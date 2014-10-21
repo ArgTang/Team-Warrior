@@ -2,40 +2,85 @@
 
 //main css document
 
-.body{
+body{
     font-Size: 20px;	/* 1em = 20px*/
  	font-family: "Segoe UI";
+
 }
 
-
+.test{
+    margin: auto 10em;
+    width: 80%;
+    height: 100%;
+    border: solid black 5px;
+}
 
 .banner{
     margin: 0 auto 1em;
-	font-size: 1.6em;
-	width:60%;
-	height:5em;
-	padding: 0.8em;
+
+	width:100%;
+    height:20em;
     
-    text-transform: uppercase;
-    
+  
 }
 
-.menu{
-    list-style-type:none;
+.logo img{
+    width: 100%;
     
+    position: relative;    /*vertical align http://codepen.io/sebastianekstrom/pen/kzEhe?editors=110 */
+    top: 50%;
+  	transform: translateY(-50%);
 }
 
+nav{
+    font-size: 1.7em;
+    clear: both;
+    float:right; 
+    letter-spacing: .04em
+}
+
+
+nav li{
+    text-align:center;
+    padding: .03em;
+    width:8em;
+    list-style-type: none;
+    display: inline-block;    
+}
+
+nav a{
+    text-transform: uppercase;    
+    padding: 0.2em;
+    text-decoration: none;
+}
+nav li:hover{
+    color: black; /*test*/
+    background-color: black;
+}
+.nav a:before{
+}
+
+.menu{   
+}
 
 .dropdownmenu{
-    list-style-type:none;
+    display: none
 }
-
 
 //end of banner class
 .content{
-    
+    width:70%;
+    margin: 0 auto 1em;  
 }
 
 .luke{
-    
+    float:left;
+    padding:18em;
+    margin:2em;
+    list-style-type:none;
+    height: 200px;
+    width: 200px;
+    border:solid black 5px; /*delete when image is ready*/    
 }
+
+
