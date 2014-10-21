@@ -2,11 +2,40 @@
 
 //main css document
 
-
-.banner{
-
+.body{
+    font-Size: 20px;	/* 1em = 20px*/
+ 	font-family: "Segoe UI";
 }
 
+
+
+.banner{
+    margin: 0 auto 1em;
+	font-size: 1.6em;
+	width:60%;
+	height:5em;
+	padding: 0.8em;
+    
+    text-transform: uppercase;
+    
+}
+
+.menu{
+    list-style-type:none;
+    
+}
+
+
+.dropdownmenu{
+    list-style-type:none;
+}
+
+
+//end of banner class
 .content{
+    
+}
+
+.luke{
     
 }
