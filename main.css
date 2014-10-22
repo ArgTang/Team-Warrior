@@ -1,64 +1,64 @@
 
 
-//main css document
+/*main css document*/
 
 body{
     font-Size: 20px;	/* 1em = 20px*/
  	font-family: "Segoe UI";
-
+    background-color:#5B7CEF;
 }
 
 .test{
-    margin: auto 10em;
-    width: 80%;
-    height: 100%;
+    margin: auto 8em;
+    width: 85%;
     border: solid black 5px;
 }
 
 .banner{
+    background-image: url(Bilder/Hioa_jule_logo.gif); /*get transparent image? .png*/
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: black; /*test color------------------------------*/
     margin: 0 auto 1em;
-
+    
+    padding;2em;
 	width:100%;
-    height:20em;
-    
-  
+    height:20em;   /* %? */
 }
 
-.logo img{
-    width: 100%;
-    
-    position: relative;    /*vertical align http://codepen.io/sebastianekstrom/pen/kzEhe?editors=110 */
-    top: 50%;
-  	transform: translateY(-50%);
-}
-
-nav{
+nav{   
     font-size: 1.7em;
-    clear: both;
-    float:right; 
-    letter-spacing: .04em
-}
-
-
-nav li{
-    text-align:center;
-    padding: .03em;
-    width:8em;
-    list-style-type: none;
-    display: inline-block;    
+    clear: both; 
+    float:right;
+    text-transform: uppercase;
+    transform: translateY(10%); /*move menu a bit down from top*/
+    /*transform: translateY(350%); /*rule for responsive design*/
+    
 }
 
 nav a{
-    text-transform: uppercase;    
-    padding: 0.2em;
+    border-left: solid black .08em;
+    color: black; 
+    padding: 0.4em;
     text-decoration: none;
+    letter-spacing: .04em;   
+    
 }
-nav li:hover{
-    color: black; /*test*/
+
+nav li{
+    bottom;100%;
+    text-align:center;
+    width:6em;
+    list-style-type: none;
+    display: inline;    
+}
+
+
+nav a:hover{
+    color: black; /*test-----------------------------------------*/
     background-color: black;
 }
-.nav a:before{
-}
+
 
 .menu{   
 }
@@ -67,20 +67,55 @@ nav li:hover{
     display: none
 }
 
-//end of banner class
+/*end of banner class*/
 .content{
     width:70%;
-    margin: 0 auto 1em;  
+    margin: 0 auto 1em; 
 }
 
 .luke{
-    float:left;
-    padding:18em;
-    margin:2em;
+    background-image:url(Bilder/frozen_snowflake_cutiemark_by_proffes-d5ybcwl.png);/*test image-------------------------------------------*/
+    background-size: contain;
+    background-color: black; /*test---------------------------------*/
+    margin:1em;
     list-style-type:none;
-    height: 200px;
-    width: 200px;
-    border:solid black 5px; /*delete when image is ready*/    
+    display: inline-block;
+    height: 280px;
+    width: 280px;
+    /*border:solid black 5px; /*delete when image is ready*/    
 }
 
-
+.luke:before{
+    display: block;
+    text-align: center;/*horizontal align*/
+    position: relative; /*vertical align*/
+    top: -12%;
+    
+    color: white;
+    font-size: 12em;
+    font-weight: 500; 
+}
+#luke1:before{content: "1";} /*.js option for this?*/
+#luke2:before{content: "2";}
+#luke3:before{content: "3";}
+#luke4:before{content: "4";}
+#luke5:before{content: "5";}
+#luke6:before{content: "6";}
+#luke7:before{content: "7";}
+#luke8:before{content: "8";}
+#luke9:before{content: "9";}
+#luke10:before{content: "10";}
+#luke11:before{content: "11";}
+#luke12:before{content: "12";}
+#luke13:before{content: "13";}
+#luke14:before{content: "14";}
+#luke15:before{content: "15";}
+#luke16:before{content: "16";}
+#luke17:before{content: "17";}
+#luke18:before{content: "18";}
+#luke19:before{content: "19";}
+#luke20:before{content: "20";}
+#luke21:before{content: "21";}
+#luke22:before{content: "22";}
+#luke23:before{content: "23";}
+#luke24:before{content: "24";}
