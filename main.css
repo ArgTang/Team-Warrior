@@ -36,10 +36,10 @@ body{
 }
 
 .banner{
-    background-image: url(Bilder/Hioa_jule_logo.gif); /*get transparent image? .png*/
+    background-image: url(Bilder/Hioa_jule_logo.png); /*get transparent image? .png*/
     background-size: contain;
     background-repeat: no-repeat;
-    background-color: black; /*test color------------------------------*/
+    border: solid black 5px;
     margin: 0 auto 1em;
     
     padding;2em;
