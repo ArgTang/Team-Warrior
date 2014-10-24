@@ -25,12 +25,22 @@ body{
 }
 
 .banner{
+<<<<<<< HEAD
     background-image: url(Bilder/Hioa_jule_logo.gif); /*get transparent image? .png*/
 	background: transparent;
     background-size: contain;
     background-repeat: no-repeat;
     /*background-color: black; /*test color------------------------------*/
     margin: 0 auto 1em;    
+=======
+    background-image: url(Bilder/Hioa_jule_logo.png); /*get transparent image? .png*/
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: solid black 5px;
+    margin: 0 auto 1em;
+    
+    padding;2em;
+>>>>>>> origin/master
 	width:100%;
     height:15em;   /* %? */
 }
