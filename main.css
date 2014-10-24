@@ -1,11 +1,32 @@
 
 
+/*Snowing in the winter*/
+#snowflakeContainer {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+.snowflake {
+    position: fixed;
+    color: #ecf3f7; /*testcolor-----------------------------------*/
+    -webkit-filter: blur(.02em); /*not for IE, check for Firefox?*/
+    filter: blur(.02em);/*Check if this works for FF*/
+    -webkit-user-select: none; /*hmm error, but is green on caniuse.com https://developer.mozilla.org/en-US/docs/Web/CSS/user-select*/   
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    z-index: 1000;
+}
+.snowflake:hover { cursor: default;}
+
+
 /*main css document*/
 
 body{
     font-Size: 20px;	/* 1em = 20px*/
- 	font-family: "Segoe UI";
-    background-color:#5B7CEF;
+ 	font-family: "Segoe UI";/*Test font----------------*/
+    background-color:#c2d8e6;/*Test color--------------------*/
+    /*-webkit-background: linear-gradient( #c2d8e6, #8ab4cf);/*not working?*/
 }
 
 .test{
@@ -67,29 +88,34 @@ nav a:hover{
     display: none
 }
 
-/*end of banner class*/
+/*-----------------------------------------------------------------------end of banner class------------------------------------------------------------------*/
 .content{
-    width:70%;
-    margin: 0 auto 1em; 
+    margin-left: auto; 
+    margin-right:auto;
 }
 
 .luke{
     background-image:url(Bilder/frozen_snowflake_cutiemark_by_proffes-d5ybcwl.png);/*test image-------------------------------------------*/
     background-size: contain;
-    background-color: black; /*test---------------------------------*/
+    background-color: #c2d8e6; /*test---------------------------------*/
     margin:1em;
     list-style-type:none;
     display: inline-block;
     height: 280px;
     width: 280px;
-    /*border:solid black 5px; /*delete when image is ready*/    
+    box-shadow: .2em .2em 1em .3em #242424 ;/*3dFX?*/
+        
+    -webkit-filter: blur(.06em); 
+    filter: blur(.03em);/*Check if this works for FF*/
 }
+.luke:hover{-webkit-filter:none;filter:none;}
 
 .luke:before{
     display: block;
     text-align: center;/*horizontal align*/
     position: relative; /*vertical align*/
     top: -12%;
+    
     
     color: white;
     font-size: 12em;
