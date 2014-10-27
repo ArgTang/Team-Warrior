@@ -51,7 +51,7 @@ nav a{
     padding: 0.4em;
     text-decoration: none;
     /*letter-spacing: .04em; */ 
-    transition: letter-spacing .7s;  
+    transition: letter-spacing .6s;  
 }
 nav a:hover{
     color: black; /*test-----------------------------------------*/
