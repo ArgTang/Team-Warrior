@@ -83,8 +83,6 @@ margin-right: auto;
 .content ul{
 	padding-left:0.5em;
 	padding-right:0.5em;
- 
-	/*padding:0 !important;*/
 }
 .luke{
     background-image:url(Bilder/frozen_snowflake_cutiemark_by_proffes-d5ybcwl.png);/*test image-------------------------------------------*/
@@ -164,9 +162,8 @@ margin-right: auto;
     display:block;
     width:100%;
     height:20em;
-    border: solid black 5px;
     margin-bottom: 1em;
-    background-color: white;
+    background-color: #c2d8e6;
     color:black;
 }
 
@@ -181,36 +178,11 @@ margin-right: auto;
 
 .about p{
     margin:.5em;
+    padding-left: 2em;
     position: relative;
     top: 50%;
   	transform: translateY(-300%)
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.about span{font-weight: 600}
+.about a{text-decoration: none; letter-spacing: 1px;}
