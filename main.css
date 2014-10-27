@@ -42,8 +42,7 @@ nav{
     float:right;
     text-transform: uppercase;
     transform: translateY(10%); /*move menu a bit down from top*/
-    /*transform: translateY(350%); /*rule for responsive design*/
-    
+    /*transform: translateY(350%); /*rule for responsive design*/   
 }
 
 nav a{
@@ -73,9 +72,7 @@ nav a:hover{
 .menu{   
 }
 
-.dropdownmenu{
-    display: none
-}
+.dropdownmenu{ display: none}
 
 /*-----------------------------------------------------------------------end of banner class------------------------------------------------------------------*/
 .content{
@@ -159,3 +156,61 @@ margin-right: auto;
     z-index: 1000;
 }
 .snowflake:hover { cursor: default;}
+
+
+/*CSS for About us-------------------------------------------------------------------------------------------*/
+
+.about{
+    display:block;
+    width:100%;
+    height:20em;
+    border: solid black 5px;
+    margin-bottom: 1em;
+    background-color: white;
+    color:black;
+}
+
+
+.about img{
+    float:left;
+    width: 200px;
+    height:200px;
+    position: relative;
+    top:20%;
+}
+
+.about p{
+    margin:.5em;
+    position: relative;
+    top: 50%;
+  	transform: translateY(-300%)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
