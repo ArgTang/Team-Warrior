@@ -50,8 +50,13 @@ nav a{
     color: black; 
     padding: 0.4em;
     text-decoration: none;
-    letter-spacing: .04em;   
-    
+    /*letter-spacing: .04em; */ 
+    transition: letter-spacing .6s;  
+}
+nav a:hover{
+    color: black; /*test-----------------------------------------*/
+    letter-spacing: .1em;
+    font-weight: 600;
 }
 
 nav li{
@@ -63,10 +68,7 @@ nav li{
 }
 
 
-nav a:hover{
-    color: black; /*test-----------------------------------------*/
-    background-color: black;
-}
+
 
 
 .menu{   
