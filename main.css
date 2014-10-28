@@ -21,14 +21,14 @@ body{
 .test{
 	margin-right:10%;
 	margin-left:10%;
-    border: solid black 5px;
+    
 }
 
 .banner{
     background-image: url(Bilder/Hioa_jule_logo.png); /*get transparent image? .png*/
     background-size: contain;
     background-repeat: no-repeat;
-    border: solid black 5px;
+    
     margin: 0 auto 1em; 
     padding;2em;
 
@@ -87,7 +87,7 @@ margin-right: auto;
 	padding-right:0.5em;
 }
 .luke{
-    background-image:url(Bilder/frozen_snowflake_cutiemark_by_proffes-d5ybcwl.png);/*test image-------------------------------------------*/
+    background-image:url(Bilder/nissen.jpg);/*test image-------------------------------------------*/
     background-size: contain;
     background-color: #c2d8e6; /*test---------------------------------*/
     margin:0.5em;
@@ -107,7 +107,7 @@ margin-right: auto;
     position: relative; /*vertical align*/
     top: -12%;
     
-    color: white;
+    color: green;
     font-size: 9em;
     font-weight: 500; 
 }

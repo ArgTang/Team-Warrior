@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html lang="nb"> <!-- Her kan vi bytte til nb hvis vi skriver norsk bokmål-->
+    <head>
+		<meta charset="UTF-8">
+  		<link id="css" rel="stylesheet" href="main.css">
+  		<title title="HIOA Julekalender">HIOA studentjulekalender</title>
+	</head>
+	
+    <body>
+    
+   <div class="Spørreundersøkelse">
+        <ul>
+            <li><a href='#'>Hjem</a></li>
+		    <li><a href='#'>Om oss</a></li>					    
+			<li><a href='#'>Sponsorer</a></li>
+            <li><a href='#'>Regler</a></li>
+        </ul>
+    </nav>
+    <p>Enter names in the fields, then click "Submit" to submit the form:</p>
+
+<form id="frm1" action="form_action.asp">
+Student nummer: <input type="text" name="Snr"><br>
+Last name: <input type="text" name="lname"><br><br>
+<input type="button" onclick="myFunction()" value="Send inn">
+</form>
+
+<script>
+function myFunction() {
+    document.getElementById("frm1").submit();
+}
+</script>
+
+    
+    </body>
+</html>
