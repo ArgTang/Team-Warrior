@@ -21,7 +21,7 @@ body{
 .test{
 	margin-right:10%;
 	margin-left:10%;
-    
+   
 }
 
 .banner{
@@ -76,67 +76,93 @@ nav li{
 
 .dropdownmenu{ display: none}
 
-/*-----------------------------------------------------------------------end of banner class------------------------------------------------------------------*/
+/*-------------------------------------------end of banner class--------------------------*/
+
+/* --------------------------------------Luke START -------------------------------*/
+
 .content{
-text-align:center;
-margin-left: auto;
-margin-right: auto;
+        text-align:center;
+        margin-left: auto;
+        margin-right: auto;
 }
 .content ul{
-	padding-left:0.5em;
-	padding-right:0.5em;
+	   padding-left:0.5em;
+	   padding-right:0.5em;
+    
 }
 .luke{
-    background-image:url(Bilder/nissen.jpg);/*test image-------------------------------------------*/
-    background-size: contain;
-    background-color: #c2d8e6; /*test---------------------------------*/
-    margin:0.5em;
-    list-style-type:none;
-    display: inline-block;
-    height: 200px;
-    width: 200px;
-    box-shadow: .2em .2em 1em .3em #242424 ;/*3dFX?*/
-        
-    -webkit-filter: blur(.06em); 
-    filter: blur(.03em);/*Check if this works for FF*/
+        background-size: contain;
+        background-color: #c2d8e6;
+        margin:0.6em;
+        list-style-type:none;
+        display: inline-block;
+        height: 200px;
+        width: 200px;
+        box-shadow: .2em .2em 1em .3em #242424 ;
 }
-.luke:hover{-webkit-filter:none;filter:none;}
-
-.luke:before{
-    display: block;
-    position: relative; /*vertical align*/
-    top: -12%;
-    
-    color: green;
-    font-size: 9em;
-    font-weight: 500; 
+.dato {
+        background-color: red ;
+        height: 200px;
+        width: 200px;
+        margin: 
+        animation-style: preserve-3d;
+        transform-origin: 0 0;
+        transition: all 1s;
+        transition-timing-function: ease-in;
+-webkit-filter: blur(.06em); 
+        filter: blur(.03em);
+        backface-visibility: visible;
 }
-#luke1:before{content: "1";} /*.js option for this?*/
-#luke2:before{content: "2";}
-#luke3:before{content: "3";}
-#luke4:before{content: "4";}
-#luke5:before{content: "5";}
-#luke6:before{content: "6";}
-#luke7:before{content: "7";}
-#luke8:before{content: "8";}
-#luke9:before{content: "9";}
-#luke10:before{content: "10";}
-#luke11:before{content: "11";}
-#luke12:before{content: "12";}
-#luke13:before{content: "13";}
-#luke14:before{content: "14";}
-#luke15:before{content: "15";}
-#luke16:before{content: "16";}
-#luke17:before{content: "17";}
-#luke18:before{content: "18";}
-#luke19:before{content: "19";}
-#luke20:before{content: "20";}
-#luke21:before{content: "21";}
-#luke22:before{content: "22";}
-#luke23:before{content: "23";}
-#luke24:before{content: "24";}
 
+.dato:hover{
+-webkit-filter:none;filter:none;
+        transform: rotateY(-170deg);
+-webkit-transform: rotateY(-170deg);
+        filter: none;
+}
 
+.dato:before{
+        text-align: center;
+        display: block;6
+        position: relative;
+        top: -12%;
+        color: white;
+        font-size: 9em;
+        font-weight: 500; 
+}
+
+.backside{
+        height: 200px;
+        width: 200px;
+        background-image: url(Bilder/Skjermbilde.PNG);
+}
+
+#dato1:before{content: "1";}
+#dato2:before{content: "2";}
+#dato3:before{content: "3";}
+#dato4:before{content: "4";}
+#dato5:before{content: "5";}
+#dato6:before{content: "6";}
+#dato7:before{content: "7";}
+#dato8:before{content: "8";}
+#dato9:before{content: "9";}
+#dato10:before{content: "10";}
+#dato11:before{content: "11";}
+#dato12:before{content: "12";}
+#dato13:before{content: "13";}
+#dato14:before{content: "14";}
+#dato15:before{content: "15";}
+#dato16:before{content: "16";}
+#dato17:before{content: "17";}
+#dato18:before{content: "18";}
+#dato19:before{content: "19";}
+#dato20:before{content: "20";}
+#dato21:before{content: "21";}
+#dato22:before{content: "22";}
+#dato23:before{content: "23";}
+#dato24:before{content: "24";}
+
+/*----------------------------------------- Luke END -----------------------------*/
 
 /*Snowing in the winter*/
 #snowflakeContainer {
