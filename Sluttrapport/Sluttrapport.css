@@ -1,0 +1,31 @@
+body{
+    font-size: 20px;
+    font-family: "Segoe UI", verdana;
+    
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+body h1{
+    font-weight: 600;
+    font-size: 2em;
+    padding:.5em;
+    
+    
+}
+
+.content{
+    display: block;
+    margin: 0 auto 1em;
+}
+
+section{
+    border-radius: 1em;
+    background-color: #c6c7d6;
+    padding: 0.002em;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-top: 1em;
+}
+
+section h2{text-align: center;}

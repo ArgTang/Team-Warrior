@@ -8,10 +8,12 @@ body{
 	right:10%;
 	padding:0;
 	font-Size: 20px;	/* 1em = 20px*/
- 	font-family: "Segoe UI";/*Test font----------------*/
+ 	font-family: "Segoe UI", verdana;/*Test font----------------*/
     background-image: URL(Bilder/juledekorasjon.jpg);
 	background-attachment: fixed;
     background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
 	/*Test color--------------------*/
 	background-size: 100%;
     /*-webkit-background: linear-gradient( #c2d8e6, #8ab4cf);/*not working?*/
@@ -21,7 +23,6 @@ body{
 .test{
 	margin-right:10%;
 	margin-left:10%;
-   
 }
 
 .banner{
@@ -41,8 +42,8 @@ nav{
     clear: both; 
     float:right;
     text-transform: uppercase;
-    transform: translateY(10%); /*move menu a bit down from top*/
-    /*transform: translateY(350%); /*rule for responsive design*/   
+    transform: translateY(10%); /*move menu a bit down from top*/ 
+    -webkit-transform: translateY(10%); /*safari & android*/
 }
 
 nav a{
@@ -66,15 +67,6 @@ nav li{
     list-style-type: none;
     display: inline;    
 }
-
-
-
-
-
-.menu{   
-}
-
-.dropdownmenu{ display: none}
 
 /*-------------------------------------------end of banner class--------------------------*/
 
@@ -108,6 +100,7 @@ nav li{
         transform-origin: 0 0;
         transition: all 1s;
         transition-timing-function: ease-in;
+<<<<<<< HEAD:main.css
 }
 .dato:before{
         text-align: center;
@@ -121,8 +114,18 @@ nav li{
 
 .opendato{
 -webkit-filter:none;filter:none;
+=======
+    -webkit-filter: blur(.06em); 
+        filter: blur(.03em);
+        backface-visibility: visible;
+}
+
+.dato:hover{
+        -webkit-filter:none;
+        filter:none;/*Firefox*/
+>>>>>>> origin/master:index.css
         transform: rotateY(-170deg);
--webkit-transform: rotateY(-170deg);
+        -webkit-transform: rotateY(-170deg);/*safari & android*/
         filter: none;
     background-color: red;
         height: 200px;
@@ -190,8 +193,11 @@ nav li{
 .snowflake:hover { cursor: default;}
 
 
-/*CSS for About us-------------------------------------------------------------------------------------------*/
+/*CSS for Om oss-------------------------------------------------------------------------------------------*/
 
+#omoss{
+    background-image: url(Bilder/hioa_team_warrior.png);
+}
 .about{
     display:block;
     width:100%;
