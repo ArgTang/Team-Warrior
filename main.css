@@ -101,7 +101,7 @@ nav li{
         box-shadow: .2em .2em 1em .3em #242424 ;
 }
 .dato {
-        background-color: red ;
+        background-color: red;
         height: 200px;
         width: 200px;
         margin: 
@@ -134,7 +134,7 @@ nav li{
 .backside{
         height: 200px;
         width: 200px;
-        background-image: url(Bilder/Skjermbilde.PNG);
+        background-image: url(Bilder/Bekk.png);
 }
 
 #dato1:before{content: "1";}
