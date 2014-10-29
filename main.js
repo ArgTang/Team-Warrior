@@ -1,6 +1,7 @@
 function åpne(i){
     
         var myElement = document.getElementById("dato"+i);
+    
         if (myElement.className == "dato")
         {
             myElement.className = "opendato";   
@@ -8,6 +9,7 @@ function åpne(i){
             myElement.className = "dato";   
         }
 }
+
 function spørrevindu(){
         
 }

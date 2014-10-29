@@ -114,8 +114,8 @@ nav li{
 .opendato{
 -webkit-filter:none;
         filter:none;
-        transform: rotateY(-170deg);
 -webkit-transform: rotateY(-170deg);
+        transform: rotateY(-170deg);
         filter: none;
         background-color: red;
         height: 200px;
