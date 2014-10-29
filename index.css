@@ -177,8 +177,11 @@ nav li{
 .snowflake:hover { cursor: default;}
 
 
-/*CSS for About us-------------------------------------------------------------------------------------------*/
+/*CSS for Om oss-------------------------------------------------------------------------------------------*/
 
+#omoss{
+    background-image: url(Bilder/hioa_team_warrior.png);
+}
 .about{
     display:block;
     width:100%;
