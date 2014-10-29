@@ -90,7 +90,7 @@ nav li{
 	   padding-right:0.5em;
     
 }
-.luke{
+.luke{ 
         background-size: contain;
         background-color: #c2d8e6;
         margin:0.6em;
@@ -104,23 +104,11 @@ nav li{
         background-color: red;
         height: 200px;
         width: 200px;
-        margin: 
         animation-style: preserve-3d;
         transform-origin: 0 0;
         transition: all 1s;
         transition-timing-function: ease-in;
--webkit-filter: blur(.06em); 
-        filter: blur(.03em);
-        backface-visibility: visible;
 }
-
-.dato:hover{
--webkit-filter:none;filter:none;
-        transform: rotateY(-170deg);
--webkit-transform: rotateY(-170deg);
-        filter: none;
-}
-
 .dato:before{
         text-align: center;
         display: block;6
@@ -128,14 +116,32 @@ nav li{
         top: -12%;
         color: white;
         font-size: 9em;
-        font-weight: 500; 
+        font-weight: 500;
 }
 
-.backside{
+.opendato{
+-webkit-filter:none;filter:none;
+        transform: rotateY(-170deg);
+-webkit-transform: rotateY(-170deg);
+        filter: none;
+    background-color: red;
         height: 200px;
         width: 200px;
-        background-image: url(Bilder/Bekk.png);
+        animation-style: preserve-3d;
+        transform-origin: 0 0;
+        transition: all 1s;
+        transition-timing-function: ease-in;
 }
+.opendato:before{
+        text-align: center;
+        display: block;6
+        position: relative;
+        top: -12%;
+        color: white;
+        font-size: 9em;
+        font-weight: 500;
+}
+
 
 #dato1:before{content: "1";}
 #dato2:before{content: "2";}
