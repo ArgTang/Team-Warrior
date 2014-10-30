@@ -3,11 +3,9 @@ function åpne(i){
         var myElement = document.getElementById("dato"+i);
     
         if (myElement.className == "dato")
-        {
             myElement.className = "opendato";   
-        }else{
+        else
             myElement.className = "dato";   
-        }
 }
 
 function spørrevindu(){
