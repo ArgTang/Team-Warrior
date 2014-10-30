@@ -18,6 +18,26 @@ body{
 	background-size: 100%;
     /*-webkit-background: linear-gradient( #c2d8e6, #8ab4cf);/*not working?*/
 }
+footer{
+	margin-left:5em;
+	margin-right:auto;
+	margin-top:1em;
+	margin-bottom:1em;
+	display: inline-block;
+	position: relative;    
+	font-weight:bold;
+}
+footer:before{
+	content: "";
+	display: block;
+	position: absolute;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	background:white;
+	opacity: .7;
+}
+
 
 
 .test{
