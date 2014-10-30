@@ -19,6 +19,7 @@ body{
     /*-webkit-background: linear-gradient( #c2d8e6, #8ab4cf);/*not working?*/
 }
 footer{
+    width: 85%;
 	margin-left:5em;
 	margin-right:auto;
 	margin-top:1em;
@@ -46,7 +47,7 @@ footer:before{
 }
 
 .banner{
-    background-image: url(Bilder/Hioa_jule_logo.png);
+    background-image: url(Bilder/Hioa_jule_logo.png); /*get transparent image? .png*/
     background-size: contain;
     background-repeat: no-repeat;
     
@@ -54,11 +55,11 @@ footer:before{
     padding;2em;
 
 	width:100%;
-    height:15em; 
+    height:15em;   /* %? */
 }
 
 nav{   
-    font-size: 1.7em;
+    font-size: 1.3em;
     clear: both; 
     float:right;
     text-transform: uppercase;
@@ -71,10 +72,11 @@ nav a{
     color: black; 
     padding: 0.4em;
     text-decoration: none;
+    /*letter-spacing: .04em; */ 
     transition: letter-spacing .6s;  
 }
 nav a:hover{
-    color: black; 
+    color: black; /*test-----------------------------------------*/
     letter-spacing: .1em;
     font-weight: 600;
 }
@@ -84,7 +86,7 @@ nav li{
     text-align:center;
     width:6em;
     list-style-type: none;
-    display: inline;    
+    display: inline;
 }
 
 /*-------------------------------------------end of banner class--------------------------*/
@@ -98,23 +100,23 @@ nav li{
 }
 .content ul{
 	   padding-left:0.5em;
-	   padding-right:0.5em;  
+	   padding-right:0.5em;
+    
 }
-
 .luke{ 
         background-size: contain;
-        background-color: #c2d8e6;
+        background-color: rgba(0,0,0,0.5);
         margin:0.6em;
         list-style-type:none;
         display: inline-block;
-        height: 200px;
-        width: 200px;
+        height: 150px;
+        width: 150px;
         box-shadow: .2em .2em 1em .3em #242424 ;
 }
 .dato {
-        background-color: red;
-        height: 200px;
-        width: 200px;
+        background-color: rgb(172,45,66);
+        height: 150px;
+        width: 150px;
         animation-style: preserve-3d;
         transform-origin: 0 0;
         transition: all 1s;
@@ -122,23 +124,23 @@ nav li{
 }
 .dato:before{
         text-align: center;
-        display: block;6
+        display: block;
         position: relative;
         top: -12%;
         color: white;
-        font-size: 9em;
+        font-size: 6.5em;
         font-weight: 500;
 }
 
 .opendato{
-        -webkit-filter:none;
-        filter:none; /*firefox*/
-        -webkit-transform: rotateY(-170deg);/*safari & android*/
+-webkit-filter:none;
+        filter:none;
+-webkit-transform: rotateY(-170deg);
         transform: rotateY(-170deg);
         filter: none;
-        background-color: red;
-        height: 200px;
-        width: 200px;
+        background-color: rgb(172,45,66);
+        height: 150px;
+        width: 150px;
         animation-style: preserve-3d;
         transform-origin: 0 0;
         transition: all 1s;
@@ -146,11 +148,11 @@ nav li{
 }
 .opendato:before{
         text-align: center;
-        display: block;6
+        display: block;
         position: relative;
         top: -12%;
         color: white;
-        font-size: 9em;
+        font-size: 6.5em;
         font-weight: 500;
 }
 
@@ -244,7 +246,6 @@ article{
 	position: relative;    
 	font-weight:bold;
 }
-
 article:before{
 	content: "";
 	display: block;
@@ -255,7 +256,6 @@ article:before{
 	background:white;
 	opacity: .7;
 }
-
 article h1{
 	text-align:center;
 }
