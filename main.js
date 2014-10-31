@@ -18,7 +18,7 @@ function spørrevindu(){
 // info om localstorage http://diveintohtml5.info/storage.html
 function lagrebruker(studentnummer){
     if (!supportsLocalStorage()) { return -1; }//sjekker om localstorage metode er tiljengelig
-    if ( b = inputvalidering(studentnummer)){
+    if (inputvalidering(studentnummer)){
         localStorage[deltaker]=studentnummer;
         return true;
     }else
