@@ -27,8 +27,10 @@ function lagrebruker(studentnummer){
 
 function hentebruker(){
     if (!supportsLocalStorage()) { return false; }
-    studentnummer = parseInt(localstorage[deltaker]);    
-    return ('s'+studentnummer);
+    studentnummer = parseInt(localstorage[deltaker]);
+    //sjekker om nummer finnes i minne && dobbeltsjekk om det er et nummer
+    if (studentnummer != null && isNaN(studentnummer))
+        return ('s'+studentnummer);
 }
 
 function inputvalidering(a){
