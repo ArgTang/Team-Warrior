@@ -8,7 +8,7 @@
   		<title title="HIOA Julekalender">HIOA studentjulekalender</title>
 	</head>
 	
-    <body>
+    <body onload="fyllinnbruker()">
     
    <div class="Spørreundersøkelse">
     <nav>
@@ -25,12 +25,25 @@
 <form id="frm1" action="form_action.asp">
 Student nummer: <input type="text" name="Snr"><br>
 Last name: <input type="text" name="lname"><br><br>
-<input type="button" onclick="myFunction()" value="Send inn">
+<input type="button" onclick="sendskjema()" value="Send inn">
 </form>
 
 <script>
-function myFunction() {
-    document.getElementById("frm1").submit();
+function fyllinnbruker(){
+    var stud = hentebruker()
+    if(stud != false) //hvis bruker er lagret
+        dokument.getElementsByName("Snr").value = stud;
+}
+    
+function sendskjema() {
+    var input = document.getElementsByName("Snr");
+    var temp = lagrebruker( input );
+    
+    //sjekker om lagring suksessfull eller input er godkjent hvis cookies er slått av
+    if ( temp || (temp == -1 && inputvalidering(input)) ) 
+        document.getElementById("frm1").submit();
+    else
+        alert("Venligst sjekk at du har skrevet inn ditt studentnummer");
 }
 </script>
 
