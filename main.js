@@ -1,15 +1,18 @@
 "use strict"; //compile all js in strict mode
 
 function apne(i) {
-	var d = new Date(),
-        n = d.getDate(),
-        m = d.getMonth(),
+	var d = new Date();
+    var n = d.getDate();
+    var m = d.getMonth();
     
-        flipper = document.getElementById("flipper" + i);
+    var flipper = document.getElementById("flipper" + i);
     
-    if (flipper.className === "flipper" && i <= n && m === 10) {
+    if (flipper.className === "flipper" && i <= n && m === 10) 
+	{
         flipper.className = "flipperopen";
-    } else {
+    } 
+	else 
+	{
         flipper.className = "flipper";
     }
 }
@@ -18,7 +21,7 @@ function apne(i) {
 
 // info om localstorage http://diveintohtml5.info/storage.html
 function supportsLocalStorage() {
-    return 'localStorage' in window && window['localStorage'] !== null;
+    return typeof(Storage) !== "undefined";
 }
 
 function inputvalidering(a) {
@@ -41,7 +44,7 @@ function lagrebruker(studentnummer) {
 
 function hentebruker() {
     if (!supportsLocalStorage()) { return false; }
-    var studentnummer = parseInt(localstorage['deltaker'], 10);
+    var studentnummer = parseInt(localStorage['deltaker'], 10);
     //sjekker om nummer finnes i minne && dobbeltsjekk om det er et nummer
     if (studentnummer !== null && isNaN(studentnummer)) {
         return ('s' + studentnummer);
@@ -63,23 +66,23 @@ function sendskjema() {
     //sjekker om lagring suksessfull eller input er godkjent hvis cookies er slått av
     if (temp || (temp === -1 && inputvalidering(input))) {
         
-        if (Document.getElementsName("alt1").innerHTML == true;) {
+        if (Document.getElementsName("alt1").innerHTML == true) {
             svar[0] = 1;
-        } else if(Document.getElementsName("alt2").innerHTML == true;) {
+        } else if(Document.getElementsName("alt2").innerHTML == true) {
             svar[0] = 2;
-        }else if(Document.getElementsName("alt3").innerHTML == true;) {
+        }else if(Document.getElementsName("alt3").innerHTML == true) {
             svar[0] = 3;
-        }else if(Document.getElementsName("alt4").innerHTML == true;) {
+        }else if(Document.getElementsName("alt4").innerHTML == true) {
             svar[0] = 4;
         }
         
-        if (Document.getElementsName("alt5").innerHTML == true;) {
+        if (Document.getElementsName("alt5").innerHTML == true) {
             svar[1] = 1;
-        } else if(Document.getElementsName("alt6").innerHTML == true;) {
+        } else if(Document.getElementsName("alt6").innerHTML == true) {
             svar[1] = 2;
-        }else if(Document.getElementsName("alt7").innerHTML == true;) {
+        }else if(Document.getElementsName("alt7").innerHTML == true) {
             svar[1] = 3;
-        }else if(Document.getElementsName("alt8").innerHTML == true;) {
+        }else if(Document.getElementsName("alt8").innerHTML == true) {
             svar[1] = 4;
         }
         
@@ -97,7 +100,7 @@ function sendskjema() {
     }
 }
 
-function sporrevindu(var dag) {
+function sporrevindu(dag) {
     fyllinnbruker();
     var spm = getSpørsmål(dag);
     if (spm != null) {

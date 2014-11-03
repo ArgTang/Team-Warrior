@@ -15,7 +15,7 @@
         if ($riktigsvar[4] == $svar[0] && $riktigsvar[9] == $svar[1]);
             $riktig = RIKTIG_SVAR;
         if ($svar == $riktigsvar) {
-            $to      = 'teamwarrior@gmail.com';
+            $to      = 'teamwarrior14@gmail.com';
             $subject = $studnummer . " " . $riktig;
             $message = $svar;
             $headers = 'From: Adventskalender@hioa.no'
