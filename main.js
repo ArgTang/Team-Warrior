@@ -1,16 +1,20 @@
 "use strict"; //compile all js in strict mode
 
 function apne(i) {
+	var d = new Date();
+    var n = d.getDate();
+	var m = d.getMonth();
     var myElement = document.getElementById("dato" + i);
-    if (myElement.className === "dato") {
+    if (myElement.className === "dato" && i <= n && m === 10) {
         myElement.className = "opendato";
     } else {
         myElement.className = "dato";
     }
+	
 }
 
 function sporrevindu() {
-    
+
 }
 
 // info om localstorage http://diveintohtml5.info/storage.html
