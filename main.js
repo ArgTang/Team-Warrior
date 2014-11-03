@@ -2,8 +2,17 @@
 
 function apne(i) {
 	var d = new Date(),
-        n = d.getDate(),
-        m = d.getMonth(),
+        n = d.getDate();
+        
+        /*serverdate = new XMLHttpRequest();
+        serverdate.onreadystatechange = Function() {
+            if(serverdate.readyState === 4 &&serverdate.status === 200) {
+                var endato = serverdate.responseText();
+            }
+        serverdate.open("GET", "getDato.php", true);
+        serverdate.send();*/ /* incomplete code */
+            
+    var m = d.getMonth(),
         flipper = document.getElementById("flipper" + i);
     
     if (flipper.className === "flipper" && i <= n && m === 10) {
@@ -83,7 +92,16 @@ function sendskjema() {
         }
         
         if (svar[0] > 0 && svar[1] > 0) {
-            SendSvar(temp, svar);
+            //SendSvar(temp, svar);
+            var sendSvaret = new XMLHttpRequest();
+            sendSvaret.onreadystatechange = function () {
+                if (sendSvaret.readyState === 4 && sendSvaret.status === 200) {
+                    melding = "Svar mottat. Takk for innsats";
+                }
+            };
+            sendSvaret.open("GET", "SendSvar.php", true);
+            sendSvaret.send();
+            
         } else {
             melding = "Vennligst sjekk at du har krysset av et ssvar på begge spørsmål";
         }
@@ -98,7 +116,16 @@ function sendskjema() {
 
 function sporrevindu(dag) {
     fyllinnbruker();
-    var spm = getSporsmal(dag);
+    var spm,
+        sporsmol = new XMLHttpRequest();
+    sporsmol.onreadystatechange = function () {
+        if (sporsmol.readyState === 4 && sporsmol.status === 200) {
+            spm = JSON.parse(sporsmol.responseText);
+        }
+    };
+    sporsmol.open("GET", "sporsmol.php", true);
+    sporsmol.send();
+    //var spm = getSporsmal(dag);
     if (spm !== null) {
         document.getElementsByClassName("sporsmal1").innerHTML = spm[0];
         document.getElementsName("alt1").innerHTML = spm[1];
