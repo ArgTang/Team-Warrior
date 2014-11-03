@@ -161,7 +161,14 @@ nav li{
         display: inline-block;
         margin:0.6em;
 }
-.luke:hover .flipper, .luke.hover .flipper {
+
+.flipperopen{
+        transition: 2s;
+-webkit-transform-style: preserve-3d;
+-webkit-transform-origin: 0 0;
+        transform-style: preserve-3d;
+        transform-origin: 0 0;
+        position: relative;
 -webkit-transform: rotateY(180deg);
         transform: rotateY(180deg);
 }
@@ -172,14 +179,13 @@ nav li{
 }
 
 .flipper {
-        transition: 1s;
+        transition: 2s;
 -webkit-transform-style: preserve-3d;
 -webkit-transform-origin: 0 0;
         transform-style: preserve-3d;
         transform-origin: 0 0;
         position: relative;
 }
-
 
 .front, .back {
 	backface-visibility: hidden;

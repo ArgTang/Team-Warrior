@@ -4,17 +4,18 @@ function apne(i) {
 	var d = new Date();
     var n = d.getDate();
 	var m = d.getMonth();
-    var myElement = document.getElementById("dato" + i);
-    if (myElement.className === "dato" && i <= n && m === 10) {
-        myElement.className = "opendato";
+    
+    var flipper = document.getElementById("flipper"+i);
+    
+    if (flipper.className == "flipper" && i <= n && m === 10) {
+        flipper.className = "flipperopen";
     } else {
-        myElement.className = "dato";
-    }
-	
+        flipper.className = "flipper";
+    }   
 }
 
 function sporrevindu() {
-
+    
 }
 
 // info om localstorage http://diveintohtml5.info/storage.html
