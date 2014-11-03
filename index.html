@@ -55,6 +55,47 @@
                 <li class="luke"><div class="flipper" id="flipper24" onclick="apne(24)"><div class="front" id="front24" data-nummer="24"></div><div class="back"></div></div><div class="bakgrunn" id="bakgrunn24" onclick="sporrevidu(24)"></div></li>
 			</ul>
 		</div>
+            <div class="sporreskjema">
+            <p>Skriv inn ditt student nummer i feltet under, når du har svart på våre to kalender spørsmål, så trykker du på send inn knappen  nederst</p>
+            <br>
+            <form id="frm1" action="form_action.asp">
+                <p class="sporsmal">Student nummer: <input type="text" name="Snr"><br>
+                <br>Hvor ble Jesus født?:<br>
+                    <input type="radio" name="city" value="Jerusalem">Jerusalem<br>
+                    <input type="radio" name="city" value="Fredrikstad">Fredrikstad<br>
+                    <input type="radio" name="city" value="Nazaret">Nazaret<br>
+                    <input type="radio" name="city" value="Betlehem">Betlehem<br>
+                </p>
+                <br>
+                <p class="sporsmal">Hvor gammel er Ulf:<br>
+                    <input type="radio" name="age" value="70 år gammel">70 år gammel<br>
+                    <input type="radio" name="age" value="75 år gammel">75 år gammel<br>
+                    <input type="radio" name="age" value="68 år gammel">68 år gammel<br>
+                    <input type="radio" name="age" value="28 år gammel">28 år gammel<br>
+                </p>
+                <br>
+                <div class="fast"><input type="button" onclick="sendskjema()" value="Send inn" id="knapp"></div>
+            </form>
+        </div>
+        <script>
+function fyllinnbruker(){
+                var stud = hentebruker()
+                if(stud != false) //hvis bruker er lagret
+                dokument.getElementsByName("Snr").value = stud;
+}
+    
+function sendskjema() {
+    var input = document.getElementsByName("Snr");
+    var temp = lagrebruker( input );
+    
+    //sjekker om lagring suksessfull eller input er godkjent hvis cookies er slått av
+    if ( temp || (temp == -1 && inputvalidering(input)) ) 
+        document.getElementById("frm1").submit();
+    else
+        alert("Venligst sjekk at du har skrevet inn ditt studentnummer");
+}
+</script>
+        </div>
         <footer>
 			<p>Har du spørsmål eller tilbakemeldinger( ris og ros )</p>
 			<p>Kontakt oss på mail: teamwarrior14@gmail.com</p>
