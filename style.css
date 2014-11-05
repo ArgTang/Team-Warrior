@@ -49,7 +49,7 @@ footer:before{
 }
 
 .banner{
-    background-image: url(Bilder/Hioa_jule_logoNY.png); /*get transparent image? .png*/
+    background-image: url(Bilder/Hioa_jule_logo.png); /*get transparent image? .png*/
     background-size: contain;
     background-repeat: no-repeat;
     
