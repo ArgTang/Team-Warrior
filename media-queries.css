@@ -1,6 +1,8 @@
 @media only screen and (max-width:1150px) {
 	nav {font-size:  1.3em;}
     body{background-size: cover}
+    .karusell{
+        display:none;}
 
 }
 @media only screen and (max-width:894px) {
@@ -10,12 +12,16 @@
     nav a{font-weight: 600;}
     nav a:hover{letter-spacing: 0;}
     .banner{height: 13em;}
+      .karusell{
+        display:none;}
 
 }
 @media only screen and (max-width:1150px) {
 
 	nav {font-size:  1.3em;}
     body{background-size: cover}
+      .karusell{
+        display:none;}
 }
 @media only screen and (max-width:894px) {
 	nav {
@@ -24,11 +30,90 @@
     nav a{font-weight: 600;}
     nav a:hover{letter-spacing: 0;}
     .banner{height: 13em;}
+     .karusell{
+        display:none;}
 }
 @media only screen and (max-width:650px) {   
 	nav {font-size: 1.2em;}
+     .karusell{
+        display:none;}
 }
 
-@media only screen and (max-width:400px) {   
-	body { min-width: 400px;}
+@media only screen and (max-width: 480px) {
+    
+    
+    .snowflakeContainer{
+        display:none;
+    }
+    .body{
+        height: 500px;
+    }
+    
+
+    .test{
+        margin-left: auto;
+        margin-right: auto; 
+        float:none;
+    }
+    
+   .banner{
+       display:none;
+    }
+    
+    .mobilbanner{
+        top: 0px;
+        height: 200px;
+        width: 100%;
+        position: relative;
+    }
+    
+    .bilder{ 
+        display: inline-block;
+        height: 100px;
+        width: 100%;
+    }
+    #mobilbilde1{
+        height: 100px;
+        width: 100px;
+        float: left;
+    }
+    
+    #mobilbilde2{
+        height: 100px;
+        width: 380px;
+        float: right;
+    }
+    
+    nav{
+        display: inline-block;
+        height: 100px;
+        margin-top: 100px;
+            }
+    
+    .mobil li{
+        border: solid 0.1em black ;
+        background-color: white;
+        color: rgb(172,45,66);
+    }
+    
+    .content{
+        display: none;
+    }
+    
+    .banner
+        
+        
+    .karusell{
+    width: 90%;
+    margin:3% 5% 3% 5%;
+        
+    }
+    
+    footer{
+       
+        top:400px;
+        margin: 0px 0px 0px 0px; 
+        
+    }
+        
 }

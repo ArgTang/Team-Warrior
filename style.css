@@ -48,6 +48,10 @@ footer:before{
 	margin-left:10%;
 }
 
+.mobilbanner{
+    display:none;
+}
+
 .banner{
     background-image: url(Bilder/Hioa_jule_logo.png); /*get transparent image? .png*/
     background-size: contain;
@@ -150,8 +154,9 @@ nav li{
 .back {
 -webkit-transform: rotateY(180deg);
         transform: rotateY(180deg);
-        background-image: url(Bilder/Bekk.png);
+        background-image: url(Bilder/MAZElogoNY.png);
         text-align: center;
+
 }
 
 .back img{
@@ -160,7 +165,7 @@ nav li{
 }
 
 .bakgrunn{
-    background-color: rgb( 0,0,0);
+    background-color: rgba(0,0,0,0.5);
     background-color: rgba(0,0,0,0.5);
     height: 150px;
     width: 150px;
@@ -170,6 +175,8 @@ nav li{
 .content .front::before{
     content: attr(data-nummer);
 }
+
+
 /*----------------------------------------- Luke END -----------------------------*/
 
 /*Snowing in the winter*/
@@ -274,7 +281,84 @@ h1{
     text-align: left;
 }
 
+@media only screen and (max-width: 480px) {
+    
+    
+    .snowflakeContainer{
+        display:none;
+    }
+    .body{
+        height: 500px;
+    }
+    
 
+    .test{
+        margin-left: auto;
+        margin-right: auto; 
+        float:none;
+    }
+    
+   .banner{
+       display:none;
+    }
+    
+    .mobilbanner{
+        top: 0px;
+        height: 200px;
+        width: 100%;
+        position: relative;
+    }
+    
+    .bilder{ 
+        display: inline-block;
+        height: 100px;
+        width: 100%;
+    }
+    #mobilbilde1{
+        height: 100px;
+        width: 100px;
+        float: left;
+    }
+    
+    #mobilbilde2{
+        height: 100px;
+        width: 380px;
+        float: right;
+    }
+    
+    nav{
+        display: inline-block;
+        height: 100px;
+        margin-top: 100px;
+            }
+    
+    .mobil li{
+        border: solid 0.1em black ;
+        background-color: white;
+        color: rgb(172,45,66);
+    }
+    
+    .content{
+        display: none;
+    }
+    
+    .banner
+        
+        
+    .karusell{
+    width: 90%;
+    margin:3% 5% 3% 5%;
+        
+    }
+    
+    footer{
+       
+        top:400px;
+        margin: 0px 0px 0px 0px; 
+        
+    }
+        
+}
 
 
 
