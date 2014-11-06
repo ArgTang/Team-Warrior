@@ -67,6 +67,8 @@
                 <li class="luke"><div class="flipper" id="flipper22" onclick="apne(22)"><div class="front" id="front22" data-nummer="22"></div><div class="back" id="back22"></div></div><div class="bakgrunn" id="bakgrunn22" onclick="sporrevindu(22)"></div></li>
                 <li class="luke"><div class="flipper" id="flipper23" onclick="apne(23)"><div class="front" id="front23" data-nummer="23"></div><div class="back" id="back23"></div></div><div class="bakgrunn" id="bakgrunn23" onclick="sporrevindu(23)"></div></li>
                 <li class="luke"><div class="flipper" id="flipper24" onclick="apne(24)"><div class="front" id="front24" data-nummer="24"></div><div class="back" id="back24"></div></div><div class="bakgrunn" id="bakgrunn24" onclick="sporrevindu(24)"></div></li>
+                <!-- text field for server komunikasjon-->
+                <input type="text" name="dag" value="" style=display:none>
 			</ul>
 		</div>
             <div class="sporreskjema">
@@ -79,13 +81,17 @@
                     <input type="radio" name="alt2" value="Fredrikstad">Fredrikstad<br>
                     <input type="radio" name="alt3" value="Nazaret">Nazaret<br>
                     <input type="radio" name="alt4" value="Betlehem">Betlehem<br>
+                    <!-- text field for server komunikasjon-->
+                    <input type="text" name="svar1" value="" style=display:none>
                 </p>
                 <br>
-                <p> class="sporsmal2">Hvor gammel er Ulf:<br>
+                <p class="sporsmal2">Hvor gammel er Ulf:<br>
                     <input type="radio" name="alt5" value="70 år gammel">70 år gammel<br>
                     <input type="radio" name="alt6" value="75 år gammel">75 år gammel<br>
                     <input type="radio" name="alt7" value="68 år gammel">68 år gammel<br>
                     <input type="radio" name="alt8" value="28 år gammel">28 år gammel<br>
+                    <!-- text field for server komunikasjon-->
+                    <input type="text" name="svar2" value="" style=display:none>
                 </p>
                 <br>
                 <div class="fast"><input type="button" onclick="sendskjema()" value="Send inn" id="knapp"></div>
