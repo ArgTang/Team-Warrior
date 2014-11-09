@@ -69,7 +69,7 @@ nav a{
     color: black; 
     padding: 0.4em;
     text-decoration: none;
-    transition: letter-spacing .5s;  
+    transition: letter-spacing .5s ease;  
 }
 
 nav a:hover{
@@ -131,7 +131,7 @@ nav li{
 -webkit-transform: rotateY(0deg);
         transform: rotateY(0deg);
 }
-.front::before{
+.front:before{
     text-align: center;
     display: block;
     position: relative;
@@ -161,7 +161,7 @@ nav li{
     box-shadow: .2em .2em 1em .3em #242424 ;
 }
 
-.content .front::before{content: attr(data-nummer);}
+.content .front:before{content: attr(data-nummer);}
 
 
 /*----------------------------------------- Luke END -----------------------------*/
@@ -177,13 +177,14 @@ nav li{
     color: #ecf3f7; /*testcolor-----------------------------------*/
     -webkit-filter: blur(.02em); /*not for IE, check for Firefox?*/
     filter: blur(.02em);/*Check if this works for FF*/
-    -webkit-user-select: none;  
+    /*-webkit-user-select: none;  
     -moz-user-select:none;
     -ms-user-select:none;
-    user-select:none;
+    user-select:none;*/
     z-index: 1000;
+    pointer-events: none; /*istedet for user select ikke for IE <11*/
 }
-.snowflake:hover { cursor: default;}
+/*.snowflake:hover { cursor: default;}*//*pointer event istedet*/
 
 
 /*CSS for Om oss.html-------------------------------------------------------------------------------------------*/
@@ -229,7 +230,7 @@ article{
 	font-weight:bold;
 }
 
-article::before{
+article:before{
 	content: "";
 	display: block;
 	position: absolute;
