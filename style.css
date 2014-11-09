@@ -243,30 +243,67 @@ article::before{
 h1{text-align:center;}
 
 /*CSS for Spørremskjema ------------------------------------------------------------------*/
-.sporreskjema{
-    font-size: 1.2em;
-    border: solid;
-    border-color: black;
-    padding: 2% 10% 2% 10%;
-    background:white;
-    z-index: 1000;
-    width: 70%;
-	display:flex;
+.konkurranse{
+    z-index: 10000;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
     
-    position: relative;
-    transform: translateY(calc( -240% + 15em));
+	background: rgba(0,0,0,0.8);
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in; /*old android*/
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
 }
 
-.fast{text-align: center;}
+.konkurranse div{
+    width: 70%;
+    position: relative;
+	margin: 4% auto;
+    background: white;
+    font-size: 1.2em;
+    border-radius: 1em;
+    padding: 2% 10% 2% 10%;   
+}
 
-#knapp{
-    width: 100px;
-    height: 50px;
+.konkurranse:target {
+	opacity: 0.99; /*poof like magic*/
+	pointer-events: auto;
+}
+
+.Lukk {
+    color: red;
+    font-size: 1.2em;
+	position: absolute;
+	right: 0.50em;
+    top: 0.3em;
+	text-align: center;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.konkurranse .submit{
+    text-align: center;
+    margin: 0;
+    padding: 2% 0;
+}
+
+[name="Snr"]{
+    font-size: inherit;
+    font-family: inherit;
+}
+
+
+[value="Send inn"] {
+    font-family: inherit;
+    font-size: 0.7em;
+    font-weight: 500;
+    width: 5em;
+    height: 2em;
     color: red;
 }
-
-.sporsmal{text-align: left;}
-
 
 /*CSS for mobil----------------------------------------------------------------*/
 

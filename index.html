@@ -67,16 +67,21 @@
                 <li class="luke"><div class="flipper" id="flipper22" onclick="apne(22)"><div class="front" id="front22" data-nummer="22"></div><div class="back" id="back22"></div></div><div class="bakgrunn" id="bakgrunn22" onclick="visKonkurranse(22)"></div></li>
                 <li class="luke"><div class="flipper" id="flipper23" onclick="apne(23)"><div class="front" id="front23" data-nummer="23"></div><div class="back" id="back23"></div></div><div class="bakgrunn" id="bakgrunn23" onclick="visKonkurranse(23)"></div></li>
                 <li class="luke"><div class="flipper" id="flipper24" onclick="apne(24)"><div class="front" id="front24" data-nummer="24"></div><div class="back" id="back24"></div></div><div class="bakgrunn" id="bakgrunn24" onclick="visKonkurranse(24)"></div></li>
-                <!-- text field for server komunikasjon-->
-                <input type="text" name="dag" value="" style=display:none>
-			</ul>
+                </ul>
+            <!-- text field for server komunikasjon-->
+            <input type="text" name="dag" value="" style=display:none>	
 		</div>
-            <div class="sporreskjema">
-            <p>Skriv inn ditt studentnummer i feltet under, når du har svart på våre to kalender spørsmål, så trykker du på send inn knappen  nederst</p>
-            <br>
-            <form id="frm1" action="form_action.asp">
-                <p>Studentnummer: <input type="text" name="Snr"><br>
-                <br><p class="sporsmal1">Hvor ble Jesus født?:<br>
+           
+        <a href="#apnekonkurranse">Åpne konkurranse</a>
+        
+        <div id="apnekonkurranse" class="konkurranse">
+          <div class="skjema">
+           <a href="#Lukk" title="Lukk" class="Lukk">X</a>
+            <p>Skriv inn ditt studentnummer i feltet under. Når du har svart på spørsmålene og trykker på send inn, er du med i trekningen!</p>
+            <form id="konkurranse" action="sendskjema()">
+                <p>Studentnummer: <input type="text" name="Snr"> </p>
+                <p class="sporsmal1">Hvor ble Jesus født?
+                   <br>
                     <input type="radio" name="alt1" value="Jerusalem">Jerusalem<br>
                     <input type="radio" name="alt2" value="Fredrikstad">Fredrikstad<br>
                     <input type="radio" name="alt3" value="Nazaret">Nazaret<br>
@@ -84,7 +89,6 @@
                     <!-- text field for server komunikasjon-->
                     <input type="text" name="svar1" value="" style=display:none>
                 </p>
-                <br>
                 <p class="sporsmal2">Hvor gammel er Ulf:<br>
                     <input type="radio" name="alt5" value="70 år gammel">70 år gammel<br>
                     <input type="radio" name="alt6" value="75 år gammel">75 år gammel<br>
@@ -93,12 +97,13 @@
                     <!-- text field for server komunikasjon-->
                     <input type="text" name="svar2" value="" style=display:none>
                 </p>
-                <br>
-                <div class="fast"><input type="button" onclick="sendskjema()" value="Send inn" id="knapp"></div>
+                
+                <div class="submit"><input type="submit" value="Send inn"></div>
             </form>
+            </div>
         </div>
 
-        </div>
+    </div>
         <footer>
 			<p>Har du spørsmål eller tilbakemeldinger( ris og ros )</p>
 			<p>Kontakt oss på mail: teamwarrior14@gmail.com</p>
@@ -107,5 +112,3 @@
 <!--   <script src="Snow.js"></script>-->
     </body>
 </html>
-
-        
