@@ -8,7 +8,7 @@ function apne(i) {
         /*serverdate = new XMLHttpRequest();
         //metode for å finne dato fra PHP server
         serverdate.onreadystatechange = function() {
-            if(serverdate.readyState === 4 &&serverdate.status === 200) {
+            if(serverdate.readyState === 4 && serverdate.status === 200) {
                 var endato = serverdate.responseText();
             }
         serverdate.open("GET", "getDato.php", true);
@@ -23,7 +23,6 @@ function apne(i) {
         flipper.className = "flipper";
     }
 }
-
 
 
 // info om localstorage http://diveintohtml5.info/storage.html
@@ -85,7 +84,7 @@ function sendskjema() {
         } else if (document.getElementsName("alt4").checked) {
             document.getElementsByName("alt4").disabled = true;
             svar[0] = 4;
-        }        
+        }
         document.getElementsName("svar1").value = svar[0];
         
         if (document.getElementsName("alt5").checked) {
@@ -129,7 +128,7 @@ function sendskjema() {
     }
 }
 
-function sporrevindu(dag) {
+function visKonkurranse(dag) {
     fyllinnbruker(); //fyller inn studnummer hvis dette er i cache
     var spm,
         sporsmol = new XMLHttpRequest();
