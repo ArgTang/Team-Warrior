@@ -377,4 +377,32 @@ h1{text-align:center;}
     }
         
 }
+.sponsor{
+    display:block;
+    width:100%;
+    height:15em;
+    margin-bottom: 1em;
+    background-color: white;
+    opacity: 0.9;
+    color:black;
+}
 
+
+.sponsorimg img{
+	width:25%;
+    float:left;
+    width: 10em;
+    height:10em;
+    position: relative;
+    top:20%;
+}
+.sponsortekst p{
+	font-family:sans-serif;
+	line-height:1px;
+	float:right;
+	width:70%;
+	position:relative;
+	text-align:center;
+  	transform: translateY(-300%)
+}
+.sponsor a{text-decoration: none; letter-spacing: 1px;}
