@@ -156,7 +156,7 @@ nav li{
 
 .bakgrunn{
     background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.5); 
+    background-color: rgba(255,255,255,0.2);; 
     height: 150px;
     width: 150px;
     box-shadow: .2em .2em 1em .3em #242424 ;
@@ -164,7 +164,18 @@ nav li{
 
 .bakgrunn:hover{
     cursor: pointer;
-    background-color: rgba(255,255,255,0.2);
+}
+
+.luke a{
+    display:block;
+    text-align:center;
+    padding-top: 50px;
+
+    color: rgb(172,45,66);
+    text-decoration: none;
+    
+
+    
 }
 
 .content .front:before{content: attr(data-nummer);}
