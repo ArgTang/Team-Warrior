@@ -13,28 +13,27 @@ body{
 }
 
 footer{
-    font-size: 1.5em;
-    width: 100%;
-	/*margin: 5em 0 0 0;*/
+	margin-left:auto;
+	margin-right:auto;
 	display: inline-block;
-	position: relative;
-    text-align: center;
-    background: white;
-    height: 100%;
-    opacity: .5;
-    font-weight: bold;
-    color: rgb(172,45,66);
+	position: relative;    
+	font-weight:bold;
+	width:100%;
+	height:100%;
+	text-align:center;
+	font-Size:1.5em;
 }
 
-/*footer:before{/*content ""? hva styler denne?*/
-/*	content: "";
+footer:before{
+	content: "";
 	display: block;
+	position: absolute;
 	z-index: -1;
 	width: 100%;
 	height: 100%;
 	background:white;
 	opacity: .7;
-}*/
+}
 
 .test{
 	margin-right:10%;
