@@ -115,6 +115,7 @@ nav li{
         transform-style: preserve-3d;
         transform-origin: 0 0;
         position: relative;
+    cursor: pointer;
 }
 
 .front, .back {
@@ -145,6 +146,7 @@ nav li{
         transform: rotateY(180deg);
         background-image: url(Bilder/MAZElogoNY.png);
         text-align: center;
+    cursor: pointer;
 }
 
 .back img{
@@ -158,6 +160,11 @@ nav li{
     height: 150px;
     width: 150px;
     box-shadow: .2em .2em 1em .3em #242424 ;
+}
+
+.bakgrunn:hover{
+    cursor: pointer;
+    background-color: rgba(255,255,255,0.2);
 }
 
 .content .front:before{content: attr(data-nummer);}
