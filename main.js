@@ -1,20 +1,28 @@
 "use strict"; //compile all js in strict mode
 
+function getDato() {
+    var xmlhttp = new XMLHttpRequest();
+    //metode for å finne dato fra PHP server
+    xmlhttp.onreadystatechange = function () {
+        console.log(xmlhttp.readyState + " " + xmlhttp.status);
+        if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
+            var dato = xmlhttp.responseText;
+            console.log("Dato: " + dato);
+            document.getElementById("serverDato").value = dato;
+            document.getElementById("serverDato").innerHTML = dato;
+        }
+    }
+    xmlhttp.open("GET", "server.php?dato=", true);
+    xmlhttp.send();
+    console.log("getDato()");
+}
+
 function apne(i) {
+    console.log("apne(" + i + ")");
     //funksjonen for å åpne luke
 	var d = new Date(),
-        n = d.getDate();
-        
-        /*serverdate = new XMLHttpRequest();
-        //metode for å finne dato fra PHP server
-        serverdate.onreadystatechange = function() {
-            if(serverdate.readyState === 4 && serverdate.status === 200) {
-                var endato = serverdate.responseText();
-            }
-        serverdate.open("GET", "getDato.php", true);
-        serverdate.send();*/ /* incomplete code */
-            
-    var m = d.getMonth(),
+        n = d.getDate(),
+        m = d.getMonth(),
         flipper = document.getElementById("flipper" + i);
     //åpner luke hvis desember og dag < dagen i dag
     if (flipper.className === "flipper" && i <= n && m === 10) {
@@ -31,6 +39,7 @@ function supportsLocalStorage() {
 }
 
 function inputvalidering(a) {
+    console("inputvalidering()");
     if (a === "") { return false; } //sjekker om det er fylt inn noe
     if (String.indexOf('s') !== -1) {
         a = String.slice(1);
@@ -39,6 +48,7 @@ function inputvalidering(a) {
 }
 
 function lagrebruker(studentnummer) {
+    console.log("lagrebruker()");
     if (!supportsLocalStorage()) { return -1; } //sjekker om localstorage metode er tiljengelig
     if (inputvalidering(studentnummer)) {
         localStorage['deltaker'] = studentnummer;
@@ -49,26 +59,32 @@ function lagrebruker(studentnummer) {
 }
 
 function hentebruker() {
+    console.log("hentebruker()");
     if (!supportsLocalStorage()) { return false; }
     var studentnummer = parseInt(localStorage['deltaker'], 10);
     //sjekker om nummer finnes i minne && dobbeltsjekk om det er et nummer
+    console.log(studentnummer);
     if (studentnummer !== null && isNaN(studentnummer)) {
         return ('s' + studentnummer);
     }
 }
 
 function fyllinnbruker() {
+    console.log("fyllinnbruker()");
     var stud = hentebruker();
+    console.log(stud);
     if (stud !== false) { //hvis bruker er lagret
         document.getElementsByName("Snr").value = stud;
     }
 }
     
-function sendskjema() {
+/*function sendskjema() { //not working, tenk at dette er pseudokode
+    console.log("sendskjema");
     var input = document.getElementsByName("Snr"),
         temp = lagrebruker(input),
         svar,
         melding = "";
+        
     //sjekker om lagring suksessfull eller input er godkjent hvis cookies er slått av
     if (temp || (temp === -1 && inputvalidering(input))) {
         // fryser og finner hvilken radialmeny som er krysset av
@@ -111,7 +127,7 @@ function sendskjema() {
                     melding = "Svar mottat. Takk for innsats";
                 }
             };
-            sendSvaret.open("GET", "SendSvar.php", true);
+            sendSvaret.open("GET", "server.php?sendskjema=", true);
             sendSvaret.send();
         
         } else {
@@ -126,36 +142,49 @@ function sendskjema() {
     if (melding !== "") {
         document.getElementsByClassName("spmmelding").innerHTML = melding;
     }
-}
+}*/
 
 function visKonkurranse(dag) {
+    console.log("visKonkuranse(" + dag + ")");
     fyllinnbruker(); //fyller inn studnummer hvis dette er i cache
     var spm,
-        sporsmol = new XMLHttpRequest();
+        sporsmol = new XMLHttpRequest(),  
+        d = new Date(),
+        n = d.getDate();
     
-    document.getElementsName("dag").value = dag;
+    var i;
+    var spm = document.querySelectorAll(".sporsmal");
+    var resp;
+
+    /*for (i = 0; i < spm.length; i++) {
+        spm[i].innerHTML = 'Spørsmål' + (i+1) + '<br> ' +
+                    '<input type="radio"  name="svar' + (i+1) + '"  value=" ">Jerusalem ' + (i+1) + '<br>' +
+                    '<input type="radio"  name="svar' + (i+1) + '"  value=" ">Fredrikstad ' + (i+1) + '<br>' +
+                    '<input type="radio"  name="svar' + (i+1) + '"  value=" ">Nazaret ' + (i+1) + '<br>' +
+                    '<input type="radio"  name="svar' + (i+1) + '"  value=" ">Betlehem ' + (i+1) + '<br>';
+        console.log(spm[i]);
+    }*/
     
     //spør server om dagens spørsmål
     sporsmol.onreadystatechange = function () {
         if (sporsmol.readyState === 4 && sporsmol.status === 200) {
-            spm = JSON.parse(sporsmol.responseText);
+            console.log(sporsmol.responseText);
+            resp = JSON.parse(sporsmol.responseText);
+            console.log(resp[0]); //Fail her
+            console.log(resp[1]);
+            //display dagens spørsmål til bruker
+            for (i = 0; i < spm.length; i++) {
+                spm[i].innerHTML = resp[i] + '<br> ' +
+                    '<input type="radio"  name="svar' + (i+1) + '"  value=" ">' + resp[i + 1] + '<br>' +
+                    '<input type="radio"  name="svar' + (i+1) + '"  value=" ">' + resp[i + 2] + '<br>' +
+                    '<input type="radio"  name="svar' + (i+1) + '"  value=" ">' + resp[i + 3] + '<br>' +
+                    '<input type="radio"  name="svar' + (i+1) + '"  value=" ">' + resp[i + 4] + '<br>';
+                console.log(spm[i]);
+            }
         }
-    };
-    sporsmol.open("GET", "getsporsmal.php", true);
-    sporsmol.send();
-    //display dagens spørsmål til bruker
-    if (spm !== null) {
-        document.getElementsByClassName("sporsmal1").innerHTML = spm[0];
-        document.getElementsName("alt1").innerHTML = spm[1];
-        document.getElementsName("alt2").innerHTML = spm[2];
-        document.getElementsName("alt3").innerHTML = spm[3];
-        //document.getElementsName("alt4").innerHTML = spm[4];
-        document.getElementsByClassName("sporsmal2").innerHTML = spm[5];
-        document.getElementsName("alt5").innerHTML = spm[6];
-        document.getElementsName("alt6").innerHTML = spm[7];
-        document.getElementsName("alt7").innerHTML = spm[8];
-        //document.getElementsName("alt8").innerHTML = spm[9];
     }
+    sporsmol.open("GET", "server.php?visKonkurranse=" + dag, true);
+    sporsmol.send();
 }
 
 
