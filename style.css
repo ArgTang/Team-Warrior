@@ -11,6 +11,13 @@ body{
     background-size: 100%;
     background-repeat: no-repeat;
 }
+.content{
+    padding-left: auto;
+    padding-right: auto;
+}
+.content ul{
+    padding: 0 auto;
+}
 
 footer{
 	margin-left:auto;
@@ -115,6 +122,7 @@ nav li{
         transform-style: preserve-3d;
         transform-origin: 0 0;
         position: relative;
+    cursor: pointer;
 }
 
 .front, .back {
@@ -130,6 +138,10 @@ nav li{
 -webkit-transform: rotateY(0deg);
         transform: rotateY(0deg);
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
 .front:before{
     text-align: center;
     display: block;
@@ -145,6 +157,13 @@ nav li{
         transform: rotateY(180deg);
         background-image: url(Bilder/MAZElogoNY.png);
         text-align: center;
+    cursor: pointer;
+}
+
+#back2{
+    background-image: url(Bilder/Bekk.png);
+    background-size: 150px;
+    
 }
 
 .back img{
@@ -154,13 +173,36 @@ nav li{
 
 .bakgrunn{
     background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.5); 
+    background-color: rgba(255,255,255,0.2);; 
     height: 150px;
     width: 150px;
     box-shadow: .2em .2em 1em .3em #242424 ;
 }
 
+<<<<<<< HEAD
 .content .front:before{content: attr(data-nummer);}
+=======
+.bakgrunn:hover{
+    cursor: pointer;
+    
+}
+
+.luke a{
+    display:block;
+    text-align:center;
+    padding-top: 50px;
+
+    color: rgb(172,45,66);
+    text-decoration: none;
+    
+
+    
+}
+
+.content .front:before{
+    content: attr(data-nummer);
+}
+>>>>>>> master
 
 
 /*----------------------------------------- Luke END -----------------------------*/
@@ -259,14 +301,13 @@ h1{text-align:center;}
 	pointer-events: none;
 }
 
-.konkurranse div{
-    width: 70%;
+.konkurranse .skjema{
     position: relative;
 	margin: 4% auto;
     background: white;
-    font-size: 1.2em;
+    font-size: 1.15em;
     border-radius: 1em;
-    padding: 2% 10% 2% 10%;   
+    padding: 2% 5% 2% 5%;
 }
 
 .konkurranse:target {
@@ -276,7 +317,7 @@ h1{text-align:center;}
 
 .Lukk {
     color: red;
-    font-size: 1.2em;
+    font-size: 1em;
 	position: absolute;
 	right: 0.50em;
     top: 0.3em;
@@ -305,76 +346,81 @@ h1{text-align:center;}
     height: 2em;
     color: red;
 }
-
-/*CSS for mobil----------------------------------------------------------------*/
-
-@media only screen and (max-width: 480px) {
+.ytreboks{   
+    margin: 0 auto;
+    padding: 0 auto;
+    display: inline-block;
+}
+.indreboks{
+    text-align: left;
+    padding-left: auto;
+    padding-right: auto;
+    width: auto;
+    padding-left: ;
     
-    
-    .snowflakeContainer{display:none;}
-    
-    .body{height: 500px;}
-    
-    .test{
-        margin-left: auto;
-        margin-right: auto; 
-        float:none;
-    }
-    
-   .banner{display:none}
-    
-    .mobilbanner{
-        top: 0;
-        height: 200px;
-        width: 100%;
-        position: relative;
-    }
-    
-    .bilder{ 
-        display: inline-block;
-        height: 100px;
-        width: 100%;
-    }
-    
-    #mobilbilde1{
-        height: 100px;
-        width: 100px;
-        float: left;
-    }
-    
-    #mobilbilde2{
-        height: 100px;
-        width: 380px;
-        float: right;
-    }
-    
-    nav{
-        display: inline-block;
-        height: 100px;
-        margin-top: 100px;
-    }
-    
-    nav a:hover{font-weight: 600;}
-    
-    .mobil li{
-        border: solid 0.1em black ;
-        background-color: white;
-        color: rgb(172,45,66);
-    }
-    
-    .content{display: none;}
-    
-    .banner{ /*skal denne brukes?*/}
-          
-    .karusell{
-    width: 90%;
-    margin:3% 5% 3% 5%;
-    }
-    
-    footer{  
-        top:400px;
-        margin: 0 0 0 0; 
-    }
-        
+}
+.skjema{
+    width: 70%;
+    height: 65%;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
+.venstreside{
+    text-align: center;
+    width: 49%;
+    height: 100%;
+    float: left;
+    display: inline-block;
+    margin-right: 1%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    padding-right: 0.5%;
+    border-right: solid lightgray 3px;
+}
+
+.høyreside{
+    text-align: center;
+    width: 49%;
+    height: 100%;
+    display: inline-block;   
+}
+.høyreside article{
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1% 1% 1% 1%;
+}
+
+
+
+<!----- css for sponsorsiden    ------->
+}
+.sponsor{
+    display:block;
+    width:100%;
+    height:15em;
+    margin-bottom: 1em;
+    background-color: white;
+    opacity: 0.9;
+    color:black;
+}
+
+
+.sponsorimg img{
+	width:25%;
+    float:left;
+    width: 10em;
+    height:10em;
+    position: relative;
+    top:20%;
+}
+.sponsortekst p{
+	font-family:sans-serif;
+	line-height:1px;
+	float:right;
+	width:70%;
+	position:relative;
+	text-align:center;
+  	transform: translateY(-300%)
+}
+.sponsor a{text-decoration: none; letter-spacing: 1px;}
