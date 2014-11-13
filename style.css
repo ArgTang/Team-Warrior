@@ -251,8 +251,9 @@ nav li{
 /*CSS for regler.html----------------------------------------------------------------------------------------------*/
 
 article{
-	margin-left:5em;
+	margin-left:auto;
 	margin-right:auto;
+	margin-bottom:2em;
 	display: inline-block;
 	position: relative;    
 	font-weight:bold;
