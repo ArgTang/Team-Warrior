@@ -170,7 +170,7 @@ nav li{
 
 .bakgrunn{
     background-color: rgb(0,0,0);
-    background-color: rgba(255,255,255,0.2);; 
+    background-color: rgba(255,255,255,0.7);; 
     height: 150px;
     width: 150px;
     box-shadow: .2em .2em 1em .3em #242424 ;
@@ -349,8 +349,6 @@ h1{text-align:center;}
     padding-left: auto;
     padding-right: auto;
     width: auto;
-    padding-left: ;
-    
 }
 .skjema{
     width: 70%;
