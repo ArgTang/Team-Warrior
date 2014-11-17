@@ -1,4 +1,15 @@
 "use strict"; //compile all js in strict mode
+function dropdownopen(){
+       var dropdown = document.getElementById("dropmenu");
+    
+    if (dropdown.className === "visible") {
+        dropdown.className = "closed";
+    } else {
+        dropdown.className = "visible";
+    }
+    
+}
+
 
 function getDato() {
     var xmlhttp = new XMLHttpRequest();
@@ -31,7 +42,6 @@ function apne(i) {
         flipper.className = "flipper";
     }
 }
-
 
 // info om localstorage http://diveintohtml5.info/storage.html
 function supportsLocalStorage() {
