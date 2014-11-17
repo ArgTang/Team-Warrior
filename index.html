@@ -74,14 +74,15 @@
         
         <div id="apnekonkurranse" class="konkurranse">
          
-                 <input type="submit" value="test Vis Spørsmål" onclick="visKonkurranse(2)" onclick="#apnekonkurranse"><!--Dette er for testing!-->
+                 <input type="submit" value="test Vis Spørsmål" onclick="visKonkurranse(2)"><!--Dette er for testing!-->
 
           <div class="skjema">
            <a href="#Lukk" title="Lukk" class="Lukk">X</a>
             <div class="venstreside">
-            <p>Skriv inn ditt studentnummer i feltet under. Når du er klar trykk på send inn, og du er du med i trekningen!</p>
-            <form id="konkurranse" action="sendskjema()">
-                <p>Studentnummer: <input type="text" name="Snr"> </p>
+            <p id="spmmelding">Skriv inn ditt studentnummer i feltet under. Når du er klar trykk på send inn, og du er du med i trekningen!</p>
+            <div class="skjema">
+<!--            <form id="konkurranse" action="sendskjema()">-->
+                <p>Studentnummer: <input type="text" id="stdnr" name="Snr"> </p>
                 <!--<div class="ytreboks"> //Hva er disse for?
                         <div class="indreboks">-->
                 <p class="sporsmal" id="spm1">Hvor ble Jesus født?
@@ -94,11 +95,9 @@
                 </p>
                 
                 <div class="submit"><input type="submit" value="Send inn"></div>
-                    <!-- text field for server komunikasjon-->
-                    <input type="text" name="svar1" value="" style=display:none>
-                    <!-- text field for server komunikasjon-->
-                    <input type="text" name="svar2" value="" style=display:none>
-            </form>
+                <button value="Send inn" onclick="sendskjema()">Send inn</button>
+<!--            </form>-->
+            </div>
             </div>
             <div class="høyreside">
                 <div>

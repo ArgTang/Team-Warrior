@@ -1,10 +1,10 @@
 <?php
 
-/*if (isset($_GET['dato'])){
+if (isset($_GET['dato'])){
     getDato();
 } else if (isset($_GET['sendskjema'])) {
-    sendSvar();
-} else*/ if (isset($_GET['visKonkurranse'])) {
+    sendSvar(json_decode($_GET['sendskjema']));
+} else if (isset($_GET['visKonkurranse'])) {
     $dag = $_GET['visKonkurranse'];
     getSporsmal($dag);
 }
@@ -16,21 +16,12 @@
         echo date('d');
     }
             
-    function SendSvar() {
+    function SendSvar($svar) {
     // funksjon til å sende svar til mailen vår
-        //get svar og studnr
-        $stdnr = $_POST['Snr'];
-        $svar[0] = $_POST['svar1'];
-        $svar[1] = $_POST['svar2'];
-        $riktig = IKKE_RIKTIG;
-        //get riktigsvar
-        $riktigsvar = getSpørsmål(getDato());
-        //sjekkriktigsvar
-        if ($riktigsvar != null && $riktigsvar[4] == $svar[0] && $riktigsvar[9] == $svar[1]);
-            $riktig = RIKTIG_SVAR;
+
         //sendmail
         $to      = 'teamwarrior14@gmail.com';
-        $subject = $studnummer . " " . $riktig;
+        $subject = $svar[2] . " " . $riktig;
         $message = $svar;
         $headers = 'From: Adventskalender@hioa.no';
 
@@ -46,7 +37,7 @@
     //get dagen som blir purt etter
     // sjekker dato og sender tilbake oppgavene
     if ($dag <= 30 /*getdato()*/){ // get dato fail
-    $oppgave = array($oppgaver[$dag*10] , $oppgaver[$dag*10+1] , $oppgaver[$dag*10+2] , $oppgaver[$dag*10+3] , $oppgaver[$dag*10+4] ,  $oppgaver[$dag*10+5] ,  $oppgaver[$dag*10+6] ,  $oppgaver[$dag*10+7] ,  $oppgaver[$dag*10+8] ,  $oppgaver[$dag*10+9]);
+    $oppgave = array($oppgaver[$dag*12] , $oppgaver[$dag*12+1] , $oppgaver[$dag*12+2] , $oppgaver[$dag*12+3] , $oppgaver[$dag*12+4] ,  $oppgaver[$dag*12+5] ,  $oppgaver[$dag*12+6] ,  $oppgaver[$dag*12+7] ,  $oppgaver[$dag*12+8] ,  $oppgaver[$dag*12+9], $oppgaver[$dag*12+10], $oppgaver[$dag*12+11]);
     echo json_encode($oppgave);
     } else {
         echo json_encode(null);
