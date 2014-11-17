@@ -69,46 +69,40 @@
                 <li class="luke"><div class="flipper" id="flipper24" onclick="apne(24)"><div class="front" id="front24" data-nummer="24"></div><div class="back" id="back24"></div></div><div class="bakgrunn" id="bakgrunn24" onclick="visKonkurranse(24)"><a href="#apnekonkurranse">Klikk her for å delta</a></div></li>
                 </ul>
             <!-- text field for server komunikasjon-->
-            <input type="text" name="dag" value="" style=display:none>	
+            <input type="text" id="serverDato" value="TeamWarrior" style=display:none>	
+<!--            <p id="serverDato" style="display:none">TeamWarrior</p> -->
 		</div>
            
-        <!---<a href="#apnekonkurranse">Åpne konkurranse</a>--->
+        <a href="#apnekonkurranse">Test Åpne konkurranse</a> <!--Dette er for testing!-->
+        <input type="submit" value="test getdato" onclick="getDato()"> <!--Dette er for testing!-->
+
         
         <div id="apnekonkurranse" class="konkurranse">
+         
+                 <input type="submit" value="test Vis Spørsmål" onclick="visKonkurranse(2)" onclick="#apnekonkurranse"><!--Dette er for testing!-->
+
           <div class="skjema">
            <a href="#Lukk" title="Lukk" class="Lukk">X</a>
             <div class="venstreside">
-            <p>Skriv inn ditt studentnummer i feltet under. Når du har svart på spørsmålene og trykker på send inn, er du med i trekningen!</p>
+            <p>Skriv inn ditt studentnummer i feltet under. Når du er klar trykk på send inn, og du er du med i trekningen!</p>
             <form id="konkurranse" action="sendskjema()">
-                <p>Studentnummer: <br>
-                    <input type="text" name="Snr"> </p>
-                <p class="sporsmal1">Hvor ble Jesus født?
-                   <br>
-                    <div class="ytreboks">
-                        <div class="indreboks">
-                    <input type="radio" name="alt1" value="Jerusalem">Jerusalem<br>
-                    <input type="radio" name="alt2" value="Fredrikstad">Fredrikstad<br>
-                    <input type="radio" name="alt3" value="Nazaret">Nazaret<br>
-                    <input type="radio" name="alt4" value="Betlehem">Betlehem<br>
-                    <!-- text field for server komunikasjon-->
-                    <input type="text" name="svar1" value="" style=display:none>
-                            </div>
-                        </div>
+                <p>Studentnummer: <input type="text" name="Snr"> </p>
+                <!--<div class="ytreboks"> //Hva er disse for?
+                        <div class="indreboks">-->
+                <p class="sporsmal" id="spm1">Hvor ble Jesus født?
+<!--                    Her genererer js oppgavene-->
                 </p>
-                <p class="sporsmal2">Hvor gammel er Ulf:<br>
-                <div class="ytreboks">
-                    <div class="indreboks">
-                    <input type="radio" name="alt5" value="70 år gammel">70 år gammel<br>
-                    <input type="radio" name="alt6" value="75 år gammel">75 år gammel<br>
-                    <input type="radio" name="alt7" value="68 år gammel">68 år gammel<br>
-                    <input type="radio" name="alt8" value="28 år gammel">28 år gammel<br>
-                    <!-- text field for server komunikasjon-->
-                    <input type="text" name="svar2" value="" style=display:none>
-                        </div>
-                    </div>
+                <p class="sporsmal" id="spm2">Hvor gammel er Ulf:
+<!--                    Her genererer js oppgavene-->
+                 <!--       </div>
+                    </div>-->
                 </p>
                 
                 <div class="submit"><input type="submit" value="Send inn"></div>
+                    <!-- text field for server komunikasjon-->
+                    <input type="text" name="svar1" value="" style=display:none>
+                    <!-- text field for server komunikasjon-->
+                    <input type="text" name="svar2" value="" style=display:none>
             </form>
             </div>
             <div class="høyreside">

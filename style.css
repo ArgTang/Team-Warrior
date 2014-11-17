@@ -139,6 +139,7 @@ nav li{
         transform: rotateY(0deg);
 }
 
+
 .front:before{
     text-align: center;
     display: block;
@@ -154,13 +155,12 @@ nav li{
         transform: rotateY(180deg);
         background-image: url(Bilder/MAZElogoNY.png);
         text-align: center;
-    cursor: pointer;
+        cursor: pointer;
 }
 
 #back2{
     background-image: url(Bilder/Bekk.png);
     background-size: 150px;
-    
 }
 
 .back img{
@@ -170,16 +170,20 @@ nav li{
 
 .bakgrunn{
     background-color: rgb(0,0,0);
+<<<<<<< HEAD
     background-color: rgba(255,255,255,0.7);; 
+=======
+    background-color: rgba(255,255,255,0.2); 
+>>>>>>> origin/master
     height: 150px;
     width: 150px;
     box-shadow: .2em .2em 1em .3em #242424 ;
 }
 
-.bakgrunn:hover{
-    cursor: pointer;
-    
-}
+
+.content .front:before{content: attr(data-nummer);}
+
+.bakgrunn:hover{cursor: pointer;}
 
 .luke a{
     display:block;
@@ -187,14 +191,7 @@ nav li{
     padding-top: 50px;
 
     color: rgb(172,45,66);
-    text-decoration: none;
-    
-
-    
-}
-
-.content .front:before{
-    content: attr(data-nummer);
+    text-decoration: none; 
 }
 
 
@@ -219,7 +216,7 @@ nav li{
     pointer-events: none; /*istedet for user select ikke for IE <11*/
 }
 /*.snowflake:hover { cursor: default;}*//*pointer event istedet*/
-
+.snowflake:hover { pointer-events: none; }
 
 /*CSS for Om oss.html-------------------------------------------------------------------------------------------*/
 
@@ -258,8 +255,9 @@ nav li{
 /*CSS for regler.html----------------------------------------------------------------------------------------------*/
 
 article{
-	margin-left:5em;
+	margin-left:auto;
 	margin-right:auto;
+	margin-bottom:2em;
 	display: inline-block;
 	position: relative;    
 	font-weight:bold;
@@ -278,7 +276,7 @@ article:before{
 
 h1{text-align:center;}
 
-/*CSS for Spørremskjema ------------------------------------------------------------------*/
+/*CSS for Konkurranseskjema ------------------------------------------------------------------*/
 .konkurranse{
     z-index: 10000;
 	position: fixed;
@@ -298,7 +296,7 @@ h1{text-align:center;}
     position: relative;
 	margin: 4% auto;
     background: white;
-    font-size: 1.15em;
+    font-size: 1em;
     border-radius: 1em;
     padding: 2% 5% 2% 5%;
 }
@@ -320,7 +318,7 @@ h1{text-align:center;}
 }
 
 .konkurranse .submit{
-    text-align: center;
+    /*text-align: center;*/
     margin: 0;
     padding: 2% 0;
 }
@@ -339,7 +337,7 @@ h1{text-align:center;}
     height: 2em;
     color: red;
 }
-.ytreboks{   
+/*.ytreboks{   //Hva er disse for?
     margin: 0 auto;
     padding: 0 auto;
     display: inline-block;
@@ -349,7 +347,13 @@ h1{text-align:center;}
     padding-left: auto;
     padding-right: auto;
     width: auto;
+<<<<<<< HEAD
 }
+=======
+    padding-left: ;
+    
+}*/
+>>>>>>> origin/master
 .skjema{
     width: 70%;
     height: 65%;
@@ -358,11 +362,11 @@ h1{text-align:center;}
 }
 
 .venstreside{
-    text-align: center;
+    /*text-align: center;*/
     width: 49%;
     height: 100%;
     float: left;
-    display: inline-block;
+    display: inline-block; /*ingen effekt?*/
     margin-right: 1%;
     margin-top: 0%;
     margin-bottom: 0%;
@@ -371,21 +375,25 @@ h1{text-align:center;}
 }
 
 .høyreside{
-    text-align: center;
+    /*text-align: center;*/
+    text-align: justify;
+    
     width: 49%;
     height: 100%;
     display: inline-block;   
 }
+.høyreside >div img{display: block; margin-left: auto; margin-right: auto;}
+
 .høyreside article{
+    font-weight: 400; /*Hvor kommer BOLD fra?*/
+    line-height: 1em; /*hvor kommer større linjehøyde fra?*/
     margin-left: auto;
     margin-right: auto;
-    padding: 1% 1% 1% 1%;
+    padding: 1%;
 }
-
-
 
 <!----- css for sponsorsiden    ------->
-}
+
 .sponsor{
     display:block;
     width:100%;
@@ -405,6 +413,7 @@ h1{text-align:center;}
     position: relative;
     top:20%;
 }
+
 .sponsortekst p{
 	font-family:sans-serif;
 	line-height:1px;
@@ -414,4 +423,5 @@ h1{text-align:center;}
 	text-align:center;
   	transform: translateY(-300%)
 }
+
 .sponsor a{text-decoration: none; letter-spacing: 1px;}
