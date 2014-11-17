@@ -46,7 +46,7 @@
     //get dagen som blir purt etter
     // sjekker dato og sender tilbake oppgavene
     if ($dag <= 30 /*getdato()*/){ // get dato fail
-    $oppgave = array($oppgaver[$dag*10] , $oppgaver[$dag*10+1] , $oppgaver[$dag*10+2] , $oppgaver[$dag*10+3] , $oppgaver[$dag*10+4] ,  $oppgaver[$dag*10+5] ,  $oppgaver[$dag*10+6] ,  $oppgaver[$dag*10+7] ,  $oppgaver[$dag*10+8] ,  $oppgaver[$dag*10+9]);
+    $oppgave = array($oppgaver[$dag*12] , $oppgaver[$dag*12+1] , $oppgaver[$dag*12+2] , $oppgaver[$dag*12+3] , $oppgaver[$dag*12+4] ,  $oppgaver[$dag*12+5] ,  $oppgaver[$dag*12+6] ,  $oppgaver[$dag*12+7] ,  $oppgaver[$dag*12+8] ,  $oppgaver[$dag*12+9], $oppgaver[$dag*12+10], $oppgaver[$dag*12+11]);
     echo json_encode($oppgave);
     } else {
         echo json_encode(null);

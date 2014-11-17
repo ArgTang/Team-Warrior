@@ -150,22 +150,12 @@ function visKonkurranse(dag) {
     var spm,
         sporsmol = new XMLHttpRequest(),  
         d = new Date(),
-        n = d.getDate();
-    
-    var i;
-    var spm = document.querySelectorAll(".sporsmal");
-    var resp;
+        n = d.getDate(),
+        i,resp,
+        spm = document.querySelectorAll(".sporsmal");
 
-    /*for (i = 0; i < spm.length; i++) {
-        spm[i].innerHTML = 'Spørsmål' + (i+1) + '<br> ' +
-                    '<input type="radio"  name="svar' + (i+1) + '"  value=" ">Jerusalem ' + (i+1) + '<br>' +
-                    '<input type="radio"  name="svar' + (i+1) + '"  value=" ">Fredrikstad ' + (i+1) + '<br>' +
-                    '<input type="radio"  name="svar' + (i+1) + '"  value=" ">Nazaret ' + (i+1) + '<br>' +
-                    '<input type="radio"  name="svar' + (i+1) + '"  value=" ">Betlehem ' + (i+1) + '<br>';
-        console.log(spm[i]);
-    }*/
-    
     //spør server om dagens spørsmål
+    /*
     sporsmol.onreadystatechange = function () {
         if (sporsmol.readyState === 4 && sporsmol.status === 200) {
             console.log(sporsmol.responseText);
@@ -174,17 +164,17 @@ function visKonkurranse(dag) {
             console.log(resp[1]);
             //display dagens spørsmål til bruker
             for (i = 0; i < spm.length; i++) {
-                spm[i].innerHTML = resp[i] + '<br> ' +
-                    '<input type="radio"  name="svar' + (i+1) + '"  value=" ">' + resp[i + 1] + '<br>' +
-                    '<input type="radio"  name="svar' + (i+1) + '"  value=" ">' + resp[i + 2] + '<br>' +
-                    '<input type="radio"  name="svar' + (i+1) + '"  value=" ">' + resp[i + 3] + '<br>' +
-                    '<input type="radio"  name="svar' + (i+1) + '"  value=" ">' + resp[i + 4] + '<br>';
+                spm[i].innerHTML = resp[i*6] + '<br> ' +
+                    '<input type="radio"  name="svar' + (i+1) + '"  value=" ">' + resp[i*6 + 1] + '<br>' +
+                    '<input type="radio"  name="svar' + (i+1) + '"  value=" ">' + resp[i*6 + 2] + '<br>' +
+                    '<input type="radio"  name="svar' + (i+1) + '"  value=" ">' + resp[i*6 + 3] + '<br>' +
+                    '<input type="radio"  name="svar' + (i+1) + '"  value=" ">' + resp[i*6 + 4] + '<br>';
                 console.log(spm[i]);
             }
         }
     }
     sporsmol.open("GET", "server.php?visKonkurranse=" + dag, true);
     sporsmol.send();
-}
+}*/
 
 
