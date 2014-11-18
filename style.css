@@ -210,6 +210,10 @@ footer:before{
     color: rgb(172,45,66);
     text-decoration: none; 
 }
+.content ul{
+	padding:0;
+	text-align:center;
+}
 
 
 /*----------------------------------------- Luke END -----------------------------*/
@@ -403,7 +407,7 @@ h1{text-align:center;}
     padding: 1%;
 }
 
-<!----- css for sponsorsiden    ------->
+/*<!----- css for sponsorsiden    ------->*/
 
 .sponsor{
     display:block;
