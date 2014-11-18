@@ -1,6 +1,9 @@
+/*jslint vars: true, plusplus: true, devel: true, nomen: true, indent: 4, maxerr: 50 */
+/*global define */
 "use strict"; //compile all js in strict mode
-function dropdownopen(){
-       var dropdown = document.getElementById("dropmenu");
+function dropdownopen() {
+    //funksjon for å vise mobil nav
+    var dropdown = document.getElementById("dropmenu");
     
     if (dropdown.className === "visible") {
         dropdown.className = "closed";
@@ -13,7 +16,7 @@ function dropdownopen(){
 
 function getDato() {
     var xmlhttp = new XMLHttpRequest();
-    //metode for å finne dato fra PHP server
+    //metode for å finne dato fra PHP server som er oerflødig pr nå
     xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
             var dato = xmlhttp.responseText;
@@ -44,10 +47,12 @@ function apne(i) {
 
 // info om localstorage http://diveintohtml5.info/storage.html
 function supportsLocalStorage() {
+    //sjekker om localstorage er støttet (for alle uten veldig gamle nettlesere)
     return typeof (Storage) !== "undefined";
 }
 
 function inputvalidering(streng) {
+    //sjekker om input er et tall
     console.log("inputvalidering()");
     if (streng === "") { return false; } //sjekker om det er fylt inn noe
     if (streng.indexOf("s") !== -1) {
@@ -57,11 +62,12 @@ function inputvalidering(streng) {
 }
 
 function lagrebruker(studentnummer) {
+    //Lagrer bruker i localstorage
     console.log("lagrebruker()");
     if (!supportsLocalStorage()) { return -1; } //sjekker om localstorage metode er tiljengelig
-    if (inputvalidering(studentnummer)) {       //bug her!!!!
+    if (inputvalidering(studentnummer)) { //kan nok skrives om sammen med inputvalidering
         if (studentnummer.indexOf("s") !== -1) {
-        studentnummer = studentnummer.slice(1);
+            studentnummer = studentnummer.slice(1);
         } //fjerner s
         
         localStorage['deltaker'] = studentnummer;
@@ -73,6 +79,7 @@ function lagrebruker(studentnummer) {
 }
 
 function hentebruker() {
+    //Henter studentnummer fra Localstorage hvis tilgjengelig
     console.log("hentebruker()");
     if (!supportsLocalStorage()) { return false; }
     var studentnummer = parseInt(localStorage['deltaker'], 10);
@@ -86,6 +93,7 @@ function hentebruker() {
 }
 
 function fyllinnbruker() {
+    //kan kombineres med hentebruker?
     console.log("fyllinnbruker()");
     var stud = hentebruker();
     if (stud !== null || stud !== undefined) { //hvis bruker er lagret
@@ -93,7 +101,8 @@ function fyllinnbruker() {
     }
 }
     
-function sendskjema() { //not working, tenk at dette er pseudokode
+function sendskjema() {
+    //sjekker om alle felt er utfylt, og sender avgårde svar, git også tilbakemeling
     console.log("sendskjema()");
     var input = document.getElementById('stdnr').value,
         bruker_lagret = lagrebruker(input),
@@ -106,7 +115,7 @@ function sendskjema() { //not working, tenk at dette er pseudokode
     if (bruker_lagret || (bruker_lagret === -1 && inputvalidering(input))) {
         // fryser og finner hvilken radialmeny som er krysset av
         console.log("radio " + answers[0]);
-        for(i = 0; i< answers.length; i++){
+        for (i = 0; i < answers.length; i++) {
             answers[i].disabled = true; //disable radiobutton
             if (answers[i].checked) {
                 srver[srver.length] = i + 1;
@@ -131,8 +140,9 @@ function sendskjema() { //not working, tenk at dette er pseudokode
             //melding hvis ikke svart på begge spørsmål
             melding = "Vennligst sjekk at du har krysset av et svar på begge spørsmål!";
             console.log("her");
-            for(i = 0; i < answers.length; i++)
-                answers[i].disabled = false; //låser opp igjrn radial knappene
+            for (i = 0; i < answers.length; i++) {
+                answers[i].disabled = false; //låser opp igjen radial knappene
+            }
         }
     } else {
         //melding hvis ikke studentnr godkjent
@@ -146,6 +156,7 @@ function sendskjema() { //not working, tenk at dette er pseudokode
 }
 
 function visKonkurranse(dag) {
+    //Henter konkuranse fra etterspurt dag og setter inn i skjema
     console.log("visKonkuranse(" + dag + ")");
     fyllinnbruker(); //fyller inn studnummer hvis dette er i cache
     var sporsmol = new XMLHttpRequest(),
