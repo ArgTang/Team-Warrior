@@ -15,13 +15,14 @@
     nav a:hover{letter-spacing: normal}
     .hovedmeny{display: none;}
     
-    .konkurranse venstreside{border-right:solid white 0px;}
-    .konkurranse .høyreside article{
-    display: none;
+    .konkurransewrapper{flex-flow: column-reverse nowrap}
+    .konkurranse .venstreside{
+        border-right:solid white 0px;
+        width: 90%
     }
-    .konkurranse .høyreside img{order:1;}
-    .venstreside .høyreside {flex:1 100%}
-}
+    .konkurranse .høyreside{width: 90%; padding: 0;}
+    .konkurranse .høyreside article{display: none;}
+    
 
 @media screen and (max-width: 620px) {
     .banner{height: 9em;}
@@ -32,7 +33,6 @@
     }
     
     .front:before {font-size: 3.5em;}
-    
     .bakgrunn a{font-size: 0.7em;}
 }
 
@@ -45,6 +45,5 @@
     }
     
     .front:before {font-size: 3em;}
-    
     .bakgrunn a{font-size: 0.7em;}
 }

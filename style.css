@@ -41,6 +41,7 @@ footer:before{
 
 nav ul{
     display: flex;
+    -webkit-display:flex; /*safari*/
     flex-flow: row wrap;
     justify-content: flex-end;
     position: absolute;
@@ -56,7 +57,8 @@ nav a{
     color: black; 
     padding: 0.4em;
     text-decoration: none;
-    transition: letter-spacing .5s ease;  
+    transition: letter-spacing 0.5s ease;
+    letter-spacing: 0;/*fix for FF*/
 }
 
 nav a:hover{
@@ -117,6 +119,7 @@ nav a:hover{
 
 .lukewrapper {
     display: flex;
+    -webkit-display:flex; /*safari*/
     flex-flow: row wrap;
     justify-content: center;
 }
@@ -143,8 +146,8 @@ nav a:hover{
 .flipperopen{
         transition: 1.2s ease;
         -webkit-transform-style: preserve-3d;
-        -webkit-transform-origin: 0 0;
         transform-style: preserve-3d;
+        -webkit-transform-origin: 0 0;
         transform-origin: 0 0;
         -webkit-transform: rotateY(180deg);
         transform: rotateY(180deg);
@@ -303,7 +306,7 @@ h1{text-align:center;}
 
 .konkurransewrapper{
     display: flex;
-    -webkit-display: flex; /*safari*/
+    -webkit-display:flex; /*safari*/
     flex-flow: row nowrap;
     width: 70%;
     height: 80%;
@@ -321,6 +324,9 @@ h1{text-align:center;}
 }
 
 .konkurranse .høyreside{
+    display: flex;
+    -webkit-display:flex; /*safari*/
+    flex-flow: column nowrap;
     margin: auto;
     width: 49%;
     text-align: justify;
@@ -328,8 +334,7 @@ h1{text-align:center;}
 }
 
 .konkurranse img{
-    position:relative;
-    margin:auto; /*Why u no work?????*/
+    margin:auto;
 }
 
 .høyreside article{    /*få tak i en uformatert tekst?*/
