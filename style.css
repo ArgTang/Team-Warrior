@@ -41,7 +41,7 @@ footer:before{
 
 nav ul{
     display: flex;
-    -webkit-display:flex; /*safari*/
+    display:-webkit-flex; /*safari*/
     flex-flow: row wrap;
     justify-content: flex-end;
     position: absolute;
@@ -119,7 +119,7 @@ nav a:hover{
 
 .lukewrapper {
     display: flex;
-    -webkit-display:flex; /*safari*/
+    display: -webkit-flex; /*safari*/
     flex-flow: row wrap;
     justify-content: center;
 }
@@ -306,7 +306,7 @@ h1{text-align:center;}
 
 .konkurransewrapper{
     display: flex;
-    -webkit-display:flex; /*safari*/
+    display: -webkit-flex; /*safari*/
     flex-flow: row nowrap;
     width: 70%;
     height: 80%;
@@ -325,7 +325,7 @@ h1{text-align:center;}
 
 .konkurranse .høyreside{
     display: flex;
-    -webkit-display:flex; /*safari*/
+    display: -webkit-flex; /*safari*/
     flex-flow: column nowrap;
     margin: auto;
     width: 49%;
@@ -334,6 +334,7 @@ h1{text-align:center;}
 }
 
 .konkurranse img{
+    width: 10em; /*IE fix*/
     margin:auto;
 }
 
