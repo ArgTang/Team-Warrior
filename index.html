@@ -13,8 +13,8 @@
     <body>
     <div class="test">
         <div class="banner">
-            <div id="logo"><a href="index.html"><img src="Bilder/Hioa_jule_logo.png" alt="logobild med nisselue"></a></div>
-            <div onclick="dropdownopen()" id="meny"><a><img src="Bilder/navbarstripes.png" alt="bakgrunn til mobilnavigasjon"></a></div>
+            <div id="logo"><a href="index.html"><img src="Bilder/Hioa_jule_logo.png"/</a></div>
+            <div onclick="dropdownopen()" id="meny" ><a><img src="Bilder/navbarstripes.png"/></a></div>
             <div class="navbar">
                 <nav>
                     <ul>
@@ -63,13 +63,17 @@
                 <li class="luke"><div class="flipper" id="flipper23" onclick="apne(23)"><div class="front" id="front23" data-nummer="23"></div><div class="back" id="back23"></div></div><div class="bakgrunn" id="bakgrunn23" onclick="visKonkurranse(23)"><a href="#apnekonkurranse">Klikk her for å delta</a></div></li>
                 <li class="luke"><div class="flipper" id="flipper24" onclick="apne(24)"><div class="front" id="front24" data-nummer="24"></div><div class="back" id="back24"></div></div><div class="bakgrunn" id="bakgrunn24" onclick="visKonkurranse(24)"><a href="#apnekonkurranse">Klikk her for å delta</a></div></li>
                 </ul>
+            <!-- text field for server komunikasjon-->
+            <input type="text" id="serverDato" value="TeamWarrior" style=display:none>	
+<!--            <p id="serverDato" style="display:none">TeamWarrior</p> -->
 		</div>
-
+        
         <div id="apnekonkurranse" class="konkurranse">
-        <div class="skjema">
-            <a href="#Lukk" title="Lukk" class="Lukk">X</a>
+
+          <div class="container">
+           <a href="#Lukk" title="Lukk" class="Lukk">X</a>
             <div class="venstreside">
-                <p id="spmmelding">Skriv inn ditt studentnummer i feltet under. Når du er klar trykk på send inn, og du er du med i trekningen!</p>
+            <p id="spmmelding">Skriv inn ditt studentnummer i feltet under. Når du er klar trykk på send inn, og du er du med i trekningen!</p>
                 <div class="skjema">
                     <p>Studentnummer: <input type="text" id="stdnr" name="Snr"> </p>
                 <!--<div class="ytreboks"> //Hva er disse for?
@@ -95,7 +99,7 @@
 Grunnleggerne av Maze har det siste 10-året vært glødende opptatt av hva som skal til for å få resten av medarbeiderne og resten av de lokale lederne til å gjøre det samme som de som skaper de beste resultatene. Interessen er drevet av en overbevisning om at dette er den korteste veien til dramatisk resutatforbedring i de aller fleste salgs- og service organisasjoner. Metoden og verktøyene ble først utviklet i nært samarbeid med flere retail kjeder, men er senere også blitt videreutviklet for bank, forsikring og andre typer salgsorganisasjoner. 
                 </article>
             </div>
-        </div>
+            </div>
         </div>
 
     </div>
