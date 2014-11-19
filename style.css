@@ -8,7 +8,6 @@ body{
     background-image: URL(Bilder/juledekorasjon.jpg);
 	background-attachment: fixed;
     background-position: center;
-    background-size: 100%;
     background-repeat: no-repeat;
 }
 
@@ -35,21 +34,24 @@ footer:before{
 	opacity: .7;
 }
 
-.test{
+.innholdswrapper{
 	margin-right:10%;
 	margin-left:10%;
 }
 
-.navbar {
-    top: 25px;
-    right: 0;
+nav ul{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
     position: absolute;
+    top: 25px;
+    right: 2em;
     font-size: 1.1em;
-    clear: both; 
     text-transform: uppercase;
+    list-style: none;
 }
 
-.navbar nav a{
+nav a{
     border-left: solid black .08em;
     color: black; 
     padding: 0.4em;
@@ -57,20 +59,12 @@ footer:before{
     transition: letter-spacing .5s ease;  
 }
 
-.navbar nav a:hover{
+nav a:hover{
     letter-spacing: .15em;
     font-weight: 600;
 }
 
-.navbar nav li{
-    bottom:100%;
-    text-align:center;
-    width:6em;
-    list-style-type: none;
-    display: inline;
-}
-
-.visible nav{
+.visible{
     z-index: 1;
     position: absolute;
     right: 25px;
@@ -79,7 +73,7 @@ footer:before{
     border: solid white;
 }
 
-.closed nav{ display: none;}
+.closed { display: none;}
 
 .visible li{
     list-style-type: none;
@@ -102,6 +96,7 @@ footer:before{
     right: 25px;
     top: 25px;
     z-index: 3;
+    cursor: pointer;
 }
 
 #meny img{height: 40px;}
@@ -120,36 +115,39 @@ footer:before{
 
 /* --------------------------------------Luke START -------------------------------*/
 
-
-.luke {
-    display: inline-block;
-    margin:0.6em;
+.lukewrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
 }
 
-.flipperopen{
-        transition: 1.2s;
--webkit-transform-style: preserve-3d;
--webkit-transform-origin: 0 0;
-        transform-style: preserve-3d;
-        transform-origin: 0 0;
-        position: relative;
--webkit-transform: rotateY(180deg);
-        transform: rotateY(180deg);
-}
+.luke {margin: 0.4em;}
+
+
 
 .luke, .front, .back {
+    list-style: none;
     width: 150px;
     height: 150px;
 }
 
 .flipper {
-        transition: 1.2s;
--webkit-transform-style: preserve-3d;
--webkit-transform-origin: 0 0;
+        transition: 1.2s ease;
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        -webkit-transform-origin: 0 0;
+        transform-origin: 0 0;
+        cursor: pointer;
+}
+
+.flipperopen{
+        transition: 1.2s ease;
+        -webkit-transform-style: preserve-3d;
+        -webkit-transform-origin: 0 0;
         transform-style: preserve-3d;
         transform-origin: 0 0;
-        position: relative;
-        cursor: pointer;
+        -webkit-transform: rotateY(180deg);
+        transform: rotateY(180deg);
 }
 
 .front, .back {
@@ -163,7 +161,7 @@ footer:before{
 .front {
         background-color: rgb(172,45,66);
         z-index: 2;
--webkit-transform: rotateY(0deg);
+        -webkit-transform: rotateY(0deg);
         transform: rotateY(0deg);
 }
 
@@ -179,16 +177,13 @@ footer:before{
 }
 
 .back {
--webkit-transform: rotateY(180deg);
+        -webkit-transform: rotateY(180deg);
         transform: rotateY(180deg);
         background-image: url(Bilder/MAZElogoNY.png);
-        text-align: center;
         cursor: pointer;
 }
 
-#back2{
-    background-image: url(Bilder/Bekk.png);
-}
+#back2{background-image: url(Bilder/Bekk.png);}
 
 .back img{
     height: 200px;
@@ -212,12 +207,6 @@ footer:before{
     color: rgb(172,45,66);
     text-decoration: none; 
 }
-
-.content ul {
-	padding:0;
-    text-align: center;
-}
-
 
 /*----------------------------------------- Luke END -----------------------------*/
 
@@ -312,16 +301,40 @@ h1{text-align:center;}
 	pointer-events: none;
 }
 
-.container{
+.konkurransewrapper{
+    display: flex;
+    -webkit-display: flex; /*safari*/
+    flex-flow: row nowrap;
     width: 70%;
     height: 80%;
     position: relative;
-    margin-top: auto;
-    margin-bottom: auto;
     background: white;
     padding: 2% 5% 2% 5%;
     border-radius: 1em;
     margin: 4% auto;
+}
+
+.konkurranse .venstreside{
+    margin: auto;
+    width: 49%;
+    border-right: solid lightgray 3px;
+}
+
+.konkurranse .høyreside{
+    margin: auto;
+    width: 49%;
+    text-align: justify;
+    padding: 1%;
+}
+
+.konkurranse img{
+    position:relative;
+    margin:auto; /*Why u no work?????*/
+}
+
+.høyreside article{    /*få tak i en uformatert tekst?*/
+    font-weight: 400; /*Hvor kommer BOLD fra?*/
+    line-height: 1em; /*hvor kommer større linjehøyde fra?*/
 }
 
 .konkurranse:target {
@@ -329,64 +342,29 @@ h1{text-align:center;}
 	pointer-events: auto;
 }
 
-.Lukk {
+.konkurranse .Lukk {
     color: red;
     font-size: 1em;
 	position: absolute;
 	right: 0.50em;
     top: 0.3em;
-	text-align: center;
 	text-decoration: none;
 	font-weight: bold;
 }
 
-.konkurranse .submit{
-    margin: 0;
-    padding: 2% 0;
-}
-
-[name="Snr"]{
+.konkurranse [name="Snr"]{
     font-size: inherit;
     font-family: inherit;
 }
 
 
-[value="Send inn"]{
+.konkurranse [value="Send inn"]{
     font-family: inherit;
     font-size: 0.7em;
     font-weight: 500;
-    width: 5em;
+    width: 6em;
     height: 2em;
     color: red;
-}
-
-.venstreside{
-    width: 49%;
-    height: 100%;
-    float: left;        /*float og inline block funker ikke sammen*/
-    display: inline-block; /*ingen effekt?*/
-    margin-right: 1%;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-right: 0.5%;
-    border-right: solid lightgray 3px;
-}
-
-.høyreside{
-    text-align: justify;
-    width: 49%;
-    height: 100%;
-    display: inline-block;   
-}
-
-.høyreside div img{display: block; margin-left: auto; margin-right: auto;}
-
-.høyreside article{
-    font-weight: 400; /*Hvor kommer BOLD fra?*/
-    line-height: 1em; /*hvor kommer større linjehøyde fra?*/
-    margin-left: auto;
-    margin-right: auto;
-    padding: 1%;
 }
 
 /*------------- css for sponsorsiden    ------------------------------------*/

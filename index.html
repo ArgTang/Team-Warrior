@@ -1,108 +1,91 @@
 <!DOCTYPE html>
 
-<html lang="nb"> <!-- Her kan vi bytte til nb hvis vi skriver norsk bokmål-->
+<html lang="nb">
     <head>
 		<meta charset="UTF-8">
         <meta name="viewport" content="width=width, initial-scale=1.0">
-        <meta name="author" content="Team Warrior HIOA" />
-  		<link id="css" rel="stylesheet" href="style.css">
-  		<link id="media-queries" rel="stylesheet" href="media-queries.css">
+        <meta name="author" content="Team Warrior HIOA">
+  		<link rel="stylesheet" href="style.css">
+  		<link rel="stylesheet" href="media-queries.css">
   		<title title="HIOA Julekalender">HIOA studentjulekalender</title>
 	</head>
 
     <body>
-    <div class="test">
+    <div class="innholdswrapper">
         <div class="banner">
             <div id="logo"><a href="index.html"><img src="Bilder/Hioa_jule_logo.png" alt="logobild med nisselue"></a></div>
             <div onclick="dropdownopen()" id="meny"><a><img src="Bilder/navbarstripes.png" alt="bakgrunn til mobilnavigasjon"></a></div>
-            <div class="navbar">
-                <nav>
-                    <ul>
-                        <li><a href="index.html">HJEM</a></li>
-                        <li><a href="Omoss.html">OM OSS</a></li>
-                        <li><a href="sponsorer.html">SPONSORER</a></li>
-                        <li><a href="Regler.html">REGLER</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div id="dropmenu" class="closed">
-                <nav>
-                    <ul>
-                        <li><a href="index.html">HJEM</a></li>
-                        <li><a href="Omoss.html">OM OSS</a></li>
-                        <li><a href="sponsorer.html">SPONSORER</a></li>
-                        <li><a href="Regler.html">REGLER</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-        <div class="content">
-            <ul>
-                <li class="luke"><div class="flipper" id="flipper1" onclick="apne(1)"><div class="front" id="front1" data-nummer="1"></div><div class="back" id="back1"></div></div><div class="bakgrunn" id="bakgrunn1" onclick="visKonkurranse(1)" ><a href="#apnekonkurranse">Klikk her for å delta</a></div></li>
-                <li class="luke"><div class="flipper" id="flipper2" onclick="apne(2)"><div class="front" id="front2" data-nummer="2"></div><div class="back" id="back2"></div></div><div class="bakgrunn" id="bakgrunn2" onclick="visKonkurranse(2)"><a href="#apnekonkurranse">Klikk her for å delta</a></div></li>
-                <li class="luke"><div class="flipper" id="flipper3" onclick="apne(3)"><div class="front" id="front3" data-nummer="3"></div><div class="back" id="back3"></div></div><div class="bakgrunn" id="bakgrunn3" onclick="visKonkurranse(3)"><a href="#apnekonkurranse">Klikk her for å delta</a></div></li>
-                <li class="luke"><div class="flipper" id="flipper4" onclick="apne(4)"><div class="front" id="front4" data-nummer="4"></div><div class="back" id="back4"></div></div><div class="bakgrunn" id="bakgrunn4" onclick="visKonkurranse(4)"><a href="#apnekonkurranse">Klikk her for å delta</a></div></li>
-                <li class="luke"><div class="flipper" id="flipper5" onclick="apne(5)"><div class="front" id="front5" data-nummer="5"></div><div class="back" id="back5"></div></div><div class="bakgrunn" id="bakgrunn5" onclick="visKonkurranse(5)"><a href="#apnekonkurranse">Klikk her for å delta</a></div></li>
-                <li class="luke"><div class="flipper" id="flipper6" onclick="apne(6)"><div class="front" id="front6" data-nummer="6"></div><div class="back" id="back6"></div></div><div class="bakgrunn" id="bakgrunn6" onclick="visKonkurranse(6)"><a href="#apnekonkurranse">Klikk her for å delta</a></div></li>
-                <li class="luke"><div class="flipper" id="flipper7" onclick="apne(7)"><div class="front" id="front7" data-nummer="7"></div><div class="back" id="back7"></div></div><div class="bakgrunn" id="bakgrunn7" onclick="visKonkurranse(7)"><a href="#apnekonkurranse">Klikk her for å delta</a></div></li>
-                <li class="luke"><div class="flipper" id="flipper8" onclick="apne(8)"><div class="front" id="front8" data-nummer="8"></div><div class="back" id="back8"></div></div><div class="bakgrunn" id="bakgrunn8" onclick="visKonkurranse(8)"><a href="#apnekonkurranse">Klikk her for å delta</a></div></li>
-                <li class="luke"><div class="flipper" id="flipper9" onclick="apne(9)"><div class="front" id="front9" data-nummer="9"></div><div class="back" id="back9"></div></div><div class="bakgrunn" id="bakgrunn9" onclick="visKonkurranse(9)"><a href="#apnekonkurranse">Klikk her for å delta</a></div></li>
-                <li class="luke"><div class="flipper" id="flipper10" onclick="apne(10)"><div class="front" id="front10" data-nummer="10"></div><div class="back" id="back10"></div></div><div class="bakgrunn" id="bakgrunn10" onclick="visKonkurranse(10)"><a href="#apnekonkurranse">Klikk her for å delta</a></div></li>
-                <li class="luke"><div class="flipper" id="flipper11" onclick="apne(11)"><div class="front" id="front11" data-nummer="11"></div><div class="back" id="back11"></div></div><div class="bakgrunn" id="bakgrunn11" onclick="visKonkurranse(11)"><a href="#apnekonkurranse">Klikk her for å delta</a></div></li>
-                <li class="luke"><div class="flipper" id="flipper12" onclick="apne(12)"><div class="front" id="front12" data-nummer="12"></div><div class="back" id="back12"></div></div><div class="bakgrunn" id="bakgrunn12" onclick="visKonkurranse(12)"><a href="#apnekonkurranse">Klikk her for å delta</a></div></li>
-                <li class="luke"><div class="flipper" id="flipper13" onclick="apne(13)"><div class="front" id="front13" data-nummer="13"></div><div class="back" id="back13"></div></div><div class="bakgrunn" id="bakgrunn13" onclick="visKonkurranse(13)"><a href="#apnekonkurranse">Klikk her for å delta</a></div></li>
-                <li class="luke"><div class="flipper" id="flipper14" onclick="apne(14)"><div class="front" id="front14" data-nummer="14"></div><div class="back" id="back14"></div></div><div class="bakgrunn" id="bakgrunn14" onclick="visKonkurranse(14)"><a href="#apnekonkurranse">Klikk her for å delta</a></div></li>
-                <li class="luke"><div class="flipper" id="flipper15" onclick="apne(15)"><div class="front" id="front15" data-nummer="15"></div><div class="back" id="back15"></div></div><div class="bakgrunn" id="bakgrunn15" onclick="visKonkurranse(15)"><a href="#apnekonkurranse">Klikk her for å delta</a></div></li>
-                <li class="luke"><div class="flipper" id="flipper16" onclick="apne(16)"><div class="front" id="front16" data-nummer="16"></div><div class="back" id="back16"></div></div><div class="bakgrunn" id="bakgrunn16" onclick="visKonkurranse(16)"><a href="#apnekonkurranse">Klikk her for å delta</a></div></li>
-                <li class="luke"><div class="flipper" id="flipper17" onclick="apne(17)"><div class="front" id="front17" data-nummer="17"></div><div class="back" id="back17"></div></div><div class="bakgrunn" id="bakgrunn17" onclick="visKonkurranse(17)"><a href="#apnekonkurranse">Klikk her for å delta</a></div></li>
-                <li class="luke"><div class="flipper" id="flipper18" onclick="apne(18)"><div class="front" id="front18" data-nummer="18"></div><div class="back" id="back18"></div></div><div class="bakgrunn" id="bakgrunn18" onclick="visKonkurranse(18)"><a href="#apnekonkurranse">Klikk her for å delta</a></div></li>
-                <li class="luke"><div class="flipper" id="flipper19" onclick="apne(19)"><div class="front" id="front19" data-nummer="19"></div><div class="back" id="back19"></div></div><div class="bakgrunn" id="bakgrunn19" onclick="visKonkurranse(19)"><a href="#apnekonkurranse">Klikk her for å delta</a></div></li>
-                <li class="luke"><div class="flipper" id="flipper20" onclick="apne(20)"><div class="front" id="front20" data-nummer="20"></div><div class="back" id="back20"></div></div><div class="bakgrunn" id="bakgrunn20" onclick="visKonkurranse(20)"><a href="#apnekonkurranse">Klikk her for å delta</a></div></li>
-                <li class="luke"><div class="flipper" id="flipper21" onclick="apne(21)"><div class="front" id="front21" data-nummer="21"></div><div class="back" id="back21"></div></div><div class="bakgrunn" id="bakgrunn21" onclick="visKonkurranse(21)"><a href="#apnekonkurranse">Klikk her for å delta</a></div></li>
-                <li class="luke"><div class="flipper" id="flipper22" onclick="apne(22)"><div class="front" id="front22" data-nummer="22"></div><div class="back" id="back22"></div></div><div class="bakgrunn" id="bakgrunn22" onclick="visKonkurranse(22)"><a href="#apnekonkurranse">Klikk her for å delta</a></div></li>
-                <li class="luke"><div class="flipper" id="flipper23" onclick="apne(23)"><div class="front" id="front23" data-nummer="23"></div><div class="back" id="back23"></div></div><div class="bakgrunn" id="bakgrunn23" onclick="visKonkurranse(23)"><a href="#apnekonkurranse">Klikk her for å delta</a></div></li>
-                <li class="luke"><div class="flipper" id="flipper24" onclick="apne(24)"><div class="front" id="front24" data-nummer="24"></div><div class="back" id="back24"></div></div><div class="bakgrunn" id="bakgrunn24" onclick="visKonkurranse(24)"><a href="#apnekonkurranse">Klikk her for å delta</a></div></li>
+            <nav class="hovedmeny">
+                <ul>
+                    <li><a href="index.html">HJEM</a></li>
+                    <li><a href="Omoss.html">OM OSS</a></li>
+                    <li><a href="sponsorer.html">SPONSORER</a></li>
+                    <li><a href="Regler.html">REGLER</a></li>
                 </ul>
-            <!-- text field for server komunikasjon-->
-            <input type="text" id="serverDato" value="TeamWarrior" style=display:none>	
-<!--            <p id="serverDato" style="display:none">TeamWarrior</p> -->
-		</div>
+            </nav>
+            <nav id="dropmenu" class="closed">
+                <ul>
+                    <li><a href="index.html">HJEM</a></li>
+                    <li><a href="Omoss.html">OM OSS</a></li>
+                    <li><a href="sponsorer.html">SPONSORER</a></li>
+                    <li><a href="Regler.html">REGLER</a></li>
+                </ul>
+            </nav>
+        </div>
+        <ul class="lukewrapper">
+            <li class="luke"><div class="flipper" id="flipper1" onclick="apne(1)"><div class="front" id="front1" data-nummer="1"></div><div class="back" id="back1"></div></div><div class="bakgrunn" id="bakgrunn1" onclick="visKonkurranse(1)" ><a href="#apnekonkurranse">Klikk her for å delta</a></div></li>
+            <li class="luke"><div class="flipper" id="flipper2" onclick="apne(2)"><div class="front" id="front2" data-nummer="2"></div><div class="back" id="back2"></div></div><div class="bakgrunn" id="bakgrunn2" onclick="visKonkurranse(2)"><a href="#apnekonkurranse">Klikk her for å delta</a></div></li>
+            <li class="luke"><div class="flipper" id="flipper3" onclick="apne(3)"><div class="front" id="front3" data-nummer="3"></div><div class="back" id="back3"></div></div><div class="bakgrunn" id="bakgrunn3" onclick="visKonkurranse(3)"><a href="#apnekonkurranse">Klikk her for å delta</a></div></li>
+            <li class="luke"><div class="flipper" id="flipper4" onclick="apne(4)"><div class="front" id="front4" data-nummer="4"></div><div class="back" id="back4"></div></div><div class="bakgrunn" id="bakgrunn4" onclick="visKonkurranse(4)"><a href="#apnekonkurranse">Klikk her for å delta</a></div></li>
+            <li class="luke"><div class="flipper" id="flipper5" onclick="apne(5)"><div class="front" id="front5" data-nummer="5"></div><div class="back" id="back5"></div></div><div class="bakgrunn" id="bakgrunn5" onclick="visKonkurranse(5)"><a href="#apnekonkurranse">Klikk her for å delta</a></div></li>
+            <li class="luke"><div class="flipper" id="flipper6" onclick="apne(6)"><div class="front" id="front6" data-nummer="6"></div><div class="back" id="back6"></div></div><div class="bakgrunn" id="bakgrunn6" onclick="visKonkurranse(6)"><a href="#apnekonkurranse">Klikk her for å delta</a></div></li>
+            <li class="luke"><div class="flipper" id="flipper7" onclick="apne(7)"><div class="front" id="front7" data-nummer="7"></div><div class="back" id="back7"></div></div><div class="bakgrunn" id="bakgrunn7" onclick="visKonkurranse(7)"><a href="#apnekonkurranse">Klikk her for å delta</a></div></li>
+            <li class="luke"><div class="flipper" id="flipper8" onclick="apne(8)"><div class="front" id="front8" data-nummer="8"></div><div class="back" id="back8"></div></div><div class="bakgrunn" id="bakgrunn8" onclick="visKonkurranse(8)"><a href="#apnekonkurranse">Klikk her for å delta</a></div></li>
+            <li class="luke"><div class="flipper" id="flipper9" onclick="apne(9)"><div class="front" id="front9" data-nummer="9"></div><div class="back" id="back9"></div></div><div class="bakgrunn" id="bakgrunn9" onclick="visKonkurranse(9)"><a href="#apnekonkurranse">Klikk her for å delta</a></div></li>
+            <li class="luke"><div class="flipper" id="flipper10" onclick="apne(10)"><div class="front" id="front10" data-nummer="10"></div><div class="back" id="back10"></div></div><div class="bakgrunn" id="bakgrunn10" onclick="visKonkurranse(10)"><a href="#apnekonkurranse">Klikk her for å delta</a></div></li>
+            <li class="luke"><div class="flipper" id="flipper11" onclick="apne(11)"><div class="front" id="front11" data-nummer="11"></div><div class="back" id="back11"></div></div><div class="bakgrunn" id="bakgrunn11" onclick="visKonkurranse(11)"><a href="#apnekonkurranse">Klikk her for å delta</a></div></li>
+            <li class="luke"><div class="flipper" id="flipper12" onclick="apne(12)"><div class="front" id="front12" data-nummer="12"></div><div class="back" id="back12"></div></div><div class="bakgrunn" id="bakgrunn12" onclick="visKonkurranse(12)"><a href="#apnekonkurranse">Klikk her for å delta</a></div></li>
+            <li class="luke"><div class="flipper" id="flipper13" onclick="apne(13)"><div class="front" id="front13" data-nummer="13"></div><div class="back" id="back13"></div></div><div class="bakgrunn" id="bakgrunn13" onclick="visKonkurranse(13)"><a href="#apnekonkurranse">Klikk her for å delta</a></div></li>
+            <li class="luke"><div class="flipper" id="flipper14" onclick="apne(14)"><div class="front" id="front14" data-nummer="14"></div><div class="back" id="back14"></div></div><div class="bakgrunn" id="bakgrunn14" onclick="visKonkurranse(14)"><a href="#apnekonkurranse">Klikk her for å delta</a></div></li>
+            <li class="luke"><div class="flipper" id="flipper15" onclick="apne(15)"><div class="front" id="front15" data-nummer="15"></div><div class="back" id="back15"></div></div><div class="bakgrunn" id="bakgrunn15" onclick="visKonkurranse(15)"><a href="#apnekonkurranse">Klikk her for å delta</a></div></li>
+            <li class="luke"><div class="flipper" id="flipper16" onclick="apne(16)"><div class="front" id="front16" data-nummer="16"></div><div class="back" id="back16"></div></div><div class="bakgrunn" id="bakgrunn16" onclick="visKonkurranse(16)"><a href="#apnekonkurranse">Klikk her for å delta</a></div></li>
+            <li class="luke"><div class="flipper" id="flipper17" onclick="apne(17)"><div class="front" id="front17" data-nummer="17"></div><div class="back" id="back17"></div></div><div class="bakgrunn" id="bakgrunn17" onclick="visKonkurranse(17)"><a href="#apnekonkurranse">Klikk her for å delta</a></div></li>
+            <li class="luke"><div class="flipper" id="flipper18" onclick="apne(18)"><div class="front" id="front18" data-nummer="18"></div><div class="back" id="back18"></div></div><div class="bakgrunn" id="bakgrunn18" onclick="visKonkurranse(18)"><a href="#apnekonkurranse">Klikk her for å delta</a></div></li>
+            <li class="luke"><div class="flipper" id="flipper19" onclick="apne(19)"><div class="front" id="front19" data-nummer="19"></div><div class="back" id="back19"></div></div><div class="bakgrunn" id="bakgrunn19" onclick="visKonkurranse(19)"><a href="#apnekonkurranse">Klikk her for å delta</a></div></li>
+            <li class="luke"><div class="flipper" id="flipper20" onclick="apne(20)"><div class="front" id="front20" data-nummer="20"></div><div class="back" id="back20"></div></div><div class="bakgrunn" id="bakgrunn20" onclick="visKonkurranse(20)"><a href="#apnekonkurranse">Klikk her for å delta</a></div></li>
+            <li class="luke"><div class="flipper" id="flipper21" onclick="apne(21)"><div class="front" id="front21" data-nummer="21"></div><div class="back" id="back21"></div></div><div class="bakgrunn" id="bakgrunn21" onclick="visKonkurranse(21)"><a href="#apnekonkurranse">Klikk her for å delta</a></div></li>
+            <li class="luke"><div class="flipper" id="flipper22" onclick="apne(22)"><div class="front" id="front22" data-nummer="22"></div><div class="back" id="back22"></div></div><div class="bakgrunn" id="bakgrunn22" onclick="visKonkurranse(22)"><a href="#apnekonkurranse">Klikk her for å delta</a></div></li>
+            <li class="luke"><div class="flipper" id="flipper23" onclick="apne(23)"><div class="front" id="front23" data-nummer="23"></div><div class="back" id="back23"></div></div><div class="bakgrunn" id="bakgrunn23" onclick="visKonkurranse(23)"><a href="#apnekonkurranse">Klikk her for å delta</a></div></li>
+            <li class="luke"><div class="flipper" id="flipper24" onclick="apne(24)"><div class="front" id="front24" data-nummer="24"></div><div class="back" id="back24"></div></div><div class="bakgrunn" id="bakgrunn24" onclick="visKonkurranse(24)"><a href="#apnekonkurranse">Klikk her for å delta</a></div></li>
+        </ul>
         
         <div id="apnekonkurranse" class="konkurranse">
-
-          <div class="container">
+          <div class="konkurransewrapper">
            <a href="#Lukk" title="Lukk" class="Lukk">X</a>
-            <div class="venstreside">
-            <p id="spmmelding">Skriv inn ditt studentnummer i feltet under. Når du er klar trykk på send inn, og du er du med i trekningen!</p>
+            <section class="venstreside">
+                <p id="spmmelding">Skriv inn ditt studentnummer i feltet under. Når du er klar trykk på send inn, og du er du med i trekningen!</p>
                 <div class="skjema">
                     <p>Studentnummer: <input type="text" id="stdnr" name="Snr"> </p>
-                <!--<div class="ytreboks"> //Hva er disse for?
-                        <div class="indreboks">-->
                     <p class="sporsmal" id="spm1">Hvor ble Jesus født?
 <!--                    Her genererer js oppgavene-->
                     </p>
                     <p class="sporsmal" id="spm2">Hvor gammel er Ulf:
 <!--                    Her genererer js oppgavene-->
-                 <!--       </div>
-                    </div>-->
                     </p>
-                
-<!--                    <div class="submit"><input type="submit" value="Send inn"></div>-->
                     <button value="Send inn" onclick="sendskjema()">Send inn</button>
+            
                 </div>
-            </div>
-            <div class="høyreside">
-                <div>
+            </section>
+            <section class="høyreside">
                     <img src="Bilder/MAZElogoNY.png" alt="Bilde av logoen til Maze" title="Bilde av logoen til Maze"/>  
-                </div>
                 <article>
 Grunnleggerne av Maze har det siste 10-året vært glødende opptatt av hva som skal til for å få resten av medarbeiderne og resten av de lokale lederne til å gjøre det samme som de som skaper de beste resultatene. Interessen er drevet av en overbevisning om at dette er den korteste veien til dramatisk resutatforbedring i de aller fleste salgs- og service organisasjoner. Metoden og verktøyene ble først utviklet i nært samarbeid med flere retail kjeder, men er senere også blitt videreutviklet for bank, forsikring og andre typer salgsorganisasjoner. 
                 </article>
-            </div>
+            </section>
             </div>
         </div>
 
-    </div>
+    </div> <!-- end of innholdswrapper -->
         <footer>
 			<p>Har du spørsmål eller tilbakemeldinger( ris og ros )</p>
 			<p>Kontakt oss på mail: teamwarrior14@gmail.com</p>
