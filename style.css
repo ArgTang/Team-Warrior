@@ -134,6 +134,14 @@ nav a:hover{
     height: 150px;
 }
 
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+   /* IE10+ specific styles go here */  
+    /*IE hack link: http://stackoverflow.com/questions/20541306/how-to-write-a-css-hack-for-ie-11*/
+    .front, .back{display: none;}
+    .bakgrunn{content: attr(data-nummer);}
+    .konkurranse img{width: 10em;}
+}
+
 .flipper {
         transition: 1.2s ease;
         -webkit-transform-style: preserve-3d;
@@ -333,10 +341,7 @@ h1{text-align:center;}
     padding: 1%;
 }
 
-.konkurranse img{
-    width: 10em; /*IE fix*/
-    margin:auto;
-}
+.konkurranse img{margin:auto;}
 
 .høyreside article{    /*få tak i en uformatert tekst?*/
     font-weight: 400; /*Hvor kommer BOLD fra?*/
