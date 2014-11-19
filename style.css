@@ -39,7 +39,7 @@ footer:before{
 	margin-left:10%;
 }
 
-nav ul{
+.hovedmeny nav ul{
     display: flex;
     display:-webkit-flex; /*safari*/
     flex-flow: row wrap;
@@ -52,7 +52,7 @@ nav ul{
     list-style: none;
 }
 
-nav a{
+.hovedmeny nav a{
     border-left: solid black .08em;
     color: black; 
     padding: 0.4em;
@@ -61,12 +61,12 @@ nav a{
     letter-spacing: 0;/*fix for FF*/
 }
 
-nav a:hover{
+.hovedmeny nav a:hover{
     letter-spacing: .15em;
     font-weight: 600;
 }
 
-.visible{
+.visible nav{
     z-index: 1;
     position: absolute;
     right: 25px;
@@ -75,7 +75,7 @@ nav a:hover{
     border: solid white;
 }
 
-.closed { display: none;}
+.closed nav{ display: none;}
 
 .visible li{
     list-style-type: none;
@@ -100,19 +100,20 @@ nav a:hover{
     z-index: 3;
     cursor: pointer;
 }
-
-#meny img{height: 40px;}
+    #meny img{
+        height: 40px;
+    }
 
 #logo{
     width: 100%;
     display: inline-block;
 }
+    #logo img{
+        float: left;
+        height: auto;
+        width: 100%;
+    }
 
-#logo img{
-    float: left;
-    height: auto;
-    width: 100%;
-}
 /*---------------------------------------Meny slutt-----------------------*/
 
 /* --------------------------------------Luke START -------------------------------*/
