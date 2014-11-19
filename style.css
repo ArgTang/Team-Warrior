@@ -103,19 +103,19 @@ footer:before{
     top: 25px;
     z-index: 3;
 }
-    #meny img{
-        height: 40px;
-    }
+
+#meny img{height: 40px;}
 
 #logo{
     width: 100%;
     display: inline-block;
 }
-    #logo img{
-        float: left;
-        height: auto;
-        width: 100%;
-    }
+
+#logo img{
+    float: left;
+    height: auto;
+    width: 100%;
+}
 /*---------------------------------------Meny slutt-----------------------*/
 
 /* --------------------------------------Luke START -------------------------------*/
@@ -149,7 +149,7 @@ footer:before{
         transform-style: preserve-3d;
         transform-origin: 0 0;
         position: relative;
-        cursor: pointer; /*pointer event istedet?*/
+        cursor: pointer;
 }
 
 .front, .back {
@@ -203,7 +203,7 @@ footer:before{
     box-shadow: .2em .2em 1em .3em #242424 ;
 }
 
-.bakgrunn:hover{cursor: pointer;} /*pointer event istedet?*/
+.bakgrunn:hover{cursor: pointer;}
 
 .bakgrunn a{
     display:block;
@@ -212,6 +212,7 @@ footer:before{
     color: rgb(172,45,66);
     text-decoration: none; 
 }
+
 .content ul {
 	padding:0;
     text-align: center;
@@ -228,7 +229,7 @@ footer:before{
 }
 .snowflake {
     position: fixed;
-    color: #ecf3f7; /*testcolor-----------------------------------*/
+    color: #ecf3f7; 
     -webkit-filter: blur(.02em); /*not for IE, check for Firefox?*/
     filter: blur(.02em);/*Check if this works for FF*/
     z-index: 1000;
@@ -237,11 +238,9 @@ footer:before{
 
 .snowflake:hover { pointer-events: none; }
 
-/*CSS for Om oss.html--------------------------------------------------------------*/
+/*---------------- CSS for Om oss.html -------------------------------------------------------------*/
 
-.omoss{
-    background-image: url(Bilder/hioa_team_warrior.png);
-}
+.omoss{background-image: url(Bilder/hioa_team_warrior.png);}
 
 .about{
     display:block;
@@ -271,6 +270,7 @@ footer:before{
 
 .about span{font-weight: 600}
 .about a{text-decoration: none; letter-spacing: 1px;}
+
 /*--------------------- CSS for regler.html----------------------------------------------------------------------------------------------*/
 
 article{
@@ -296,6 +296,7 @@ article:before{
 h1{text-align:center;}
 
 /*-------------- CSS for Konkurranseskjema ------------------------------------------------------------------*/
+
 .konkurranse{
     z-index: 10000;
 	position: fixed;
@@ -340,7 +341,6 @@ h1{text-align:center;}
 }
 
 .konkurranse .submit{
-    /*text-align: center;*/
     margin: 0;
     padding: 2% 0;
 }
@@ -351,7 +351,7 @@ h1{text-align:center;}
 }
 
 
-[value="Send inn"] {
+[value="Send inn"]{
     font-family: inherit;
     font-size: 0.7em;
     font-weight: 500;
@@ -361,26 +361,24 @@ h1{text-align:center;}
 }
 
 .venstreside{
-    /*text-align: center;*/
     width: 49%;
     height: 100%;
-    float: left;
+    float: left;        /*float og inline block funker ikke sammen*/
     display: inline-block; /*ingen effekt?*/
     margin-right: 1%;
-    margin-top: 0%;
-    margin-bottom: 0%;
+    margin-top: 0;
+    margin-bottom: 0;
     padding-right: 0.5%;
     border-right: solid lightgray 3px;
 }
 
 .høyreside{
-    
-    /*text-align: center;*/
     text-align: justify;
     width: 49%;
     height: 100%;
     display: inline-block;   
 }
+
 .høyreside div img{display: block; margin-left: auto; margin-right: auto;}
 
 .høyreside article{
@@ -391,7 +389,7 @@ h1{text-align:center;}
     padding: 1%;
 }
 
-<!----- css for sponsorsiden    ------->
+/*------------- css for sponsorsiden    ------------------------------------*/
 
 .sponsor{
     display:block;
@@ -405,9 +403,9 @@ h1{text-align:center;}
 
 
 .sponsorimg img{
+    /*width: 10em; Hvilken er riktig?*/
 	width:25%;
     float:left;
-    width: 10em;
     height:10em;
     position: relative;
     top:20%;
