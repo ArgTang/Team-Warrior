@@ -48,6 +48,7 @@ footer:before{
     clear: both; 
     text-transform: uppercase;
 }
+
 .navbar nav a{
     border-left: solid black .08em;
     color: black; 
@@ -148,7 +149,7 @@ footer:before{
         transform-style: preserve-3d;
         transform-origin: 0 0;
         position: relative;
-    cursor: pointer;
+        cursor: pointer; /*pointer event istedet?*/
 }
 
 .front, .back {
@@ -202,7 +203,7 @@ footer:before{
     box-shadow: .2em .2em 1em .3em #242424 ;
 }
 
-.bakgrunn:hover{cursor: pointer;}
+.bakgrunn:hover{cursor: pointer;} /*pointer event istedet?*/
 
 .bakgrunn a{
     display:block;
@@ -211,11 +212,11 @@ footer:before{
     color: rgb(172,45,66);
     text-decoration: none; 
 }
-
 .content ul {
+	padding:0;
     text-align: center;
-    padding: 0;
 }
+
 
 /*----------------------------------------- Luke END -----------------------------*/
 
@@ -230,14 +231,10 @@ footer:before{
     color: #ecf3f7; /*testcolor-----------------------------------*/
     -webkit-filter: blur(.02em); /*not for IE, check for Firefox?*/
     filter: blur(.02em);/*Check if this works for FF*/
-    /*-webkit-user-select: none;  
-    -moz-user-select:none;
-    -ms-user-select:none;
-    user-select:none;*/
     z-index: 1000;
     pointer-events: none; /*istedet for user select ikke for IE <11*/
 }
-/*.snowflake:hover { cursor: default;}*//*pointer event istedet*/
+
 .snowflake:hover { pointer-events: none; }
 
 /*CSS for Om oss.html--------------------------------------------------------------*/
@@ -245,6 +242,7 @@ footer:before{
 .omoss{
     background-image: url(Bilder/hioa_team_warrior.png);
 }
+
 .about{
     display:block;
     width:100%;
@@ -273,7 +271,7 @@ footer:before{
 
 .about span{font-weight: 600}
 .about a{text-decoration: none; letter-spacing: 1px;}
-/*CSS for regler.html----------------------------------------------------------------------------------------------*/
+/*--------------------- CSS for regler.html----------------------------------------------------------------------------------------------*/
 
 article{
 	margin-left:auto;
@@ -297,7 +295,7 @@ article:before{
 
 h1{text-align:center;}
 
-/*CSS for Konkurranseskjema ------------------------------------------------------------------*/
+/*-------------- CSS for Konkurranseskjema ------------------------------------------------------------------*/
 .konkurranse{
     z-index: 10000;
 	position: fixed;
