@@ -1,11 +1,6 @@
 @media screen and (max-width: 960px) {
-    .banner{
-        height: 11em;
-    }
-    
-    #meny img{
-        visibility: visible;   
-    }
+    .banner{height: 11em;}
+    #meny img{visibility: visible;}
     
     .luke, .front, .back, .bakgrunn{
         height: 120px;
@@ -13,18 +8,22 @@
     }
     
     .front:before {font-size: 5em;}
+    .bakgrunn a{padding-top: 28%;}
+    nav a:hover{letter-spacing: normal}
+    .hovedmeny{display: none;}
     
-    .bakgrunn a{
-        padding-top: 28%;
+    .konkurransewrapper{flex-flow: column-reverse nowrap}
+    .konkurranse .venstreside{
+        border-right:solid white 0;
+        width: 90%
     }
+    .konkurranse .høyreside{width: 90%; padding: 0;}
+    .konkurranse .høyreside article{display: none;}
     
-    .navbar{display: none;}
 }
 
 @media screen and (max-width: 620px) {
-    .banner{
-        height: 9em;
-    }
+    .banner{height: 9em;}
     
     .luke, .front, .back, .bakgrunn{
         height: 80px;
@@ -32,16 +31,11 @@
     }
     
     .front:before {font-size: 3.5em;}
-    
-    .bakgrunn a{
-        font-size: 0.7em;
-    }
+    .bakgrunn a{font-size: 0.7em;}
 }
 
 @media screen and (max-width: 490px) {
-    .banner{
-        height: 5.5em;
-    }
+    .banner{height: 5.5em;}
     
     .luke, .front, .back, .bakgrunn{
         height: 75px;
@@ -49,8 +43,5 @@
     }
     
     .front:before {font-size: 3em;}
-    
-    .bakgrunn a{
-        font-size: 0.7em;
-    }
+    .bakgrunn a{font-size: 0.7em;}
 }
