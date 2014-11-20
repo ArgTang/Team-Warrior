@@ -9,34 +9,30 @@
   		<link rel="stylesheet" href="media-queries.css">
   		<title title="HIOA Julekalender">HIOA studentjulekalender</title>
 	</head>
-	
+
     <body>
-    <div class="test">
+    <div class="innholdswrapper">
         <div class="banner">
             <div id="logo"><a href="index.html"><img src="Bilder/Hioa_jule_logo.png" alt="logobild med nisselue"></a></div>
             <div onclick="dropdownopen()" id="meny"><a><img src="Bilder/navbarstripes.png" alt="bakgrunn til mobilnavigasjon"></a></div>
-            <div class="navbar">
-                <nav>
-                    <ul>
-                        <li><a href="index.html">HJEM</a></li>
-                        <li><a href="Omoss.html">OM OSS</a></li>
-                        <li><a href="sponsorer.html">SPONSORER</a></li>
-                        <li><a href="Regler.html">REGLER</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div id="dropmenu" class="closed">
-                <nav>
-                    <ul>
-                        <li><a href="index.html">HJEM</a></li>
-                        <li><a href="Omoss.html">OM OSS</a></li>
-                        <li><a href="sponsorer.html">SPONSORER</a></li>
-                        <li><a href="Regler.html">REGLER</a></li>
-                    </ul>
-                </nav>
-            </div>
+            <nav class="hovedmeny">
+                <ul>
+                    <li><a href="index.html">HJEM</a></li>
+                    <li><a href="Omoss.html">OM OSS</a></li>
+                    <li><a href="sponsorer.html">SPONSORER</a></li>
+                    <li><a href="Regler.html">REGLER</a></li>
+                </ul>
+            </nav>
+            <nav id="dropmenu" class="closed">
+                <ul>
+                    <li><a href="index.html">HJEM</a></li>
+                    <li><a href="Omoss.html">OM OSS</a></li>
+                    <li><a href="sponsorer.html">SPONSORER</a></li>
+                    <li><a href="Regler.html">REGLER</a></li>
+                </ul>
+            </nav>
         </div>
-       
+        
 		<div class = "regler">	
 			<h1>Regler og informasjon</h1>
 			<div class = "reglement">
@@ -49,15 +45,13 @@
 					<li class="regel"></li>
 				</ul>
 			</div>
-		</div>
-	</div>
-        <footer>
-			<p>Har du spørsmål eller tilbakemeldinger( ris og ros )</p>
-			<p>Kontakt oss på mail: teamwarrior14@gmail.com</p>
-        </footer>
-    
-
+		</div><!-- END of Regel -->
+	</div> 
+    <footer>
+		<p>Har du spørsmål eller tilbakemeldinger( ris og ros )</p>
+		<p>Kontakt oss på mail: teamwarrior14@gmail.com</p>
+    </footer>
+        
    <script src="main.js"></script>
-<!-- <script src="Snow.js"></script> -->
     </body>
 </html>

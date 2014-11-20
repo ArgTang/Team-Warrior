@@ -1,7 +1,6 @@
 @media screen and (max-width: 960px) {
     .banner{height: 11em;}
-    
-    #meny img{visibility: visible;   }
+    #meny img{visibility: visible;}
     
     .luke, .front, .back, .bakgrunn{
         height: 120px;
@@ -9,20 +8,19 @@
     }
     
     .front:before {font-size: 5em;}
-    
     .bakgrunn a{padding-top: 28%;}
-    
     nav a:hover{letter-spacing: normal}
     .hovedmeny{display: none;}
     
     .konkurransewrapper{flex-flow: column-reverse nowrap}
     .konkurranse .venstreside{
-        border-right:solid white 0px;
+        border-right:solid white 0;
         width: 90%
     }
     .konkurranse .høyreside{width: 90%; padding: 0;}
     .konkurranse .høyreside article{display: none;}
     
+}
 
 @media screen and (max-width: 620px) {
     .banner{height: 9em;}
