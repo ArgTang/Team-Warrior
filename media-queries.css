@@ -6,6 +6,7 @@
         height: 120px;
         width: 120px;
     }
+    .konkurranse .Lukk{font-size: 2em;}
     
     .front:before {font-size: 5em;}
     .bakgrunn a{padding-top: 28%;}
@@ -14,17 +15,18 @@
     
     .konkurransewrapper{flex-flow: column-reverse nowrap}
     .konkurranse .venstreside{
-        border-right:solid white 0;
-        width: 90%
+        transform: translateY(-5em);
+        border-right:none;
+        width: 90%;
     }
-    .konkurranse .høyreside{width: 90%; padding: 0;}
+    .konkurranse .høyreside{ padding: 0;}
     .konkurranse .høyreside article{display: none;}
     
 }
 
 @media screen and (max-width: 620px) {
     .banner{height: 9em;}
-    
+    .konkurranse .høyreside{display:none;}
     .luke, .front, .back, .bakgrunn{
         height: 80px;
         width: 80px;
