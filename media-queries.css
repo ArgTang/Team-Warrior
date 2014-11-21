@@ -22,6 +22,11 @@
     .konkurranse .høyreside{ padding: 0;}
     .konkurranse .høyreside article{display: none;}
     
+     /*Sponsor*/
+    .sponsor{flex-direction: column;}
+    .sponsor a img{height: 150px;}
+    .sponsor .sponsortekst { width: 95%; }
+    
 }
 
 @media screen and (max-width: 620px) {
@@ -34,6 +39,10 @@
     
     .front:before {font-size: 3.5em;}
     .bakgrunn a{font-size: 0.7em;}
+    
+    /*Om oss*/
+    .about{width: 350px;}
+   
 }
 
 @media screen and (max-width: 490px) {

@@ -411,8 +411,6 @@ h1{text-align:center;}
 .sponsorwrapper{
     display: flex;
     flex-flow: column nowrap;
-    justify-content: space-around;
-    align-items:stretch;
     width:100%;
     margin: auto;
     color:black;
@@ -420,19 +418,17 @@ h1{text-align:center;}
 
 .sponsor{
     display: flex;
-    flex-flow: row nowrap;
     justify-content: space-around;
     align-items:center;
     background-color: white;
     opacity: 0.9;
     margin-bottom: 0.6em;
     margin-top: 0.6em;
-    padding: 1%;
 }
 
 .sponsor a img{height: 200px;}
 
-.sponsortekst {width: 70%;  }
+.sponsortekst {width: 70%; margin: 0.5em; }
 .sponsortekst h2{font-size: 1em; margin: 0;}
 .sponsortekst p{
     text-align: justify;
