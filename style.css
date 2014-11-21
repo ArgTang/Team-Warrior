@@ -215,7 +215,7 @@ nav a:hover{
 }
 
 .lukewrapper li{counter-increment: luke;}
-.bakgrunn a:before{content: "Klikk her for å åpne luke " counter(luke);}
+.bakgrunn a:after{content: "Klikk her for å åpne luke " counter(luke);}
 
 /*----------------------------------------- Luke END -----------------------------*/
 
