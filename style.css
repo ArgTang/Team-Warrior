@@ -179,7 +179,7 @@ nav a:hover{
     color: white;
     font-size: 6.5em;
     font-weight: 500;
-    content: attr(data-nummer);
+    content: counter(luke);
 }
 
 .back {
@@ -215,7 +215,7 @@ nav a:hover{
 }
 
 .lukewrapper li{counter-increment: luke;}
-.bakgrunn a:after{content: "Klikk her for å åpne luke " counter(luke);}
+.bakgrunn a:after{content: " " counter(luke);}
 
 /*----------------------------------------- Luke END -----------------------------*/
 
@@ -324,7 +324,6 @@ nav a:hover{
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
     /*IE hack link: http://stackoverflow.com/questions/20541306/how-to-write-a-css-hack-for-ie-11*/
     .front, .back{display: none;}
-    .bakgrunn{content: attr(data-nummer);}
     .konkurranse img{width: 10em;}
     .internetexplorer{
         padding: 2%;
