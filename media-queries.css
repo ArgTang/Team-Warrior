@@ -26,7 +26,6 @@
     .sponsor{flex-direction: column;}
     .sponsor a img{height: 150px;}
     .sponsor .sponsortekst { width: 95%; }
-    
 }
 
 @media screen and (max-width: 620px) {

@@ -214,6 +214,9 @@ nav a:hover{
     text-decoration: none; 
 }
 
+.lukewrapper li{counter-increment: luke;}
+.bakgrunn a:before{content: "Klikk her for å åpne luke " counter(luke);}
+
 /*----------------------------------------- Luke END -----------------------------*/
 
 /*Snowing in the winter*/
@@ -352,7 +355,6 @@ nav a:hover{
     margin-top: 1em;
     background-color: white;
     opacity: 0.98;
-    border-radius: 1em;
 }
 
 .about p{margin: 0;}
@@ -366,6 +368,7 @@ nav a:hover{
 .about img{
     margin: auto;
     padding-bottom: 0.5em;
+    padding-top: 0.5;
     width: 150px;
 }
 
@@ -412,7 +415,6 @@ h1{text-align:center;}
     display: flex;
     flex-flow: column nowrap;
     width:100%;
-    margin: auto;
     color:black;
 }
 
