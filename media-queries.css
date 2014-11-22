@@ -31,7 +31,6 @@
 }
 
 @media screen and (max-width: 620px) {
-    .body{background-attachment:none;}
     .banner{height: 9em;}
     .visible a{font-size: .9em;}
     .konkurranse .høyreside{display:none;}

@@ -37,10 +37,14 @@ function GjemGammelLuke() {
     dag = dag.getDate();
     console.log("GjemGammelLuke()");
     console.log("width " + width + "px");
+    //legger invertert farge til dagen i dag
+    luker = document.getElementById("front" + dag);
+    luker.style.backgroundColor = "white";
+    luker.style.color = "rgb(172,45,66)";
     //sjekker om mobilside
     if (width < 620) {
-        luker = document.querySelectorAll(".luke");
         //gjemmer luker 5 eller 6 dager før dagen i dag (sånn at det blir partall antall luker igjenn)
+        luker = document.querySelectorAll(".luke");
         for (i = 0; i < (dag - (5 + 5%2)); i++) {
             luker[i].style.display = "none"
             //Teller til Lukenummer så de blir riktige

@@ -122,7 +122,7 @@ nav a:hover{
     justify-content: center;
 }
 
-.luke {margin: 0.4em;}
+.luke { margin: 0.4em;}
 
 .luke, .front, .back {
     list-style: none;
@@ -153,8 +153,6 @@ nav a:hover{
     background-size: 100%;
 	backface-visibility: hidden;
 	position: absolute;
-	top: 0;
-	left: 0;
 }
 
 .front {
@@ -162,6 +160,7 @@ nav a:hover{
     z-index: 2;
     -webkit-transform: rotateY(0deg);
     transform: rotateY(0deg);
+    color: white;
 }
 
 .front:before{
@@ -169,35 +168,33 @@ nav a:hover{
     display: block;
     position: relative;
     top: -12%;
-    color: white;
+    color: inherit;
     font-size: 6.5em;
     font-weight: 500;
     content: counter(luke);
 }
 
 .back {
-        -webkit-transform: rotateY(180deg);
-        transform: rotateY(180deg);
-        background-image: url(Bilder/MAZElogoNY.png);
-        cursor: pointer;
+     -webkit-transform: rotateY(180deg);
+     transform: rotateY(180deg);
+     background-image: url(Bilder/MAZElogoNY.png);
+     cursor: pointer;
 }
 
 #back2{background-image: url(Bilder/Bekk.png);}
 
-.back img{
-    height: 200px;
-    width: 200px;
-}
-
 .bakgrunn{
+    height: 150px;
     background-color: rgb(0,0,0);
     background-color: rgba(255,255,255,0.2); 
-    box-shadow: .2em .2em 1em .3em #242424 ;
+    box-shadow: .2em .2em 1em .3em #242424 ;   
 }
 
 .bakgrunn:hover{cursor: pointer;}
 
 .bakgrunn a{
+    height: 136px;
+    margin: auto;
     display:block;
     text-align:justify;
     padding: 5%;
@@ -206,7 +203,6 @@ nav a:hover{
 }
 
 .lukewrapper li{counter-increment: luke;} /*needs javascript for this counting to be correct, when we close old luker in mobile*/
-.bakgrunn a:after{content: " " counter(luke);}
 .bakgrunn a:after{content: " " counter(luke);}
 
 /*----------------------------------------- Luke END -----------------------------*/
@@ -250,7 +246,7 @@ nav a:hover{
     display: -webkit-flex; /*safari*/
     flex-flow: row nowrap;
     width: 70%;
-    height: 80%;
+    /*height: 80%;*/
     position: relative;
     background: white;
     padding: 2% 5% 2% 5%;
@@ -359,7 +355,6 @@ nav a:hover{
 .about img{
     margin: auto;
     padding-bottom: 0.5em;
-    padding-top: 0.5;
     width: 150px;
 }
 
