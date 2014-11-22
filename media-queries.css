@@ -1,4 +1,5 @@
 @media screen and (max-width: 960px) {
+    .innholdswrapper{margin-left: 5%; margin-right: 5%;}
     .banner{height: 11em;}
     #meny img{visibility: visible;}
     
@@ -9,7 +10,6 @@
     .konkurranse .Lukk{font-size: 2em;}
     
     .front:before {font-size: 5em;}
-    .bakgrunn a{padding-top: 28%;}
     nav a:hover{letter-spacing: normal}
     .hovedmeny{display: none;}
     
@@ -26,10 +26,14 @@
     .sponsor{flex-direction: column;}
     .sponsor a img{height: 150px;}
     .sponsor .sponsortekst { width: 95%; }
+    
+    footer{font-size: 0.9em;}
 }
 
 @media screen and (max-width: 620px) {
+    .body{background-attachment:none;}
     .banner{height: 9em;}
+    .visible a{font-size: .9em;}
     .konkurranse .høyreside{display:none;}
     .luke, .front, .back, .bakgrunn{
         height: 80px;

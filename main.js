@@ -13,23 +13,6 @@ function dropdownopen() {
     
 }
 
-
-function getDato() {
-    var xmlhttp = new XMLHttpRequest();
-    //metode for å finne dato fra PHP server som er oerflødig pr nå
-    xmlhttp.onreadystatechange = function () {
-        if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
-            var dato = xmlhttp.responseText;
-            console.log("Dato: " + dato);
-            document.getElementById("serverDato").value = dato;
-            document.getElementById("serverDato").innerHTML = dato;
-        }
-    };
-    xmlhttp.open("GET", "server.php?dato=", true);
-    xmlhttp.send();
-    console.log("getDato()");
-}
-
 function apne(i) {
     console.log("apne(" + i + ")");
     //funksjonen for å åpne luke
@@ -44,6 +27,29 @@ function apne(i) {
         flipper.className = "flipper";
     }
 }
+
+function GjemGammelLuke() {
+    //funksjon for å gjemme gamle luker på mobil
+    var width = document.body.offsetWidth,
+        i,
+        luker,
+        dag = new Date();
+    dag = dag.getDate();
+    console.log("GjemGammelLuke()");
+    console.log("width " + width + "px");
+    //sjekker om mobilside
+    if (width < 620) {
+        luker = document.querySelectorAll(".luke");
+        //gjemmer luker 5 eller 6 dager før dagen i dag (sånn at det blir partall antall luker igjenn)
+        for (i = 0; i < (dag - (5 + 5%2)); i++) {
+            luker[i].style.display = "none"
+            //Teller til Lukenummer så de blir riktige
+            if(i ==  (dag - 2 - (5 + 5%2)))
+                luker[i+2].style.counterIncrement = "luke " + (i+3);
+        }
+    }
+}
+
 
 // info om localstorage http://diveintohtml5.info/storage.html
 function supportsLocalStorage() {
@@ -78,26 +84,17 @@ function lagrebruker(studentnummer) {
     }
 }
 
-function hentebruker() {
-    //Henter studentnummer fra Localstorage hvis tilgjengelig
-    console.log("hentebruker()");
-    if (!supportsLocalStorage()) { return false; }
+function fyllinnbruker() {
+    //funksjon for å hente bruker fra localstorage
+    console.log("fyllinnbruker()");
+    if (!supportsLocalStorage()) { console.log("LocalStorage not supported"); return; }
     var studentnummer = parseInt(localStorage['deltaker'], 10);
     //sjekker om nummer finnes i minne && dobbeltsjekk om det er et nummer
     console.log(studentnummer);
-    if (studentnummer !== null && !isNaN(studentnummer)) {
-        return ('s' + studentnummer);
+    if (studentnummer !== undefined && !isNaN(studentnummer)) {
+        document.getElementById("stdnr").value = studentnummer;
     } else {
-        return null;
-    }
-}
-
-function fyllinnbruker() {
-    //kan kombineres med hentebruker?
-    console.log("fyllinnbruker()");
-    var stud = hentebruker();
-    if (stud !== null || stud !== undefined) { //hvis bruker er lagret
-        document.getElementById("stdnr").value = stud;
+        return;
     }
 }
     
