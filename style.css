@@ -111,7 +111,6 @@ nav a:hover{
     height: auto;
     width: 100%;
 }
-/*---------------------------------------Meny slutt-----------------------*/
 
 /* --------------------------------------Luke START -------------------------------*/
 
@@ -131,22 +130,22 @@ nav a:hover{
 }
 
 .flipper {
-        transition: 1.2s ease;
-        -webkit-transform-style: preserve-3d;
-        transform-style: preserve-3d;
-        -webkit-transform-origin: 0 0;
-        transform-origin: 0 0;
-        cursor: pointer;
+    transition: 1.2s ease;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    cursor: pointer;
 }
 
 .flipperopen{
-        transition: 1.2s ease;
-        -webkit-transform-style: preserve-3d;
-        transform-style: preserve-3d;
-        -webkit-transform-origin: 0 0;
-        transform-origin: 0 0;
-        -webkit-transform: rotateY(180deg);
-        transform: rotateY(180deg);
+    transition: 1.2s ease;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
 }
 
 .front, .back {
@@ -175,15 +174,17 @@ nav a:hover{
 }
 
 .back {
-     -webkit-transform: rotateY(180deg);
-     transform: rotateY(180deg);
-     background-image: url(Bilder/MAZElogoNY.png);
-     cursor: pointer;
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    background-image: url(Bilder/MAZElogoNY.png);
+    cursor: pointer;
 }
 
 #back2{background-image: url(Bilder/Bekk.png);}
 
 .bakgrunn{
+    display: flex; /*cener align .bakgrunn a*/
+    display: -webkit-flex; /*safari*/
     height: 150px;
     background-color: rgb(0,0,0);
     background-color: rgba(255,255,255,0.2); 
@@ -213,6 +214,7 @@ nav a:hover{
     left: 0;
     top: 0;
 }
+
 .snowflake {
     position: fixed;
     color: #ecf3f7; 
@@ -374,7 +376,6 @@ nav a:hover{
 }
 
 .regler:before{
-	
 	content: "";
 	display: block;
 	position: absolute;
@@ -415,9 +416,9 @@ h1{text-align:center;}
 }
 
 .sponsor a img{height: 200px;}
-
 .sponsortekst {width: 70%; margin: 0.5em; }
 .sponsortekst h2{font-size: 1em; margin: 0;}
+
 .sponsortekst p{
     text-align: justify;
     line-height: 1em;
