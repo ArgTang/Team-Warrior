@@ -95,8 +95,8 @@ nav a:hover{
     visibility: hidden;
     position: absolute;
     height: 40px;
-    right: 25px;
-    top: 24px;
+    right: 20px;
+    top: 20px;
     z-index: 3;
     cursor: pointer;
 }
@@ -119,11 +119,9 @@ nav a:hover{
     display: -webkit-flex; /*safari*/
     flex-flow: row wrap;
     justify-content: center;
-    text-align: center;
-    padding: 0;
 }
 
-.luke {margin: 0.5em;}
+.luke { margin: 0.4em;}
 
 .luke, .front, .back {
     list-style: none;
@@ -185,11 +183,12 @@ nav a:hover{
 #back2{background-image: url(Bilder/Bekk.png);}
 
 .bakgrunn{
+    text-align: center;
     display: flex; /*cener align .bakgrunn a*/
     display: -webkit-flex; /*safari*/
     height: 150px;
     background-color: rgb(0,0,0);
-    background-color: rgba(255,255,255,0.2); 
+    background-color: rgba(255,255,255,0.7); 
     box-shadow: .2em .2em 1em .3em #242424 ;   
 }
 
@@ -198,7 +197,6 @@ nav a:hover{
 .bakgrunn a{
     margin: auto;
     display:block;
-    text-align:justify;
     padding: 5%;
     color: rgb(172,45,66);
     text-decoration: none; 
@@ -208,6 +206,24 @@ nav a:hover{
 .bakgrunn a:after{content: " " counter(luke);}
 
 /*----------------------------------------- Luke END -----------------------------*/
+
+/*Snowing in the winter*/
+.snowflakeContainer {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.snowflake {
+    position: fixed;
+    color: #ecf3f7; 
+    -webkit-filter: blur(.02em); /*not for IE, check for Firefox?*/
+    filter: blur(.02em);/*Check if this works for FF*/
+    z-index: 1000;
+    pointer-events: none; /*istedet for user select ikke for IE <11*/
+}
+
+.snowflake:hover { pointer-events: none; }
 
 /*-------------- CSS for Konkurranseskjema ------------------------------------------------------------------*/
 
@@ -231,6 +247,7 @@ nav a:hover{
     display: -webkit-flex; /*safari*/
     flex-flow: row nowrap;
     width: 70%;
+    /*height: 80%;*/
     position: relative;
     background: white;
     padding: 2% 5% 2% 5%;
@@ -267,7 +284,7 @@ nav a:hover{
 }
 
 .konkurranse .Lukk {
-    color: rgb(172,45,66);
+    color: red;
     font-size: 1em;
 	position: absolute;
 	right: 0.50em;
@@ -287,8 +304,7 @@ nav a:hover{
     font-weight: 500;
     width: 6em;
     height: 2em;
-    color: white;
-    background-color: rgb(172,45,66);
+    color: red;
 }
 
 /* ------------------CSS For spesifikke nettlesere -------------*/
@@ -325,13 +341,13 @@ nav a:hover{
     padding: 3%;
     margin-bottom: 1em;
     margin-top: 1em;
-    background-color: white;
+    background-color: #AC2D42;
     opacity: 0.98;
 }
 
-.about p{margin: 0;}
+.about p{margin: 0; color: white;}
 .about p:first-of-type{
-    color:black;
+    color:white;
     text-align: center; 
     text-decoration: underline; 
     font-size: 1.2em;
@@ -340,7 +356,17 @@ nav a:hover{
 .about img{
     margin: auto;
     padding-bottom: 0.5em;
+    padding-top: 0.5em;
     width: 150px;
+    height: 150px;
+}
+.sosialemedier{
+    display: inline-block;
+    text-align: center;
+}
+.sosialemedier img{
+    width: 75px;
+    height: 75px;
 }
 
 .about a{text-decoration: none; letter-spacing: 1px;}
@@ -370,7 +396,7 @@ nav a:hover{
 }
 .reglement {
 	display:inline-block;
-	width:40%;
+    width:40%;
 	margin-left:30%;
 	margin-right:30%;
 	font-Size:1.3em;
