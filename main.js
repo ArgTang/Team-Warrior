@@ -177,10 +177,10 @@ function visKonkurranse(dag) {
             //display dagens spørsmål til bruker
             for (i = 0; i < spm.length; i++) {
                 spm[i].innerHTML = resp[i * 6] + '<br> ' +
-                    '<input type="radio"  name="svar' + (i + 1) + '"  value=" ">' + resp[i * 6 + 1] + '<br>' +
-                    '<input type="radio"  name="svar' + (i + 1) + '"  value=" ">' + resp[i * 6 + 2] + '<br>' +
-                    '<input type="radio"  name="svar' + (i + 1) + '"  value=" ">' + resp[i * 6 + 3] + '<br>' +
-                    '<input type="radio"  name="svar' + (i + 1) + '"  value=" ">' + resp[i * 6 + 4] + '<br>';
+                    '<input type="radio" label="alternativ1" title="velg svaralternativ"  name="svar' + (i + 1) + '"  value=" ">' + resp[i * 6 + 1] + '<br>' +
+                    '<input type="radio" label="alternativ2" title="velg svaralternativ" name="svar' + (i + 1) + '"  value=" ">' + resp[i * 6 + 2] + '<br>' +
+                    '<input type="radio" label="alternativ3" title="velg svaralternativ" name="svar' + (i + 1) + '"  value=" ">' + resp[i * 6 + 3] + '<br>' +
+                    '<input type="radio" label="alternativ4" title="velg svaralternativ" name="svar' + (i + 1) + '"  value=" ">' + resp[i * 6 + 4] + '<br>';
                 console.log(spm[i]);
             }
         }
