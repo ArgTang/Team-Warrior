@@ -119,9 +119,11 @@ nav a:hover{
     display: -webkit-flex; /*safari*/
     flex-flow: row wrap;
     justify-content: center;
+    text-align: center;
+    padding: 0;
 }
 
-.luke { margin: 0.4em;}
+.luke {margin: 0.5em;}
 
 .luke, .front, .back {
     list-style: none;

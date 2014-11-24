@@ -2,7 +2,8 @@
     .innholdswrapper{margin-left: 5%; margin-right: 5%;}
     .banner{height: 11em;}
     #meny img{visibility: visible;}
-    
+    .lukewrapper{justify-content: none;}
+    .luke{margin: 0.4em;}
     .luke, .front, .back, .bakgrunn{
         height: 120px;
         width: 120px;
@@ -19,7 +20,7 @@
         width: 90%;
     }
     
-    .konkurranse .høyreside{ padding: 0;}
+    .konkurranse .høyreside{padding: 0;}
     .konkurranse .høyreside article{display: none;}
     
      /*Sponsor*/
@@ -33,15 +34,16 @@
 @media screen and (max-width: 620px) {
     .banner{height: 9em;}
     .visible a{font-size: .9em;}
-    .konkurranse .høyreside{display:none;}
-    .konkurranse .venstreside{transform: translateY(0em);}
+    .luke{margin: 0.3em;}
     .luke, .front, .back, .bakgrunn{
         height: 80px;
         width: 80px;
     }
-    
+
     .front:before {font-size: 3.5em;}
     .bakgrunn a{font-size: 0.7em;}
+    .konkurranse .høyreside{display:none;}
+    .konkurranse .venstreside{transform: translateY(0em);}
     
     /*Om oss*/
     .about{width: 350px;}
