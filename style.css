@@ -360,6 +360,14 @@ nav a:hover{
     width: 150px;
     height: 150px;
 }
+.sosialemedier{
+    display: inline-block;
+    text-align: center;
+}
+.sosialemedier img{
+    width: 75px;
+    height: 75px;
+}
 
 .about a{text-decoration: none; letter-spacing: 1px;}
 
