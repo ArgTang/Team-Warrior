@@ -1,4 +1,5 @@
 @media screen and (max-width: 960px) {
+    .innholdswrapper{margin-left: 5%; margin-right: 5%;}
     .banner{height: 11em;}
     #meny img{visibility: visible;}
     
@@ -6,25 +7,40 @@
         height: 120px;
         width: 120px;
     }
+    .konkurranse .Lukk{font-size: 2em;}
     
     .front:before {font-size: 5em;}
-    .bakgrunn a{padding-top: 28%;}
     nav a:hover{letter-spacing: normal}
     .hovedmeny{display: none;}
     
-    .konkurransewrapper{flex-flow: column-reverse nowrap}
+    .konkurransewrapper{flex-flow: column-reverse nowrap;}
     .konkurranse .venstreside{
-        border-right:solid white 0;
-        width: 90%
+        border-right:none;
+        width: 90%;
+        font-size: 0.9em;
     }
-    .konkurranse .høyreside{width: 90%; padding: 0;}
+    .konkurranse .høyreside{ padding: 0;}
+    .konkurranse .høyreside img{display: none;}
     .konkurranse .høyreside article{display: none;}
     
+     /*Sponsor*/
+    .sponsor{flex-direction: column;}
+    .sponsor a img{height: 150px;}
+    .sponsor .sponsortekst { width: 95%; }
+    
+    footer{font-size: 0.9em;}
+    
+    .reglement{
+        width:100%;
+	    margin-left:0;
+	    margin-right:0;
+    }
 }
 
 @media screen and (max-width: 620px) {
     .banner{height: 9em;}
-    
+    .visible a{font-size: .9em;}
+    .konkurranse .høyreside{display:none;}
     .luke, .front, .back, .bakgrunn{
         height: 80px;
         width: 80px;
@@ -32,6 +48,10 @@
     
     .front:before {font-size: 3.5em;}
     .bakgrunn a{font-size: 0.7em;}
+    
+    /*Om oss*/
+    .about{width: 350px;}
+   
 }
 
 @media screen and (max-width: 490px) {
@@ -44,4 +64,9 @@
     
     .front:before {font-size: 3em;}
     .bakgrunn a{font-size: 0.7em;}
+    
+    #meny img{
+        height: auto;
+        width:  30px;
+    }
 }

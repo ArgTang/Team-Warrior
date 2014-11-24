@@ -10,24 +10,6 @@ function dropdownopen() {
     } else {
         dropdown.className = "visible";
     }
-    
-}
-
-
-function getDato() {
-    var xmlhttp = new XMLHttpRequest();
-    //metode for å finne dato fra PHP server som er oerflødig pr nå
-    xmlhttp.onreadystatechange = function () {
-        if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
-            var dato = xmlhttp.responseText;
-            console.log("Dato: " + dato);
-            document.getElementById("serverDato").value = dato;
-            document.getElementById("serverDato").innerHTML = dato;
-        }
-    };
-    xmlhttp.open("GET", "server.php?dato=", true);
-    xmlhttp.send();
-    console.log("getDato()");
 }
 
 function apne(i) {
@@ -44,6 +26,41 @@ function apne(i) {
         flipper.className = "flipper";
     }
 }
+
+function GjemGammelLuke() {
+    //funksjon for å gjemme gamle luker på mobil
+    //funker ikke for dag == 7 ??
+    var width = document.body.offsetWidth,
+        i,
+        luker,
+        dag = new Date();
+    dag = dag.getDate();
+    console.log("GjemGammelLuke()");
+    console.log("width " + width + "px");
+    //legger invertert farge til dagen i dag
+    luker = document.getElementById("front" + dag);
+    luker.style.backgroundColor = "white";
+    luker.style.color = "rgb(172,45,66)";
+    //sjekker om mobilside
+    if (width < 620 && dag < 25){
+        //gjemmer luker 5 eller 6 dager før dagen i dag (sånn at det blir partall antall luker igjenn)
+        luker = document.querySelectorAll(".luke");
+        for (i = 0; i < (dag - 4); i++) {
+            luker[i].style.display = "none";
+            //Teller til Lukenummer så de blir riktige
+            if (i ===  (dag - 6) || dag === 5) {
+                luker[i + 2 - (dag === 5)].style.counterIncrement = "luke " + (i + 3 - (dag === 5) );
+            }
+        }
+    }
+}
+
+function ESCclose(evt) {
+  if (evt.keyCode == 27) {
+      window.history.back(-1);
+  }
+ }
+
 
 // info om localstorage http://diveintohtml5.info/storage.html
 function supportsLocalStorage() {
@@ -78,31 +95,22 @@ function lagrebruker(studentnummer) {
     }
 }
 
-function hentebruker() {
-    //Henter studentnummer fra Localstorage hvis tilgjengelig
-    console.log("hentebruker()");
-    if (!supportsLocalStorage()) { return false; }
+function fyllinnbruker() {
+    //funksjon for å hente bruker fra localstorage
+    console.log("fyllinnbruker()");
+    if (!supportsLocalStorage()) { console.log("LocalStorage not supported"); return; }
     var studentnummer = parseInt(localStorage['deltaker'], 10);
     //sjekker om nummer finnes i minne && dobbeltsjekk om det er et nummer
-    console.log(studentnummer);
-    if (studentnummer !== null && !isNaN(studentnummer)) {
-        return ('s' + studentnummer);
+    console.log("Studentummer: " + studentnummer);
+    if (studentnummer !== undefined && !isNaN(studentnummer)) {
+        document.getElementById("stdnr").value = studentnummer;
     } else {
-        return null;
-    }
-}
-
-function fyllinnbruker() {
-    //kan kombineres med hentebruker?
-    console.log("fyllinnbruker()");
-    var stud = hentebruker();
-    if (stud !== null || stud !== undefined) { //hvis bruker er lagret
-        document.getElementById("stdnr").value = stud;
+        return;
     }
 }
     
 function sendskjema() {
-    //sjekker om alle felt er utfylt, og sender avgårde svar, git også tilbakemeling
+    //sjekker om alle felt er utfylt, og sender avgårde svar, gir også tilbakemeling
     console.log("sendskjema()");
     var input = document.getElementById('stdnr').value,
         bruker_lagret = lagrebruker(input),
@@ -151,7 +159,7 @@ function sendskjema() {
     
     if (melding !== "") {
         document.getElementById("spmmelding").innerHTML = melding;
-        document.getElementById("spmmelding").style.color = 'red';
+        document.getElementById("spmmelding").style.color = 'rgb(172,45,66)';
     }
 }
 
@@ -175,10 +183,10 @@ function visKonkurranse(dag) {
             //display dagens spørsmål til bruker
             for (i = 0; i < spm.length; i++) {
                 spm[i].innerHTML = resp[i * 6] + '<br> ' +
-                    '<input type="radio"  name="svar' + (i + 1) + '"  value=" ">' + resp[i * 6 + 1] + '<br>' +
-                    '<input type="radio"  name="svar' + (i + 1) + '"  value=" ">' + resp[i * 6 + 2] + '<br>' +
-                    '<input type="radio"  name="svar' + (i + 1) + '"  value=" ">' + resp[i * 6 + 3] + '<br>' +
-                    '<input type="radio"  name="svar' + (i + 1) + '"  value=" ">' + resp[i * 6 + 4] + '<br>';
+                    '<input type="radio" label="alternativ1" title="velg svaralternativ"  name="svar' + (i + 1) + '"  value=" ">' + resp[i * 6 + 1] + '<br>' +
+                    '<input type="radio" label="alternativ2" title="velg svaralternativ" name="svar' + (i + 1) + '"  value=" ">' + resp[i * 6 + 2] + '<br>' +
+                    '<input type="radio" label="alternativ3" title="velg svaralternativ" name="svar' + (i + 1) + '"  value=" ">' + resp[i * 6 + 3] + '<br>' +
+                    '<input type="radio" label="alternativ4" title="velg svaralternativ" name="svar' + (i + 1) + '"  value=" ">' + resp[i * 6 + 4] + '<br>';
                 console.log(spm[i]);
             }
         }

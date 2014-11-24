@@ -1,8 +1,5 @@
 body{
-    margin: 0;
-	left: 10%;
-	right:10%;
-	padding:0;
+    margin: 0;        /*footer 100% width*/
 	font-Size: 20px;	/* 1em = 20px*/
  	font-family: "Segoe UI", verdana;
     background-image: URL(Bilder/juledekorasjon.jpg);
@@ -12,13 +9,12 @@ body{
 }
 
 footer{
-	margin-left:auto;
-	margin-right:auto;
+	margin-left: 0;
+    margin-right: 0;
 	display: inline-block;
 	position: relative;    
 	font-weight:bold;
 	width:100%;
-	height:100%;
 	text-align:center;
 	font-Size:1.5em;
 }
@@ -68,7 +64,6 @@ nav a:hover{
 
 .closed { display: none;}
 
-
 .visible ul{
     width: 9em;
     display: flex;
@@ -100,8 +95,8 @@ nav a:hover{
     visibility: hidden;
     position: absolute;
     height: 40px;
-    right: 25px;
-    top: 24px;
+    right: 20px;
+    top: 20px;
     z-index: 3;
     cursor: pointer;
 }
@@ -116,7 +111,6 @@ nav a:hover{
     height: auto;
     width: 100%;
 }
-/*---------------------------------------Meny slutt-----------------------*/
 
 /* --------------------------------------Luke START -------------------------------*/
 
@@ -127,9 +121,7 @@ nav a:hover{
     justify-content: center;
 }
 
-.luke {margin: 0.4em;}
-
-
+.luke { margin: 0.4em;}
 
 .luke, .front, .back {
     list-style: none;
@@ -138,30 +130,28 @@ nav a:hover{
 }
 
 .flipper {
-        transition: 1.2s ease;
-        -webkit-transform-style: preserve-3d;
-        transform-style: preserve-3d;
-        -webkit-transform-origin: 0 0;
-        transform-origin: 0 0;
-        cursor: pointer;
+    transition: 1.2s ease;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    cursor: pointer;
 }
 
 .flipperopen{
-        transition: 1.2s ease;
-        -webkit-transform-style: preserve-3d;
-        transform-style: preserve-3d;
-        -webkit-transform-origin: 0 0;
-        transform-origin: 0 0;
-        -webkit-transform: rotateY(180deg);
-        transform: rotateY(180deg);
+    transition: 1.2s ease;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
 }
 
 .front, .back {
     background-size: 100%;
 	backface-visibility: hidden;
 	position: absolute;
-	top: 0;
-	left: 0;
 }
 
 .front {
@@ -169,6 +159,7 @@ nav a:hover{
     z-index: 2;
     -webkit-transform: rotateY(0deg);
     transform: rotateY(0deg);
+    color: white;
 }
 
 .front:before{
@@ -176,43 +167,43 @@ nav a:hover{
     display: block;
     position: relative;
     top: -12%;
-    color: white;
+    color: inherit;
     font-size: 6.5em;
     font-weight: 500;
-    content: attr(data-nummer);
+    content: counter(luke);
 }
 
 .back {
-        -webkit-transform: rotateY(180deg);
-        transform: rotateY(180deg);
-        background-image: url(Bilder/MAZElogoNY.png);
-        cursor: pointer;
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    background-image: url(Bilder/MAZElogoNY.png);
+    cursor: pointer;
 }
 
 #back2{background-image: url(Bilder/Bekk.png);}
 
-.back img{
-    height: 200px;
-    width: 200px;
-}
-
 .bakgrunn{
-    background-color: rgb(0,0,0);
-    background-color: rgba(255,255,255,0.2); 
+    text-align: center;
+    display: flex; /*cener align .bakgrunn a*/
+    display: -webkit-flex; /*safari*/
     height: 150px;
-    width: 150px;
-    box-shadow: .2em .2em 1em .3em #242424 ;
+    background-color: rgb(0,0,0);
+    background-color: rgba(255,255,255,0.7); 
+    box-shadow: .2em .2em 1em .3em #242424 ;   
 }
 
 .bakgrunn:hover{cursor: pointer;}
 
 .bakgrunn a{
+    margin: auto;
     display:block;
-    text-align:center;
-    padding-top: 32%;
+    padding: 5%;
     color: rgb(172,45,66);
     text-decoration: none; 
 }
+
+.lukewrapper li{counter-increment: luke;} /*needs javascript for this counting to be correct, when we close old luker in mobile*/
+.bakgrunn a:after{content: " " counter(luke);}
 
 /*----------------------------------------- Luke END -----------------------------*/
 
@@ -222,6 +213,7 @@ nav a:hover{
     left: 0;
     top: 0;
 }
+
 .snowflake {
     position: fixed;
     color: #ecf3f7; 
@@ -255,7 +247,7 @@ nav a:hover{
     display: -webkit-flex; /*safari*/
     flex-flow: row nowrap;
     width: 70%;
-    height: 80%;
+    /*height: 80%;*/
     position: relative;
     background: white;
     padding: 2% 5% 2% 5%;
@@ -321,7 +313,6 @@ nav a:hover{
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
     /*IE hack link: http://stackoverflow.com/questions/20541306/how-to-write-a-css-hack-for-ie-11*/
     .front, .back{display: none;}
-    .bakgrunn{content: attr(data-nummer);}
     .konkurranse img{width: 10em;}
     .internetexplorer{
         padding: 2%;
@@ -350,14 +341,13 @@ nav a:hover{
     padding: 3%;
     margin-bottom: 1em;
     margin-top: 1em;
-    background-color: white;
+    background-color: #AC2D42;
     opacity: 0.98;
-    border-radius: 1em;
 }
 
-.about p{margin: 0;}
+.about p{margin: 0; color: white;}
 .about p:first-of-type{
-    color:black;
+    color:white;
     text-align: center; 
     text-decoration: underline; 
     font-size: 1.2em;
@@ -366,7 +356,17 @@ nav a:hover{
 .about img{
     margin: auto;
     padding-bottom: 0.5em;
+    padding-top: 0.5em;
     width: 150px;
+    height: 150px;
+}
+.sosialemedier{
+    display: inline-block;
+    text-align: center;
+}
+.sosialemedier img{
+    width: 75px;
+    height: 75px;
 }
 
 .about a{text-decoration: none; letter-spacing: 1px;}
@@ -385,7 +385,6 @@ nav a:hover{
 }
 
 .regler:before{
-	
 	content: "";
 	display: block;
 	position: absolute;
@@ -397,7 +396,7 @@ nav a:hover{
 }
 .reglement {
 	display:inline-block;
-	width:40%;
+    width:40%;
 	margin-left:30%;
 	margin-right:30%;
 	font-Size:1.3em;
@@ -411,29 +410,24 @@ h1{text-align:center;}
 .sponsorwrapper{
     display: flex;
     flex-flow: column nowrap;
-    justify-content: space-around;
-    align-items:stretch;
     width:100%;
-    margin: auto;
     color:black;
 }
 
 .sponsor{
     display: flex;
-    flex-flow: row nowrap;
     justify-content: space-around;
     align-items:center;
     background-color: white;
     opacity: 0.9;
     margin-bottom: 0.6em;
     margin-top: 0.6em;
-    padding: 1%;
 }
 
 .sponsor a img{height: 200px;}
-
-.sponsortekst {width: 70%;  }
+.sponsortekst {width: 70%; margin: 0.5em; }
 .sponsortekst h2{font-size: 1em; margin: 0;}
+
 .sponsortekst p{
     text-align: justify;
     line-height: 1em;
