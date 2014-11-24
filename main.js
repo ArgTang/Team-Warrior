@@ -30,11 +30,13 @@ function apne(i) {
 
 function GjemGammelLuke() {
     //funksjon for å gjemme gamle luker på mobil
+    //funker ikke for dag == 7 ??
     var width = document.body.offsetWidth,
         i,
         luker,
         dag = new Date();
     dag = dag.getDate();
+    dag = 5;
     console.log("GjemGammelLuke()");
     console.log("width " + width + "px");
     //legger invertert farge til dagen i dag
@@ -42,14 +44,15 @@ function GjemGammelLuke() {
     luker.style.backgroundColor = "white";
     luker.style.color = "rgb(172,45,66)";
     //sjekker om mobilside
-    if (width < 620) {
+    if (width < 620 && dag < 25) {
         //gjemmer luker 5 eller 6 dager før dagen i dag (sånn at det blir partall antall luker igjenn)
         luker = document.querySelectorAll(".luke");
-        for (i = 0; i < (dag - (5 + 5%2)); i++) {
-            luker[i].style.display = "none"
+        for (i = 0; i < (dag - (5 + dag % 5)); i++) {
+            luker[i].style.display = "none";
             //Teller til Lukenummer så de blir riktige
-            if(i ==  (dag - 2 - (5 + 5%2)))
-                luker[i+2].style.counterIncrement = "luke " + (i+3);
+            if (i ===  (dag - 2 - (5 + dag % 5))) {
+                luker[i + 2].style.counterIncrement = "luke " + (i + 3);
+            }
         }
     }
 }
@@ -152,7 +155,7 @@ function sendskjema() {
     
     if (melding !== "") {
         document.getElementById("spmmelding").innerHTML = melding;
-        document.getElementById("spmmelding").style.color = 'red';
+        document.getElementById("spmmelding").style.color = 'rgb(172,45,66)';
     }
 }
 

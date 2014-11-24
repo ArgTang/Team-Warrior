@@ -194,7 +194,6 @@ nav a:hover{
 .bakgrunn:hover{cursor: pointer;}
 
 .bakgrunn a{
-    height: 136px;
     margin: auto;
     display:block;
     text-align:justify;
@@ -207,24 +206,6 @@ nav a:hover{
 .bakgrunn a:after{content: " " counter(luke);}
 
 /*----------------------------------------- Luke END -----------------------------*/
-
-/*Snowing in the winter*/
-.snowflakeContainer {
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-
-.snowflake {
-    position: fixed;
-    color: #ecf3f7; 
-    -webkit-filter: blur(.02em); /*not for IE, check for Firefox?*/
-    filter: blur(.02em);/*Check if this works for FF*/
-    z-index: 1000;
-    pointer-events: none; /*istedet for user select ikke for IE <11*/
-}
-
-.snowflake:hover { pointer-events: none; }
 
 /*-------------- CSS for Konkurranseskjema ------------------------------------------------------------------*/
 
@@ -248,7 +229,6 @@ nav a:hover{
     display: -webkit-flex; /*safari*/
     flex-flow: row nowrap;
     width: 70%;
-    /*height: 80%;*/
     position: relative;
     background: white;
     padding: 2% 5% 2% 5%;
@@ -285,7 +265,7 @@ nav a:hover{
 }
 
 .konkurranse .Lukk {
-    color: red;
+    color: rgb(172,45,66);
     font-size: 1em;
 	position: absolute;
 	right: 0.50em;
@@ -305,7 +285,8 @@ nav a:hover{
     font-weight: 500;
     width: 6em;
     height: 2em;
-    color: red;
+    color: white;
+    background-color: rgb(172,45,66);
 }
 
 /* ------------------CSS For spesifikke nettlesere -------------*/
