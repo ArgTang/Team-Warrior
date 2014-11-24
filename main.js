@@ -10,7 +10,6 @@ function dropdownopen() {
     } else {
         dropdown.className = "visible";
     }
-    
 }
 
 function apne(i) {
@@ -36,7 +35,6 @@ function GjemGammelLuke() {
         luker,
         dag = new Date();
     dag = dag.getDate();
-    dag = 5;
     console.log("GjemGammelLuke()");
     console.log("width " + width + "px");
     //legger invertert farge til dagen i dag
@@ -44,14 +42,14 @@ function GjemGammelLuke() {
     luker.style.backgroundColor = "white";
     luker.style.color = "rgb(172,45,66)";
     //sjekker om mobilside
-    if (width < 620 && dag < 25) {
+    if (width < 620 && dag < 25){
         //gjemmer luker 5 eller 6 dager før dagen i dag (sånn at det blir partall antall luker igjenn)
         luker = document.querySelectorAll(".luke");
-        for (i = 0; i < (dag - (5 + dag % 5)); i++) {
+        for (i = 0; i < (dag - 4); i++) {
             luker[i].style.display = "none";
             //Teller til Lukenummer så de blir riktige
-            if (i ===  (dag - 2 - (5 + dag % 5))) {
-                luker[i + 2].style.counterIncrement = "luke " + (i + 3);
+            if (i ===  (dag - 6) || dag === 5) {
+                luker[i + 2 - (dag === 5)].style.counterIncrement = "luke " + (i + 3 - (dag === 5) );
             }
         }
     }
@@ -97,7 +95,7 @@ function fyllinnbruker() {
     if (!supportsLocalStorage()) { console.log("LocalStorage not supported"); return; }
     var studentnummer = parseInt(localStorage['deltaker'], 10);
     //sjekker om nummer finnes i minne && dobbeltsjekk om det er et nummer
-    console.log(studentnummer);
+    console.log("Studentummer: " + studentnummer);
     if (studentnummer !== undefined && !isNaN(studentnummer)) {
         document.getElementById("stdnr").value = studentnummer;
     } else {
@@ -106,7 +104,7 @@ function fyllinnbruker() {
 }
     
 function sendskjema() {
-    //sjekker om alle felt er utfylt, og sender avgårde svar, git også tilbakemeling
+    //sjekker om alle felt er utfylt, og sender avgårde svar, gir også tilbakemeling
     console.log("sendskjema()");
     var input = document.getElementById('stdnr').value,
         bruker_lagret = lagrebruker(input),
