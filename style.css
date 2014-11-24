@@ -419,12 +419,12 @@ h1{text-align:center;}
     justify-content: space-around;
     align-items:center;
     background-color: white;
-    opacity: 0.9;
+    opacity: 0.99;
     margin-bottom: 0.6em;
     margin-top: 0.6em;
 }
 
-.sponsor a img{height: 200px;}
+.sponsor a img{height: 150px; width: 150px;}
 .sponsortekst {width: 70%; margin: 0.5em; }
 .sponsortekst h2{font-size: 1em; margin: 0;}
 
