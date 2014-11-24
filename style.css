@@ -183,6 +183,7 @@ nav a:hover{
 #back2{background-image: url(Bilder/Bekk.png);}
 
 .bakgrunn{
+    text-align: center;
     display: flex; /*cener align .bakgrunn a*/
     display: -webkit-flex; /*safari*/
     height: 150px;
