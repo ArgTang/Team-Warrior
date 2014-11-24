@@ -56,6 +56,7 @@ function GjemGammelLuke() {
 }
 
 function ESCclose(evt) {
+    //funksjon for å "lukke" popup vindu
   if (evt.keyCode == 27) {
       window.history.back(-1);
   }
