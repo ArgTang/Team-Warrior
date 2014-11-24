@@ -55,6 +55,12 @@ function GjemGammelLuke() {
     }
 }
 
+function ESCclose(evt) {
+  if (evt.keyCode == 27) {
+      window.history.back(-1);
+  }
+ }
+
 
 // info om localstorage http://diveintohtml5.info/storage.html
 function supportsLocalStorage() {
