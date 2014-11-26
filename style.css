@@ -16,7 +16,7 @@ footer{
 	font-weight:bold;
 	width:100%;
 	text-align:center;
-	font-Size:1.5em;
+	font-Size:1em;
 }
 
 footer:before{
@@ -119,6 +119,7 @@ nav a:hover{
     display: -webkit-flex; /*safari*/
     flex-flow: row wrap;
     justify-content: center;
+    padding: 0;
 }
 
 .luke { margin: 0.4em;}
@@ -204,6 +205,7 @@ nav a:hover{
 
 .lukewrapper li{counter-increment: luke;} /*javascript counts this, when we close old luker in mobile*/
 .bakgrunn a:after{content: " " counter(luke);}
+
 
 /*-------------- CSS for Konkurranseskjema ------------------------------------------------------------------*/
 
@@ -402,9 +404,13 @@ h1{
 .sponsortekst p{
     line-height: 1em;
     margin:0;
-    padding: 1%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+.sponsortekst h2{
+    text-align: center;
 }
 .sponsortekst a{
-    color:black;
-    
+    color:black;   
 }
+
