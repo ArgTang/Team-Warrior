@@ -389,7 +389,7 @@ h1{
 }
 
 .sponsortekst{ width: 90%; margin: 0.5em;}
-.sponsortekst a{color:black;}
+.sponsortekst a{color:rgb(0,174,255);}
 
 .sponsortekst h2{
     font-size: 1em;
