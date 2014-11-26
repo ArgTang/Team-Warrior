@@ -202,28 +202,8 @@ nav a:hover{
     text-decoration: none; 
 }
 
-.lukewrapper li{counter-increment: luke;} /*needs javascript for this counting to be correct, when we close old luker in mobile*/
+.lukewrapper li{counter-increment: luke;} /*javascript counts this, when we close old luker in mobile*/
 .bakgrunn a:after{content: " " counter(luke);}
-
-/*----------------------------------------- Luke END -----------------------------*/
-
-/*Snowing in the winter*/
-.snowflakeContainer {
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-
-.snowflake {
-    position: fixed;
-    color: #ecf3f7; 
-    -webkit-filter: blur(.02em); /*not for IE, check for Firefox?*/
-    filter: blur(.02em);/*Check if this works for FF*/
-    z-index: 1000;
-    pointer-events: none; /*istedet for user select ikke for IE <11*/
-}
-
-.snowflake:hover { pointer-events: none; }
 
 /*-------------- CSS for Konkurranseskjema ------------------------------------------------------------------*/
 
@@ -236,7 +216,7 @@ nav a:hover{
 	left: 0;
     
 	background: rgba(0,0,0,0.8);
-	opacity:0;
+	opacity:0; /*FF fix*/
 	-webkit-transition: opacity 400ms ease-in; /*old android*/
 	transition: opacity 400ms ease-in;
 	pointer-events: none;
@@ -247,7 +227,6 @@ nav a:hover{
     display: -webkit-flex; /*safari*/
     flex-flow: row nowrap;
     width: 70%;
-    /*height: 80%;*/
     position: relative;
     background: white;
     padding: 2% 5% 2% 5%;
@@ -342,8 +321,8 @@ nav a:hover{
     padding: 3%;
     margin-bottom: 1em;
     margin-top: 1em;
-    background-color: #AC2D42;
-    opacity: 0.98;
+    background-color: rgb(172,45,66);
+    background-color: rgba(172,45,66, 0.95);
 }
 
 .about p{margin: 0; color: white; font-size: 0.8em;}
@@ -378,8 +357,9 @@ nav a:hover{
 .regler{
     margin: 10%; 
     padding: 1%;
-    background-color: rgb(255,255,255);
-    background-color: rgba(255,255,255, 0.9);
+    color: white;
+    background-color: rgb(172,45,66);
+    background-color: rgba(172,45,66, 0.95);
 }
 
 .reglement {
@@ -407,14 +387,15 @@ h1{
     display: flex;
     justify-content: space-around;
     align-items:center;
-    background-color: rgb(255,255,255);
-    background-color: rgba(255,255,255, 0.95);
     margin-bottom: 0.6em;
     margin-top: 0.6em;
+    color: white;
+    background-color: rgb(172,45,66);
+    background-color: rgba(172,45,66, 0.95);
 }
 
-.sponsor a img{height: 150px; width: 150px;}
-.sponsortekst {width: 70%; margin: 0.5em; }
+.sponsor a img{height: 150px; width: 150px;padding: 5%;}
+.sponsortekst {width: 70%; margin: 0.5em;}
 .sponsortekst h2{font-size: 1em; margin: 0;}
 
 .sponsortekst p{
