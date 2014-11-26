@@ -69,4 +69,8 @@
         height: auto;
         width:  30px;
     }
+    
+    .visible ul{
+        right: 53px;
+    }
 }
