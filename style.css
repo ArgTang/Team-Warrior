@@ -387,6 +387,7 @@ h1{
     display: flex;
     justify-content: space-around;
     align-items:center;
+    border-radius: 1em;
     margin-bottom: 0.6em;
     margin-top: 0.6em;
     color: white;
@@ -394,7 +395,7 @@ h1{
     background-color: rgba(172,45,66, 0.95);
 }
 
-.sponsor a img{height: 150px; width: 150px;padding: 5%;}
+.sponsor a img{height: 150px; width: 150px;padding: 5%; border-radius: 10em;}
 .sponsortekst {width: 70%; margin: 0.5em;}
 .sponsortekst h2{font-size: 1em; margin: 0;}
 
@@ -403,4 +404,8 @@ h1{
     line-height: 1em;
     margin:0;
     padding: 1%;
+}
+.sponsortekst a{
+    color:black;
+    
 }
