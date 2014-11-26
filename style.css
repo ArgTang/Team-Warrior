@@ -69,8 +69,8 @@ nav a:hover{
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-end;
-    top: 0.1em;
-    right: 3em;
+    top: -2px;
+    right: 67px;
     z-index: 3;
     background-color: rgb(172,45,66);
 }
