@@ -338,6 +338,7 @@ nav a:hover{
     display: -webkit-flex; /*safari*/
     flex-flow: column nowrap;
     width: 250px;
+    border-radius: 0.5em;
     padding: 3%;
     margin-bottom: 1em;
     margin-top: 1em;
@@ -357,6 +358,7 @@ nav a:hover{
     margin: auto;
     padding-bottom: 0.5em;
     padding-top: 0.5em;
+    border-radius: 100%;
     width: 150px;
     height: 150px;
 }
