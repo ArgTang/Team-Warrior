@@ -34,6 +34,13 @@ function GjemGammelLuke() {
         i,
         luker,
         dag = new Date();
+    //Safari hack http://browserhacks.com/
+    if(/constructor/i.test(window.HTMLElement)){
+        luker = document.querySelector(".internetexplorer");
+        luker.innerHTML = "Som du ser har vi ikke fått til denne siden til safari enda, den fungerer derimot fint sammen med chrome, opera eller Firefox.";
+        luker.style.display = "block";
+    }
+    
     dag = dag.getDate();
     console.log("GjemGammelLuke()");
     console.log("width " + width + "px");
