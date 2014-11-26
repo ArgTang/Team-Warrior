@@ -56,11 +56,12 @@ function GjemGammelLuke() {
 }
 
 function ESCclose(evt) {
+    //lukke konkuranse vindu med ESC
+    console.log("ESClose");
   if (evt.keyCode == 27) {
-      window.history.back(-1);
+      window.history.back(-1);//Bare FF
   }
- }
-
+}
 
 // info om localstorage http://diveintohtml5.info/storage.html
 function supportsLocalStorage() {
