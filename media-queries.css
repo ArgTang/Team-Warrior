@@ -22,14 +22,14 @@
     .konkurranse .høyreside{ padding: 0;}
     .konkurranse .høyreside img{display: none;}
     .konkurranse .høyreside article{display: none;}
-    
-     /*Sponsor*/
-    .sponsor{flex-direction: column;}
-    .sponsor a img{height: 150px;}
-    .sponsor .sponsortekst { width: 95%; }
-    
     footer{font-size: 0.9em;}
     
+     /*Sponsorside*/
+    .sponsor{flex-direction: column;}
+    .sponsor a img{height: 150px;}
+    .sponsor .sponsortekst {width: 95%;}
+    
+    /*regelside*/
     .reglement{
         width:100%;
 	    margin-left:0;
@@ -51,7 +51,6 @@
     
     /*Om oss*/
     .about{width: 350px;}
-   
 }
 
 @media screen and (max-width: 490px) {
@@ -70,7 +69,5 @@
         width:  30px;
     }
     
-    .visible ul{
-        right: 53px;
-    }
+    .visible ul{right: 53px;}
 }

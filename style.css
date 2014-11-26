@@ -30,10 +30,7 @@ footer:before{
 	opacity: .7;
 }
 
-.innholdswrapper{
-	margin-right:10%;
-	margin-left:10%;
-}
+.innholdswrapper{margin-right:10%;margin-left:10%;}
 
 nav ul{
     display: flex;
@@ -57,12 +54,8 @@ nav a{
     letter-spacing: 0;/*fix for FF*/
 }
 
-nav a:hover{
-    letter-spacing: .15em;
-    font-weight: 600;
-}
-
-.closed { display: none;}
+nav a:hover{letter-spacing: .15em;font-weight: 600;}
+.closed{display: none;}
 
 .visible ul{
     width: 9em;
@@ -101,10 +94,7 @@ nav a:hover{
     cursor: pointer;
 }
 
-#logo{
-    width: 100%;
-    display: inline-block;
-}
+#logo{width: 100%;display: inline-block;}
 
 #logo img{
     float: left;
@@ -122,7 +112,7 @@ nav a:hover{
     padding: 0;
 }
 
-.luke { margin: 0.4em;}
+.luke {margin: 0.5em;}
 
 .luke, .front, .back {
     list-style: none;
@@ -253,11 +243,8 @@ nav a:hover{
 }
 
 .konkurranse img{margin:auto;}
+.høyreside article{line-height: 1em;} /*hvor kommer større linjehøyde fra?*/
 
-.høyreside article{    /*få tak i en uformatert tekst?*/
-    font-weight: 400; /*Hvor kommer BOLD fra?*/
-    line-height: 1em; /*hvor kommer større linjehøyde fra?*/
-}
 
 .konkurranse:target {
 	opacity: 0.99; /*poof like magic*/
@@ -265,7 +252,7 @@ nav a:hover{
 }
 
 .konkurranse .Lukk {
-    color: red;
+    color: rgb(172,45,66);
     font-size: 1em;
 	position: absolute;
 	right: 0.50em;
@@ -274,18 +261,16 @@ nav a:hover{
 	font-weight: bold;
 }
 
-.konkurranse [name="Snr"]{
-    font-size: inherit;
-    font-family: inherit;
-}
+.konkurranse input{font-size: inherit;font-family: inherit;}
 
-.konkurranse [value="Send inn"]{
+.konkurranse button{
     font-family: inherit;
     font-size: 0.7em;
     font-weight: 500;
     width: 6em;
-    height: 2em;
-    color: red;
+    height: 2.5em;
+    color: white;
+    background-color: rgb(172,45,66);
 }
 
 /* ------------------CSS For spesifikke nettlesere -------------*/
@@ -327,7 +312,12 @@ nav a:hover{
     background-color: rgba(172,45,66, 0.95);
 }
 
-.about p{margin: 0; color: white; font-size: 0.8em;}
+.about p{
+    margin: 0;
+    color: white;
+    font-size: 0.8em;
+}
+
 .about p:first-of-type{
     color:white;
     text-align: center; 
@@ -343,15 +333,9 @@ nav a:hover{
     width: 150px;
     height: 150px;
 }
-.sosialemedier{
-    display: inline-block;
-    text-align: center;
-}
-.sosialemedier img{
-    width: 75px;
-    height: 75px;
-}
 
+.sosialemedier{display: inline-block;text-align: center;}
+.sosialemedier img{width: 75px;height: 75px;}
 .about a{text-decoration: none; letter-spacing: 1px;}
 
 /*--------------------- CSS for regler.html----------------------------------------------------------------------------------------------*/
@@ -364,7 +348,7 @@ nav a:hover{
     background-color: rgba(172,45,66, 0.95);
 }
 
-.reglement {
+.reglement{
     margin-top: 2em;
 	font-Size:1.1em;
 	font-family:sans-serif;
@@ -382,24 +366,34 @@ h1{
     display: flex;
     flex-flow: column nowrap;
     width:100%;
-    color:black;
+    color:white;
 }
 
 .sponsor{
-    display: flex;
-    justify-content: space-around;
+    display: inline-flex;
     align-items:center;
     border-radius: 1em;
     margin-bottom: 0.6em;
     margin-top: 0.6em;
-    color: white;
     background-color: rgb(172,45,66);
     background-color: rgba(172,45,66, 0.95);
 }
 
-.sponsor a img{height: 150px; width: 150px;padding: 5%; border-radius: 10em;}
-.sponsortekst {width: 70%; margin: 0.5em;}
-.sponsortekst h2{font-size: 1em; margin: 0;}
+.sponsor img{
+    height: 150px; 
+    width: 150px;
+    padding: 0.4em; 
+    border-radius: 10em;
+}
+
+.sponsortekst{ width: 90%; margin: 0.5em;}
+.sponsortekst a{color:black;}
+
+.sponsortekst h2{
+    font-size: 1em;
+    text-align: center;
+    margin: 0;
+}
 
 .sponsortekst p{
     line-height: 1em;
@@ -407,10 +401,3 @@ h1{
     padding-top: 1%;
     padding-bottom: 1%;
 }
-.sponsortekst h2{
-    text-align: center;
-}
-.sponsortekst a{
-    color:black;   
-}
-
