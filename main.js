@@ -20,7 +20,7 @@ function apne(i) {
         m = d.getMonth(),
         flipper = document.getElementById("flipper" + i);
     //åpner luke hvis desember og dag < dagen i dag
-    if (flipper.className === "flipper" && i <= n && m === 11) { //her velges hvilken måned lukene skal gjelde for, å endre fra 11 til 10 vil gjøre at alle lukene kan åpnes
+    if (flipper.className === "flipper" && i <= n && m === 10) { //her velges hvilken måned lukene skal gjelde for, å endre fra 11 til 10 vil gjøre at alle lukene kan åpnes
         flipper.className = "flipperopen";
     } else {
         flipper.className = "flipper";
@@ -175,15 +175,15 @@ function visKonkurranse(dag) {
     //Henter konkuranse fra etterspurt dag og setter inn i skjema
     console.log("visKonkuranse(" + dag + ")");
     fyllinnbruker(); //fyller inn studnummer hvis dette er i cache
+    fyllinnsponsor(dag);
     var sporsmol = new XMLHttpRequest(),
         d = new Date(),
         n = d.getDate(),
         i,
         resp,
         spm = document.querySelectorAll(".sporsmal");
-
-    //spør server om dagens spørsmål
     
+    //spør server om dagens spørsmål
     sporsmol.onreadystatechange = function () {
         if (sporsmol.readyState === 4 && sporsmol.status === 200) {
             console.log(sporsmol.responseText);
@@ -201,6 +201,39 @@ function visKonkurranse(dag) {
     };
     sporsmol.open("GET", "server.php?visKonkurranse=" + dag, true);
     sporsmol.send();
+    
+}
+
+function fyllinnsponsor(l) {
+    var artikkel = document.getElementById('sponsortekst');
+    var bilde = document.getElementById('sponsorbilde');
+
+    switch(l){
+    case 1:
+    case 10:
+        bilde.src = "Bilder/MAZElogoNY.png";
+        bilde.alt = "Maze logo";
+        artikkel.innerHTML = "Grunnleggerne av Maze har det siste 10-året vært glødende opptatt av hva som skal til for å få resten av medarbeiderne og resten av de lokale lederne til å gjøre det samme som de som skaper de beste resultatene. Interessen er drevet av en overbevisning om at dette er den korteste veien til dramatisk resutatforbedring i de aller fleste salgs- og service organisasjoner. Metoden og verktøyene ble først utviklet i nært samarbeid med flere retail kjeder, men er senere også blitt videreutviklet for bank, forsikring og andre typer salgsorganisasjoner.";
+        break;
+    case 2:
+        bilde.src = "Bilder/Bekk.png";
+        bilde.alt = "Bekk logo";
+        artikkel.innerHTML = "Bekk Consulting AS er et norsk konsulentselskap. Vi gjennomfører prosjekter for store private og offentlige virksomheter innen strategisk rådgivning, utvikling av IT-systemer og design av digitale tjenester. Vi er i dag omkring 370 ansatte, og har kontorer i Oslo og Trondheim.";
+        break;
+    case 3:
+        bilde.src = "Bilder/Evry_logo_RGB_PPT.png";
+        bilde.alt = "Evry logo";
+        artikkel.innerHTML = "Som Norges største IT-selskap har EVRY omfattende leveranser til norsk og nordisk næringsliv, finanssektoren og offentlige virksomheter innen stat, kommune og helsesektor. EVRYs kontor på Fornebu utenfor Oslo. EVRY står bak en rekke innovasjoner som har endret og forenklet folks måte å bruke tjenester i samfunnet på. Over en million nordmenn er til enhver tid avhengig av tjenester som EVRY leverer. Hver eneste time, hele døgnet logger noen seg inn i nettbanken, henter fram viktige dokumenter på jobben eller sjekker når neste tog går hjem.";
+        break;
+    case 4:
+        bilde.src = "Bilder/Atea logo.png";
+        bilde.alt = "Atea logo";
+        artikkel.innerHTML = "Vi lever i et av verdens rikeste land, og kan lene oss tilbake og være tilfredse. Men i Atea vil vi mer. Vi er spesialister i IT-infrastruktur og ønsker å bruke kompetansen vår til å forme et enda bedre Norge. I nært samarbeid med kundene og partnerne våre skal vi utvikle løsninger som neste generasjon kan være stolte av. Atea i NorgeVi ønsker blant annet å bidra til mer effektiv læring i skolen. Vi vil styrke politiet og helseomsorgen i deres arbeid og på den måten være med og trygge vår felles velferd. Vi vil gjøre industrien mer konkurransedyktig og gi entreprenører muligheten til å realisere sine drømmer. Sammen med kundene våre i hele landet bygger Atea Norge med IT. Hos oss får du et heldekkende tilbud av produkter og tjenester. Vi hjelper deg med hele kjeden, fra design, utvikling og produktforsyning til funksjon og vedlikehold. Gjennom å skape en IT-infrastruktur i verdensklasse er Atea med og legger grunnlaget til et smartere og mer innovativt Norge. Vi har kontorer spredt over hele Norge, og hjelper deg der du er.";
+        break;
+    default: 
+        bilde.src = "";
+        artikkel.innerHTML = "Denne luken har ingen sponsor, men delta gjerne alike vell og konkurer om heder og ære!";
+    }
 }
 
 

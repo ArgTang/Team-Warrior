@@ -169,11 +169,16 @@ nav a:hover{letter-spacing: 0.15em;font-weight: 600;}
 .back {
     -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
-    background-image: url(Bilder/MAZElogoNY.png);
     cursor: pointer;
+    background-image: url(Bilder/Alternativt.jpg);
+    
 }
 
+#back1{background-image: url(Bilder/MAZElogoNY.png);}
 #back2{background-image: url(Bilder/Bekk.png);}
+#back3{background-image: url(Bilder/Evry_logo_RGB_PPT.jpg);}
+#back4{background-image: url(Bilder/Atealogo.jpg);}
+#back10{background-image: url(Bilder/MAZElogoNY.png);}
 
 .bakgrunn{
     text-align: center;
@@ -240,11 +245,10 @@ nav a:hover{letter-spacing: 0.15em;font-weight: 600;}
     flex-flow: column nowrap;
     margin: auto;
     width: 49%;
-    text-align: justify;
     padding: 1%;
 }
 
-.konkurranse img{margin:auto;}
+.konkurranse img{margin:auto;max-height: 100px; width: auto;}
 .høyreside article{line-height: 1em;} /*hvor kommer større linjehøyde fra?*/
 
 
