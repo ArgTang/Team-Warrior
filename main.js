@@ -35,7 +35,7 @@ function GjemGammelLuke() {
         luker,
         dag = new Date();
     //Safari hack http://browserhacks.com/
-    if(/constructor/i.test(window.HTMLElement)){
+    if (/constructor/i.test(window.HTMLElement)) {
         luker = document.querySelector(".internetexplorer");
         luker.innerHTML = "Som du ser har vi ikke fått til denne siden til safari enda, den fungerer derimot fint sammen med chrome, opera eller Firefox.";
         luker.style.display = "block";
@@ -49,14 +49,14 @@ function GjemGammelLuke() {
     luker.style.backgroundColor = "white";
     luker.style.color = "rgb(172,45,66)";
     //sjekker om mobilside
-    if (width < 620 && dag < 25){
+    if (width < 620 && dag < 25) {
         //gjemmer luker 5 eller 6 dager før dagen i dag (sånn at det blir partall antall luker igjenn)
         luker = document.querySelectorAll(".luke");
         for (i = 0; i < (dag - 4); i++) {
             luker[i].style.display = "none";
             //Teller til Lukenummer så de blir riktige
             if (i ===  (dag - 6) || dag === 5) {
-                luker[i + 2 - (dag === 5)].style.counterIncrement = "luke " + (i + 3 - (dag === 5) );
+                luker[i + 2 - (dag === 5)].style.counterIncrement = "luke " + (i + 3 - (dag === 5));
             }
         }
     }
@@ -65,9 +65,9 @@ function GjemGammelLuke() {
 function ESCclose(evt) {
     //lukke konkuranse vindu med ESC
     console.log("ESClose");
-  if (evt.keyCode == 27) {
-      window.history.back(-1);//Bare FF
-  }
+    if (evt.keyCode === 27) {
+        window.history.back(-1);//Bare FF
+    }
 }
 
 // info om localstorage http://diveintohtml5.info/storage.html
