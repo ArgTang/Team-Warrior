@@ -20,7 +20,7 @@ function apne(i) {
         m = d.getMonth(),
         flipper = document.getElementById("flipper" + i);
     //åpner luke hvis desember og dag < dagen i dag
-    if (flipper.className === "flipper" && i <= n && m === 10) {
+    if (flipper.className === "flipper" && i <= n && m === 11) { //her velges hvilken måned lukene skal gjelde for, å endre fra 11 til 10 vil gjøre at alle lukene kan åpnes
         flipper.className = "flipperopen";
     } else {
         flipper.className = "flipper";
