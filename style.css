@@ -349,12 +349,14 @@ nav a:hover{letter-spacing: 0.15em;font-weight: 600;}
     color: white;
     background-color: rgb(172,45,66);
     background-color: rgba(172,45,66, 0.95);
+    border-radius: 1em;
 }
 
 .reglement{
     margin-top: 2em;
 	font-Size: 1.1em;
 	font-family:sans-serif;
+    border-radius: 1em;
 }
 
 h1{
