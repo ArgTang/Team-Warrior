@@ -357,6 +357,8 @@ nav a:hover{letter-spacing: 0.15em;font-weight: 600;}
 	font-Size: 1.1em;
 	font-family:sans-serif;
     border-radius: 1em;
+-webkit-box-sizing: border-box;
+    box-sizing: border-box; 
 }
 
 h1{
