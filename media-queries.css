@@ -7,9 +7,9 @@
         height: 120px;
         width: 120px;
     }
-    .konkurranse .Lukk{font-size: 2em;}
     
-    .front:before {font-size: 5em;}
+    .konkurranse .Lukk{font-size: 2em;}
+    .front:before{font-size: 5em;}
     nav a:hover{letter-spacing: normal}
     .hovedmeny{display: none;}
     
@@ -19,7 +19,8 @@
         width: 90%;
         font-size: 0.9em;
     }
-    .konkurranse .høyreside{ padding: 0;}
+    
+    .konkurranse .høyreside{padding: 0;}
     .konkurranse .høyreside img{display: none;}
     .konkurranse .høyreside article{display: none;}
     footer{font-size: 0.9em;}
@@ -27,7 +28,7 @@
      /*Sponsorside*/
     .sponsor{flex-direction: column;}
     .sponsor a img{height: 150px;}
-    .sponsor .sponsortekst {width: 95%;}
+    .sponsor .sponsortekst{width: 95%;}
     
     /*regelside*/
     .reglement{
@@ -46,7 +47,7 @@
         width: 80px;
     }
     
-    .front:before {font-size: 3.5em;}
+    .front:before{font-size: 3.5em;}
     .bakgrunn a{font-size: 0.7em;}
     
     /*Om oss*/
@@ -61,7 +62,7 @@
         width: 75px;
     }
     
-    .front:before {font-size: 3em;}
+    .front:before{font-size: 3em;}
     .bakgrunn a{font-size: 0.7em;}
     
     #meny img{
